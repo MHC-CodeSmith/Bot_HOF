@@ -1,0 +1,28 @@
+# Docker / sistema
+*.swp
+*.swo
+.DS_Store
+
+# ROS2/colcon (se você criar workspaces locais depois)
+build/
+install/
+log/
+
+# Ignition/Gazebo caches (pesados, melhor não versionar)
+.ignition/
+.ignition_fuel/
+gazebo/
+
+# RViz caches e histórico
+.rviz2/
+
+# Mapas grandes alternativos (mantenha só os que você quer versionar)
+# (Descomente para ignorar tudo em maps e listar só alguns via !whitelist)
+# maps/*
+# !maps/warehouse.yaml
+# !maps/warehouse.pgm
+
+# Credenciais/rascunhos locais
+notes/
+.dev/
+
