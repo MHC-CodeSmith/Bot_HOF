@@ -43,6 +43,8 @@ docker run --rm -it \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
   -v $HOME/.ignition:/root/.ignition \
   -v $PWD/maps:/root/maps \
+  -v $PWD/worlds:/root/worlds \
   -e IGN_FUEL_CACHE_PATH=/root/.ignition/fuel \
+  -e IGN_GAZEBO_RESOURCE_PATH=/root/worlds:/root/.ignition \
   "${GPU_ARGS[@]}" \
   "${IMAGE}" bash

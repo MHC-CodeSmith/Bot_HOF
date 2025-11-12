@@ -1,0 +1,38 @@
+room:                 # 1) Dimensões da sala
+  length: 8.0         # comprimento (m)
+  width: 4.0          # largura (m)
+  height: 2.8         # pé-direito (m)
+  door:               # porta (opcional)
+    x: -3.6           # posição no eixo X (m, centro da sala = 0)
+    y: -2.0           # posição no eixo Y
+    width: 0.9        # largura da porta
+    height: 2.1
+
+bench:                # 2) Bancada da mini-fábrica
+  length: 3.5         # comprimento (m)
+  width: 0.6          # largura (m)
+  height: 0.9         # altura (m)
+  pose:               # pose do centro da bancada
+    x: 1.2            # encostada na parede direita? use x ~ (room.length/2 - 0.3)
+    y: -1.2
+    yaw_deg: 0        # 0 = eixo X; 90 = eixo Y
+
+modules:              # número de módulos Siemens sobre a bancada
+  count: 4
+  spacing: 0.85       # espaçamento entre módulos (m)
+  size:               # tamanho de cada módulo (caixa simples)
+    x: 0.35
+    y: 0.45
+    z: 0.55
+
+equipment:            # 3) Equipamentos principais (ligue/desligue)
+  conveyor: true      # esteira (caixa longa e baixa)
+  press: true         # atuador/prensa (pilar)
+  elevator: true      # elevador/alimentador vertical (coluna com caixa)
+  sensor: true        # sensor pequeno
+  arm: false          # braço robótico (placeholder caixa)
+  hmi: true           # HMI Siemens (tela na parede)
+  plc: "S7-1500"      # texto para rotular PLC
+
+
+
