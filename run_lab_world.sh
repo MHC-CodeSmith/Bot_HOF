@@ -6,7 +6,7 @@
 
 set -euo pipefail
 
-IMAGE="turtlebot4:humble"
+IMAGE="turtlebot4:jazzy"
 NAME="tb4_sim"
 
 # Parâmetros opcionais
@@ -80,16 +80,17 @@ docker run --rm -it \
   -e QT_X11_NO_MITSHM=1 \
   -e XDG_RUNTIME_DIR="/tmp/runtime-root" \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
-  -v $HOME/.ignition:/root/.ignition \
+  -v $HOME/.gz:/root/.gz \
   -v $PWD/maps:/root/maps \
   -v $PWD/worlds:/root/worlds \
   -v $PWD/params:/root/params \
-  -e IGN_FUEL_CACHE_PATH=/root/.ignition/fuel \
-  -e IGN_GAZEBO_RESOURCE_PATH=/root/worlds:/root/.ignition \
+  -v $PWD/worlds:/opt/ros/jazzy/share/turtlebot4_gz_bringup/worlds \
+  -e GZ_SIM_RESOURCE_PATH=/root/worlds:/root/.gz \
+  -e IGN_GAZEBO_RESOURCE_PATH=/root/worlds:/root/.gz \
   -e RMW_IMPLEMENTATION=rmw_fastrtps_cpp \
   "${GPU_ARGS[@]}" \
   "${IMAGE}" bash -i -c "
-    source /opt/ros/humble/setup.bash
+    source /opt/ros/jazzy/setup.bash
     unset RMW_IMPLEMENTATION
     export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
     echo '[*] Lançando TurtleBot4 no mundo do laboratório...'
@@ -102,14 +103,14 @@ docker run --rm -it \
       echo '[*] Iniciando com Nav2...'
       echo '[*] Nota: Se Nav2 falhar, inicie sem Nav2 primeiro e depois:'
       echo '         ./scripts/launch_nav2_separate.sh'
-      env RMW_IMPLEMENTATION=rmw_fastrtps_cpp ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py \
+      env RMW_IMPLEMENTATION=rmw_fastrtps_cpp ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \
         world:=my_lab rviz:=true slam:=$SLAM nav2:=$NAV2 \
         x:=$X_POS y:=$Y_POS yaw:=$YAW use_sim_time:=true
     else
       echo '[*] Iniciando sem Nav2 (apenas sim + SLAM)...'
       echo '[*] Para iniciar Nav2 depois, execute:'
       echo '    ./scripts/launch_nav2_separate.sh'
-      env RMW_IMPLEMENTATION=rmw_fastrtps_cpp ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py \
+      env RMW_IMPLEMENTATION=rmw_fastrtps_cpp ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \
         world:=my_lab rviz:=true slam:=$SLAM nav2:=false \
         x:=$X_POS y:=$Y_POS yaw:=$YAW use_sim_time:=true
     fi

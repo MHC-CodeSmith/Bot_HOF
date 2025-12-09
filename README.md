@@ -1,9 +1,9 @@
-# TurtleBot4 Simulator (ROS 2 Humble + Ignition Fortress) — Docker
+# TurtleBot4 Simulator (ROS 2 Jazzy + Gazebo Harmonic) — Docker
 
-Ambiente **reprodutível** para simular o TurtleBot4 com **Gazebo (Ignition Fortress)**,
+Ambiente **reprodutível** para simular o TurtleBot4 com **Gazebo (Harmonic)**,
 usar **SLAM (slam_toolbox)**, **salvar mapa** e depois rodar **localização + Nav2**.
 
-> Testado em Ubuntu 22.04 com GPU NVIDIA (OpenGL 4.6) via `--gpus all`.
+> Testado em Ubuntu 24.04 com GPU NVIDIA (OpenGL 4.6) via `--gpus all`.
 
 ## Estrutura
 
@@ -21,12 +21,12 @@ turtlebot4_docker/
 
 - Docker e NVIDIA Container Toolkit (para GPU NVIDIA)
 - X11 ativo (para RViz2 e GUI do Gazebo)
-- Internet (baixar mundos e pacotes Ignition/ROS)
+- Internet (baixar mundos e pacotes Gazebo/ROS)
 
 ## Build
 
 ```bash
-docker build --no-cache -t turtlebot4:humble .
+docker build --no-cache -t turtlebot4:jazzy .
 ```
 
 ## Rodar o contêiner (com GPU e X11)
@@ -39,13 +39,13 @@ chmod +x run_docker.sh
 Dentro do contêiner:
 
 ```bash
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 ```
 
 ## 1) Simulação com SLAM + Nav2 + RViz
 
 ```bash
-ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py \
+ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \
   slam:=true nav2:=true rviz:=true
 ```
 
@@ -76,7 +76,7 @@ Feche o SLAM e rode:
 
 ```bash
 # só a simulação (se preferir rodar separado)
-# ros2 launch turtlebot4_ignition_bringup ignition.launch.py
+# ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py
 
 # Localização (AMCL) usando o mapa salvo
 ros2 launch turtlebot4_navigation localization.launch.py map:=/root/maps/warehouse.yaml
@@ -114,4 +114,3 @@ ros2 run tf2_tools view_frames  # gera frames.pdf
 ## Licença
 
 MIT (ou escolha a sua).
-

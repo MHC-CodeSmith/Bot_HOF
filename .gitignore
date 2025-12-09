@@ -9,6 +9,7 @@ install/
 log/
 
 # Ignition/Gazebo caches (pesados, melhor não versionar)
+.gz/
 .ignition/
 .ignition_fuel/
 gazebo/
@@ -25,4 +26,3 @@ gazebo/
 # Credenciais/rascunhos locais
 notes/
 .dev/
-

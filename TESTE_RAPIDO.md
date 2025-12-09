@@ -23,7 +23,7 @@ Ou com parâmetros customizados:
 
 Isso vai:
 - Iniciar o contêiner Docker
-- Abrir Gazebo (Ignition) com o mundo do laboratório
+- Abrir Gazebo (Harmonic) com o mundo do laboratório
 - Abrir RViz
 - Iniciar o TurtleBot4 com SLAM + Nav2 (se habilitado)
 
@@ -39,7 +39,7 @@ Isso vai:
 
 ```bash
 # Source do ROS
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 
 # Verificar se o mundo está disponível
 ls -la /root/worlds/
@@ -51,7 +51,7 @@ ls -la /root/worlds/
 Ou manualmente:
 
 ```bash
-ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py \
+ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \
   world:=my_lab \
   rviz:=true \
   slam:=true \
@@ -61,7 +61,7 @@ ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py \
 
 ## O que esperar:
 
-1. **Gazebo (Ignition)** abre mostrando:
+1. **Gazebo (Harmonic)** abre mostrando:
    - Sala 8.7m x 5.3m (dimensões reais)
    - Bancada Festo/Siemens (2.27m x 0.8m) com módulos
    - Equipamentos (esteira verde, prensa vermelha, elevador, sensor)
@@ -107,7 +107,7 @@ ros2 run nav2_map_server map_saver_cli -f /root/maps/lab_map
 ## Troubleshooting:
 
 - **Gazebo não abre**: Verifique `DISPLAY` e permissões X11
-- **Mundo não carrega**: Verifique `IGN_GAZEBO_RESOURCE_PATH` e se `worlds/my_lab.sdf` existe
+- **Mundo não carrega**: Verifique `GZ_SIM_RESOURCE_PATH` (ou `IGN_GAZEBO_RESOURCE_PATH` para compatibilidade) e se `worlds/my_lab.sdf` existe
 - **Robô não aparece**: Verifique os logs: `ros2 topic echo /robot_description`
 - **Nav2 não inicia**: Veja `NAV2_FIX.md` para diagnóstico detalhado
 - **TF não funciona**: Execute `./scripts/check_tf_scan.sh` para diagnóstico
@@ -139,3 +139,5 @@ ros2 run nav2_map_server map_saver_cli -f /root/maps/lab_map
 # Posição inicial customizada (x=-1.0, y=0.0, yaw=90°)
 ./run_lab_world.sh true true -1.0 0.0 1.57
 ```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/cmd_vel_unstamped
+ros2 launch turtlebot4_navigation slam.launch.py sync:=true rviz:=false

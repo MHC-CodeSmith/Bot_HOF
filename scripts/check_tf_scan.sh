@@ -3,6 +3,11 @@
 
 set -e
 
+# Garantir ambiente ROS 2 Jazzy carregado
+if [ -f /opt/ros/jazzy/setup.bash ]; then
+  source /opt/ros/jazzy/setup.bash
+fi
+
 echo "=========================================="
 echo "  Diagnóstico: TF e LaserScan"
 echo "=========================================="
@@ -54,5 +59,4 @@ echo ""
 echo "=========================================="
 echo "  Diagnóstico completo"
 echo "=========================================="
-
 

@@ -4,8 +4,8 @@
 # Uso: ./scripts/launch_nav2_separate.sh
 
 set -e
-source /opt/ros/humble/setup.bash
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+source /opt/ros/jazzy/setup.bash
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
 echo "[*] Aguardando 5 segundos para garantir que TF/scan estejam estáveis..."
 sleep 5
@@ -44,5 +44,4 @@ else
         ros2 launch nav2_bringup bringup_launch.py use_sim_time:=true
     }
 fi
-
 

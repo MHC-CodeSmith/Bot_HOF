@@ -4,10 +4,10 @@
 # Exemplo: ./scripts/launch_lab_world.sh true true 0.0 0.0 0.0
 
 set -e
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 
-# Garantir RMW correto
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+# Garantir RMW correto (FastDDS é o padrão recomendado no Jazzy)
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
 SLAM=${1:-true}
 NAV2=${2:-true}
@@ -24,7 +24,7 @@ echo ""
 
 if [ "$NAV2" = "true" ]; then
   echo "[*] Iniciando com Nav2 (usando params customizados)..."
-  ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py \
+  ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \
     world:=my_lab \
     rviz:=true \
     slam:=$SLAM \
@@ -35,7 +35,7 @@ if [ "$NAV2" = "true" ]; then
     use_sim_time:=true
 else
   echo "[*] Iniciando sem Nav2 (apenas sim + SLAM)..."
-  ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py \
+  ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \
     world:=my_lab \
     rviz:=true \
     slam:=$SLAM \
@@ -45,4 +45,3 @@ else
     yaw:=$YAW \
     use_sim_time:=true
 fi
-

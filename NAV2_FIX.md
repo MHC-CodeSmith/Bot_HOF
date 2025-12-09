@@ -4,7 +4,7 @@ Este guia explica como usar o Nav2 corrigido com os parâmetros customizados.
 
 ## 🔧 O que foi corrigido
 
-1. **RMW Implementation**: Adicionado `rmw_cyclonedds_cpp` (melhor para ROS+Ignition)
+1. **RMW Implementation**: Fixado `rmw_fastrtps_cpp` (padrão no Jazzy e compatível com Create3 firmware I.*)
 2. **use_sim_time**: Garantido `true` em todos os nós
 3. **Parâmetros do Nav2**: Arquivo customizado com frames e costmaps corretos
 4. **Scripts de diagnóstico**: Ferramentas para verificar TF e scan
@@ -65,8 +65,8 @@ Em outro terminal (dentro do contêiner):
 Ou manualmente:
 
 ```bash
-source /opt/ros/humble/setup.bash
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+source /opt/ros/jazzy/setup.bash
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
 # Se turtlebot4_navigation estiver disponível:
 ros2 launch turtlebot4_navigation nav2.launch.py use_sim_time:=true
@@ -178,5 +178,4 @@ No arquivo `params/tb4_nav2_params.yaml`:
 
 - [Nav2 Documentation](https://navigation.ros.org/)
 - [TurtleBot4 Documentation](https://turtlebot.github.io/turtlebot4-docs/)
-
 

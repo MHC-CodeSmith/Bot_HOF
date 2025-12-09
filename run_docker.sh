@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-IMAGE="turtlebot4:humble"
+IMAGE="turtlebot4:jazzy"
 NAME="tb4_sim"
 
 # --- Libera acesso X11 e garante que será revogado ao sair ---
@@ -41,10 +41,12 @@ docker run --rm -it \
   -e DISPLAY="${DISPLAY}" \
   -e QT_X11_NO_MITSHM=1 \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
-  -v $HOME/.ignition:/root/.ignition \
+  -v $HOME/.gz:/root/.gz \
   -v $PWD/maps:/root/maps \
   -v $PWD/worlds:/root/worlds \
-  -e IGN_FUEL_CACHE_PATH=/root/.ignition/fuel \
-  -e IGN_GAZEBO_RESOURCE_PATH=/root/worlds:/root/.ignition \
+  -v $PWD/worlds:/opt/ros/jazzy/share/turtlebot4_gz_bringup/worlds \
+  -e GZ_SIM_RESOURCE_PATH=/root/worlds:/root/.gz \
+  -e IGN_GAZEBO_RESOURCE_PATH=/root/worlds:/root/.gz \
+  -e RMW_IMPLEMENTATION=rmw_fastrtps_cpp \
   "${GPU_ARGS[@]}" \
   "${IMAGE}" bash
