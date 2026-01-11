@@ -1,116 +1,117 @@
 # TurtleBot4 Simulator (ROS 2 Jazzy + Gazebo Harmonic) — Docker
 
-Ambiente **reprodutível** para simular o TurtleBot4 com **Gazebo (Harmonic)**,
-usar **SLAM (slam_toolbox)**, **salvar mapa** e depois rodar **localização + Nav2**.
+A **reproducible** environment for simulating TurtleBot4 using **Gazebo (Harmonic)**. This setup supports **SLAM (slam_toolbox)** for map generation, saving maps, and running **Localization + Navigation2 (Nav2)**.
 
-> Testado em Ubuntu 24.04 com GPU NVIDIA (OpenGL 4.6) via `--gpus all`.
+> **Note:** Tested on Ubuntu 24.04 with NVIDIA GPU (OpenGL 4.6) using `--gpus all`.
 
-## Estrutura
+## Project Structure
 
-```
+```text
 turtlebot4_docker/
-├─ Dockerfile
-├─ run_docker.sh
-├─ maps/                # mapas salvos (yaml/pgm)
-├─ scripts/             # (opcional) helper scripts
-├─ notes/ .dev/         # itens locais (não versionar)
-└─ README.md
+├── Dockerfile          # Container definition
+├── run_docker.sh       # Run script with GPU/X11 support
+├── maps/               # Saved maps (yaml/pgm)
+├── scripts/            # Helper scripts
+└── README.md           # Documentation
 ```
 
-## Requisitos
+## Requirements
 
-- Docker e NVIDIA Container Toolkit (para GPU NVIDIA)
-- X11 ativo (para RViz2 e GUI do Gazebo)
-- Internet (baixar mundos e pacotes Gazebo/ROS)
+- **Docker** and **NVIDIA Container Toolkit** (for GPU acceleration)
+- **X11 Server** active (required for RViz2 and Gazebo GUI)
+- **Internet connection** (to download worlds and ROS/Gazebo packages)
 
 ## Build
+
+Build the Docker image:
 
 ```bash
 docker build --no-cache -t turtlebot4:jazzy .
 ```
 
-## Rodar o contêiner (com GPU e X11)
+## Run Container
+
+Start the container with GPU and X11 forwarding enabled:
 
 ```bash
 chmod +x run_docker.sh
 ./run_docker.sh
 ```
 
-Dentro do contêiner:
+Inside the container, source the ROS environment:
 
 ```bash
 source /opt/ros/jazzy/setup.bash
 ```
 
-## 1) Simulação com SLAM + Nav2 + RViz
+## Usage
+
+### 1. SLAM + Nav2 + RViz (Mapping)
+
+To start the simulation with SLAM and mapping enabled:
 
 ```bash
 ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \
   slam:=true nav2:=true rviz:=true
 ```
 
-* Em RViz:
+**In RViz:**
+- Set `Fixed Frame = map`.
+- Add **LaserScan** (`/scan`) and **Map** (`/map`) displays if they are not already present.
 
-  * `Fixed Frame = map`
-  * Adicione **LaserScan** (`/scan`) e **Map** (`/map`) se necessário.
-* Verifique:
+**Verification:**
+```bash
+ros2 topic hz /scan
+ros2 topic echo /map --once --qos-durability transient_local
+```
 
-  ```bash
-  ros2 topic hz /scan
-  ros2 topic echo /map --once --qos-durability transient_local
-  ```
-* Movimente o robô (teleop integrado no painel da GUI).
+You can now drive the robot using the Teleop panel in the Gazebo GUI or via `ros2 run teleop_twist_keyboard teleop_twist_keyboard`.
 
-### Salvar o mapa
+### 2. Saving the Map
 
-Se o contêiner foi iniciado com `-v $PWD/maps:/root/maps`:
+If the container was started with the volume mount `-v $PWD/maps:/root/maps` (default in `run_docker.sh`), you can save the generate map to the host machine:
 
 ```bash
 ros2 run nav2_map_server map_saver_cli -f /root/maps/warehouse
-# Gera maps/warehouse.yaml e maps/warehouse.pgm no host
 ```
+This will generate `maps/warehouse.yaml` and `maps/warehouse.pgm`.
 
-## 2) Rodar com **Localização + Nav2** (sem SLAM)
+### 3. Localization + Nav2 (Navigation)
 
-Feche o SLAM e rode:
+To run navigation with a pre-existing map (disable SLAM):
 
 ```bash
-# só a simulação (se preferir rodar separado)
+# Optional: Launch simulation separately if needed
 # ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py
 
-# Localização (AMCL) usando o mapa salvo
+# Launch Localization (AMCL) providing the map path
 ros2 launch turtlebot4_navigation localization.launch.py map:=/root/maps/warehouse.yaml
 
-# Nav2
+# Launch Nav2
 ros2 launch turtlebot4_navigation nav2.launch.py
 ```
 
-Em RViz:
+**In RViz:**
+1. Use **2D Pose Estimate** to set the initial robot position.
+2. Set a destination using **2D Goal Pose** or the Navigation2 panel.
 
-* Use **2D Pose Estimate** para inicializar a pose.
-* Envie metas com **2D Goal Pose** ou pelo painel *Navigation2*.
+## Troubleshooting
 
-### Checks úteis
+- **Broken TF (`map -> odom -> base_link`)**:
+  Run `view_frames` to verify the transform tree is connected.
+  ```bash
+  ros2 run tf2_tools view_frames
+  ```
 
-```bash
-ros2 topic list | grep map
-ros2 topic info /map -v
-ros2 node list | grep amcl
-ros2 run tf2_tools view_frames  # gera frames.pdf
-```
+- **Map not appearing**:
+  Ensure the QoS profile is set to `TRANSIENT_LOCAL`.
+  ```bash
+  ros2 topic echo /map --once --qos-durability transient_local
+  ```
 
-## Solução de problemas
-
-* **TF `map→odom→base_link` quebrado**: abra `view_frames` e confirme que há um único grafo conectado.
-* **Map não aparece**: confira QoS `TRANSIENT_LOCAL` em `/map`:
-  `ros2 topic echo /map --once --qos-durability transient_local`
-* **GUI travando**: confirme aceleração de GPU no contêiner:
-
+- **GUI Freezing / Crashing**:
+  Verify GPU acceleration inside the container:
   ```bash
   apt-get update && apt-get install -y mesa-utils
   glxinfo | grep -E "OpenGL renderer|OpenGL version"
   ```
-
-## Licença
-
-MIT (ou escolha a sua).
