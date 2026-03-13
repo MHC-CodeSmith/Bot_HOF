@@ -26,3 +26,14 @@ gazebo/
 # Credenciais/rascunhos locais
 notes/
 .dev/
+
+# Python / Venv
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Logs e outputs
+launch_output.txt
+*.gv
+*.pdf

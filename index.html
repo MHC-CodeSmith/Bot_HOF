@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="UTF-8">
+<title>ETS Assembly</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="title">ETS Configuration Page</h1>
+
+    <form method="POST" action="/connect">
+        <button class="action-button" type="submit">Connect</button>
+    </form>
+
+    <form method="POST" action="/disconnect">
+        <button class="action-button" type="submit">Disconnect</button>
+    </form>
+
+    <form method="POST" action="/set_color">
+        <label for="color">Select a color:</label>
+        <select id="color" name="color" class="select-color">
+            <option value="1">Red</option>
+            <option value="4">Blue</option>
+        </select>
+        <button class="action-button" type="submit">Set Color</button>
+    </form>
+
+    <form method="POST" action="/set_quantity">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required class="input-quantity">
+        <button class="action-button" type="submit">Set Quantity</button>
+    </form>
+
+    <div class="status-messages">
+        <p class="status-text">{{ status|safe }}</p>
+        <p class="status-text">{{ status_color }}</p>
+        <p class="status-text">{{ status_quantity }}</p>
+    </div>
+
+    <div class="status">
+        <p>The selected quantity: <span id="status_quantity"></span></p>
+        <p>The selected color: <span id="status_color"></span></p>
+        <p>Order Possible: <span id="status_update"></span></p>
+    </div>
+
+    <form method="POST" action="/process_order">
+        <button class="action-button" type="submit">Process Order</button>
+    </form>
+    
+    <div class="order-status">
+        <p>Order Number: <span id="status_order_number"></span></p>
+        <p>Assembly Status: <span id="step_text"></span></p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/status.js') }}"></script>
+
+{% endblock %}

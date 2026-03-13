@@ -31,7 +31,7 @@ if ros2 pkg list | grep -q turtlebot4_navigation; then
     echo "[*] Usando turtlebot4_navigation..."
     ros2 launch turtlebot4_navigation nav2.launch.py \
       use_sim_time:=true \
-      params_file:=/root/params/tb4_nav2_params.yaml 2>&1 || {
+      params_file:="$(pwd)/params/tb4_nav2_params.yaml" 2>&1 || {
         echo "[!] Falha ao usar params_file, tentando sem..."
         ros2 launch turtlebot4_navigation nav2.launch.py use_sim_time:=true
     }
@@ -39,7 +39,7 @@ else
     echo "[*] turtlebot4_navigation não encontrado, usando nav2_bringup..."
     ros2 launch nav2_bringup bringup_launch.py \
       use_sim_time:=true \
-      params_file:=/root/params/tb4_nav2_params.yaml 2>&1 || {
+      params_file:="$(pwd)/params/tb4_nav2_params.yaml" 2>&1 || {
         echo "[!] Falha ao usar params_file, tentando sem..."
         ros2 launch nav2_bringup bringup_launch.py use_sim_time:=true
     }
