@@ -1,0 +1,22 @@
+/**:
+  ros__parameters:
+    frame_id: "map"
+    dock_tries: 2
+    vision_timeout_s: 10.0
+
+    # Dock / predock
+    dock_station:    [0.0, 0.0, 0.0]
+    predock_point:   [-0.1926519275, 0.0672889799, 0.0]
+
+    # Delivery
+    delivery_red:    [-0.2240770012, 2.0517764091, 0.0]
+    delivery_blue:   [-0.2610142231, 2.9338858128, 0.0]
+
+    # Failure
+    failure_zone:    [-0.5449312925, 4.0377111435, 0.0]
+    failure_pickup:  [-1.5655823946, 3.8912334442, 0.0]
+
+    # Pickup / inventory / supply
+    pickup_point:    [-1.9166175127, 2.5976626873, 0.0]
+    inventory_point: [-0.8561374545, 5.1967935562, 0.0]
+    supply_point:    [-1.7803814411, 5.0360541344, 0.0]
