@@ -6,6 +6,9 @@
 
 set -euo pipefail
 
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+TB4_DIR=$(dirname "$SCRIPT_DIR")
+
 IMAGE="turtlebot4:jazzy"
 NAME="tb4_sim"
 
@@ -25,10 +28,10 @@ echo "Posição inicial: x=$X_POS, y=$Y_POS, yaw=$YAW"
 echo "=========================================="
 
 # Verificar se o mundo existe
-if [ ! -f "worlds/my_lab.sdf" ]; then
+if [ ! -f "$SCRIPT_DIR/worlds/my_lab.sdf" ]; then
     echo "[!] Erro: worlds/my_lab.sdf não encontrado!"
     echo "    Gere o mundo primeiro com:"
-    echo "    python3 scripts/gen_world.py config/lab.yaml worlds/my_lab.sdf"
+    echo "    python3 scripts/gen_world.py config/lab.yaml sim/worlds/my_lab.sdf"
     exit 1
 fi
 
@@ -36,7 +39,7 @@ fi
 if ! docker images --format "{{.Repository}}:{{.Tag}}" | grep -q "^${IMAGE}$"; then
     echo "[!] Erro: Imagem $IMAGE não encontrada!"
     echo "    Faça o build primeiro com:"
-    echo "    docker build --no-cache -t $IMAGE ."
+    echo "    cd $SCRIPT_DIR && docker build --no-cache -t $IMAGE ."
     exit 1
 fi
 
@@ -81,10 +84,10 @@ docker run --rm -it \
   -e XDG_RUNTIME_DIR="/tmp/runtime-root" \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
   -v $HOME/.gz:/root/.gz \
-  -v $PWD/maps:/root/maps \
-  -v $PWD/worlds:/root/worlds \
-  -v $PWD/params:/root/params \
-  -v $PWD/worlds:/opt/ros/jazzy/share/turtlebot4_gz_bringup/worlds \
+  -v $TB4_DIR/maps:/root/maps \
+  -v $SCRIPT_DIR/worlds:/root/worlds \
+  -v $TB4_DIR/params:/root/params \
+  -v $SCRIPT_DIR/worlds:/opt/ros/jazzy/share/turtlebot4_gz_bringup/worlds \
   -e GZ_SIM_RESOURCE_PATH=/root/worlds:/root/.gz \
   -e IGN_GAZEBO_RESOURCE_PATH=/root/worlds:/root/.gz \
   -e RMW_IMPLEMENTATION=rmw_fastrtps_cpp \

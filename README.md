@@ -7,12 +7,14 @@ A **reproducible** environment for simulating TurtleBot4 using **Gazebo (Harmoni
 ## Project Structure
 
 ```text
-turtlebot4_docker/
-├── Dockerfile          # Container definition
-├── run_docker.sh       # Run script with GPU/X11 support
-├── maps/               # Saved maps (yaml/pgm)
-├── scripts/            # Helper scripts
-└── README.md           # Documentation
+turtlebot4_jazzy/
+├── sim/                    # Dockerfile, run scripts and Gazebo world
+├── maps/                   # Saved maps (yaml/pgm)
+├── params/                 # Nav2 and waypoint parameters
+├── scripts/                # Mission, diagnostics and benchmark helpers
+├── factory_integration/    # OPC-UA/factory UI experiments
+├── vision/                 # Vision datasets/assets
+└── README.md               # Documentation
 ```
 
 ## Requirements
@@ -26,6 +28,7 @@ turtlebot4_docker/
 Build the Docker image:
 
 ```bash
+cd sim
 docker build --no-cache -t turtlebot4:jazzy .
 ```
 
@@ -34,8 +37,7 @@ docker build --no-cache -t turtlebot4:jazzy .
 Start the container with GPU and X11 forwarding enabled:
 
 ```bash
-chmod +x run_docker.sh
-./run_docker.sh
+./sim/run_docker.sh
 ```
 
 Inside the container, source the ROS environment:

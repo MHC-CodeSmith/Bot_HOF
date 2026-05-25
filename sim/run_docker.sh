@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+TB4_DIR=$(dirname "$SCRIPT_DIR")
+
 IMAGE="turtlebot4:jazzy"
 NAME="tb4_sim"
 
@@ -9,7 +12,7 @@ NAME="tb4_sim"
 # ============================
 if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
   echo "[ERRO] A imagem Docker '$IMAGE' não existe."
-  echo "       Rode:  docker build -t turtlebot4:jazzy ."
+  echo "       Rode:  cd $SCRIPT_DIR && docker build -t turtlebot4:jazzy ."
   exit 1
 fi
 
@@ -76,13 +79,13 @@ docker run --rm -it \
   -e ROS_DOMAIN_ID=0 \
   -e RMW_IMPLEMENTATION=rmw_fastrtps_cpp \
   -e FASTRTPS_DEFAULT_PROFILES_FILE=/root/fastdds_super_client.xml \
-  -v "$PWD/fastdds_super_client.xml:/root/fastdds_super_client.xml:ro" \
+  -v "$TB4_DIR/fastdds_super_client.xml:/root/fastdds_super_client.xml:ro" \
   \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
   \
-  -v "$PWD/maps:/root/maps" \
-  -v "$PWD/worlds:/root/worlds" \
-  -v "$PWD/worlds:/opt/ros/jazzy/share/turtlebot4_gz_bringup/worlds" \
+  -v "$TB4_DIR/maps:/root/maps" \
+  -v "$SCRIPT_DIR/worlds:/root/worlds" \
+  -v "$SCRIPT_DIR/worlds:/opt/ros/jazzy/share/turtlebot4_gz_bringup/worlds" \
   \
   -e GZ_SIM_RESOURCE_PATH=/root/worlds:/root/.gz \
   -e IGN_GAZEBO_RESOURCE_PATH=/root/worlds:/root/.gz \

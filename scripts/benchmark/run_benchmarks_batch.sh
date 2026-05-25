@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # run_benchmarks_batch.sh
-# Uso: ./scripts/run_benchmarks_batch.sh <NUMERO_DE_EXECUCOES> <PREFIXO_OPCIONAL>
-# Exemplo: ./scripts/run_benchmarks_batch.sh 10 test_day1
+# Uso: ./scripts/benchmark/run_benchmarks_batch.sh <NUMERO_DE_EXECUCOES> <PREFIXO_OPCIONAL>
+# Exemplo: ./scripts/benchmark/run_benchmarks_batch.sh 10 test_day1
 
 NUM_RUNS=${1:-5}
 PREFIX=${2:-"benchmark"}

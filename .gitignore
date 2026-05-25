@@ -37,6 +37,7 @@ __pycache__/
 launch_output.txt
 *.gv
 *.pdf
+graphify-out/
 
 # Artefatos locais grandes
 benchmark_bags/

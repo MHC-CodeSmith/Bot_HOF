@@ -20,7 +20,7 @@ Este guia explica como usar o Nav2 corrigido com os parâmetros customizados.
 ### Opção 1: Tudo junto (recomendado para teste)
 
 ```bash
-./run_lab_world.sh true true 0.0 0.0 0.0
+./sim/run_lab_world.sh true true 0.0 0.0 0.0
 ```
 
 Isso inicia:
@@ -32,7 +32,7 @@ Isso inicia:
 #### Passo 1: Iniciar apenas sim + SLAM
 
 ```bash
-./run_lab_world.sh true false 0.0 0.0 0.0
+./sim/run_lab_world.sh true false 0.0 0.0 0.0
 ```
 
 Aguarde até:
@@ -178,4 +178,3 @@ No arquivo `params/tb4_nav2_params.yaml`:
 
 - [Nav2 Documentation](https://navigation.ros.org/)
 - [TurtleBot4 Documentation](https://turtlebot.github.io/turtlebot4-docs/)
-
