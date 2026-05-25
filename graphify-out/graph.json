@@ -1,0 +1,5117 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "app.py",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L1",
+      "id": "app_py",
+      "community": 7,
+      "norm_label": "app.py"
+    },
+    {
+      "label": "index()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L38",
+      "id": "turtlebot4_jazzy_docker_app_index",
+      "community": 7,
+      "norm_label": "index()"
+    },
+    {
+      "label": "connect_opcua()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L42",
+      "id": "turtlebot4_jazzy_docker_app_connect_opcua",
+      "community": 7,
+      "norm_label": "connect_opcua()"
+    },
+    {
+      "label": "disconnect_opcua()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L96",
+      "id": "turtlebot4_jazzy_docker_app_disconnect_opcua",
+      "community": 7,
+      "norm_label": "disconnect_opcua()"
+    },
+    {
+      "label": "set_color()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L121",
+      "id": "turtlebot4_jazzy_docker_app_set_color",
+      "community": 7,
+      "norm_label": "set_color()"
+    },
+    {
+      "label": "set_color_status()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L153",
+      "id": "turtlebot4_jazzy_docker_app_set_color_status",
+      "community": 7,
+      "norm_label": "set_color_status()"
+    },
+    {
+      "label": "get_order_status()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L164",
+      "id": "turtlebot4_jazzy_docker_app_get_order_status",
+      "community": 7,
+      "norm_label": "get_order_status()"
+    },
+    {
+      "label": "set_quantity()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L173",
+      "id": "turtlebot4_jazzy_docker_app_set_quantity",
+      "community": 7,
+      "norm_label": "set_quantity()"
+    },
+    {
+      "label": "set_quantity_status()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L190",
+      "id": "turtlebot4_jazzy_docker_app_set_quantity_status",
+      "community": 7,
+      "norm_label": "set_quantity_status()"
+    },
+    {
+      "label": "get_OrderNumber_status()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L198",
+      "id": "turtlebot4_jazzy_docker_app_get_ordernumber_status",
+      "community": 7,
+      "norm_label": "get_ordernumber_status()"
+    },
+    {
+      "label": "process_order()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L206",
+      "id": "turtlebot4_jazzy_docker_app_process_order",
+      "community": 7,
+      "norm_label": "process_order()"
+    },
+    {
+      "label": "get_assembly_step()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L289",
+      "id": "turtlebot4_jazzy_docker_app_get_assembly_step",
+      "community": 7,
+      "norm_label": "get_assembly_step()"
+    },
+    {
+      "label": "opcua_net_test.py",
+      "file_type": "code",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L1",
+      "id": "opcua_net_test_py",
+      "community": 13,
+      "norm_label": "opcua_net_test.py"
+    },
+    {
+      "label": "tcp_probe()",
+      "file_type": "code",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L19",
+      "id": "turtlebot4_jazzy_docker_opcua_net_test_tcp_probe",
+      "community": 13,
+      "norm_label": "tcp_probe()"
+    },
+    {
+      "label": "opcua_connect_test()",
+      "file_type": "code",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L37",
+      "id": "turtlebot4_jazzy_docker_opcua_net_test_opcua_connect_test",
+      "community": 13,
+      "norm_label": "opcua_connect_test()"
+    },
+    {
+      "label": "parse_host_port()",
+      "file_type": "code",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L56",
+      "id": "turtlebot4_jazzy_docker_opcua_net_test_parse_host_port",
+      "community": 13,
+      "norm_label": "parse_host_port()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L63",
+      "id": "turtlebot4_jazzy_docker_opcua_net_test_main",
+      "community": 13,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Testa se d\u00e1 pra abrir conex\u00e3o TCP host:port.",
+      "file_type": "rationale",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L20",
+      "id": "turtlebot4_jazzy_docker_opcua_net_test_rationale_20",
+      "community": 13,
+      "norm_label": "testa se da pra abrir conexao tcp host:port."
+    },
+    {
+      "label": "Testa handshake OPC UA com user/senha.",
+      "file_type": "rationale",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L38",
+      "id": "turtlebot4_jazzy_docker_opcua_net_test_rationale_38",
+      "community": 13,
+      "norm_label": "testa handshake opc ua com user/senha."
+    },
+    {
+      "label": "undock_test.py",
+      "file_type": "code",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L1",
+      "id": "scripts_undock_test_py",
+      "community": 8,
+      "norm_label": "undock_test.py"
+    },
+    {
+      "label": "UndockClient",
+      "file_type": "code",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L7",
+      "id": "scripts_undock_test_undockclient",
+      "community": 8,
+      "norm_label": "undockclient"
+    },
+    {
+      "label": "Node",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "node",
+      "community": 8,
+      "norm_label": "node"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L8",
+      "id": "scripts_undock_test_undockclient_init",
+      "community": 8,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L12",
+      "id": "scripts_undock_test_undockclient_run",
+      "community": 8,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L35",
+      "id": "scripts_undock_test_main",
+      "community": 8,
+      "norm_label": "main()"
+    },
+    {
+      "label": "mission_manager.py",
+      "file_type": "code",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L1",
+      "id": "scripts_mission_manager_py",
+      "community": 0,
+      "norm_label": "mission_manager.py"
+    },
+    {
+      "label": "MissionManager",
+      "file_type": "code",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L38",
+      "id": "scripts_mission_manager_missionmanager",
+      "community": 0,
+      "norm_label": "missionmanager"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L44",
+      "id": "scripts_mission_manager_missionmanager_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._check_nav2_ready()",
+      "file_type": "code",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L77",
+      "id": "scripts_mission_manager_missionmanager_check_nav2_ready",
+      "community": 0,
+      "norm_label": "._check_nav2_ready()"
+    },
+    {
+      "label": "._srv_delivery()",
+      "file_type": "code",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L88",
+      "id": "scripts_mission_manager_missionmanager_srv_delivery",
+      "community": 0,
+      "norm_label": "._srv_delivery()"
+    },
+    {
+      "label": "._srv_failure()",
+      "file_type": "code",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L91",
+      "id": "scripts_mission_manager_missionmanager_srv_failure",
+      "community": 0,
+      "norm_label": "._srv_failure()"
+    },
+    {
+      "label": "._srv_restock()",
+      "file_type": "code",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L94",
+      "id": "scripts_mission_manager_missionmanager_srv_restock",
+      "community": 0,
+      "norm_label": "._srv_restock()"
+    },
+    {
+      "label": "._trigger_routine()",
+      "file_type": "code",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L101",
+      "id": "scripts_mission_manager_missionmanager_trigger_routine",
+      "community": 0,
+      "norm_label": "._trigger_routine()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L143",
+      "id": "scripts_mission_manager_main",
+      "community": 0,
+      "norm_label": "main()"
+    },
+    {
+      "label": "N\u00f3 gerenciador de miss\u00f5es.     Recebe triggers via service e despacha para a rot",
+      "file_type": "rationale",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L39",
+      "id": "scripts_mission_manager_rationale_39",
+      "community": 0,
+      "norm_label": "no gerenciador de missoes.     recebe triggers via service e despacha para a rot"
+    },
+    {
+      "label": "Verifica periodicamente se o Nav2 est\u00e1 dispon\u00edvel.",
+      "file_type": "rationale",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L78",
+      "id": "scripts_mission_manager_rationale_78",
+      "community": 0,
+      "norm_label": "verifica periodicamente se o nav2 esta disponivel."
+    },
+    {
+      "label": "benchmark_csv_exporter.py",
+      "file_type": "code",
+      "source_file": "scripts/benchmark_csv_exporter.py",
+      "source_location": "L1",
+      "id": "scripts_benchmark_csv_exporter_py",
+      "community": 17,
+      "norm_label": "benchmark_csv_exporter.py"
+    },
+    {
+      "label": "export_bag_to_csv()",
+      "file_type": "code",
+      "source_file": "scripts/benchmark_csv_exporter.py",
+      "source_location": "L18",
+      "id": "scripts_benchmark_csv_exporter_export_bag_to_csv",
+      "community": 17,
+      "norm_label": "export_bag_to_csv()"
+    },
+    {
+      "label": "delivery_routine.py",
+      "file_type": "code",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L1",
+      "id": "scripts_delivery_routine_py",
+      "community": 0,
+      "norm_label": "delivery_routine.py"
+    },
+    {
+      "label": "DeliveryRoutine",
+      "file_type": "code",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L14",
+      "id": "scripts_delivery_routine_deliveryroutine",
+      "community": 0,
+      "norm_label": "deliveryroutine"
+    },
+    {
+      "label": "MissionBase",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "missionbase",
+      "community": 0,
+      "norm_label": "missionbase"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L15",
+      "id": "scripts_delivery_routine_deliveryroutine_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._on_product_class()",
+      "file_type": "code",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L30",
+      "id": "scripts_delivery_routine_deliveryroutine_on_product_class",
+      "community": 0,
+      "norm_label": "._on_product_class()"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L36",
+      "id": "scripts_delivery_routine_deliveryroutine_start",
+      "community": 0,
+      "norm_label": ".start()"
+    },
+    {
+      "label": "._go_pickup()",
+      "file_type": "code",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L47",
+      "id": "scripts_delivery_routine_deliveryroutine_go_pickup",
+      "community": 0,
+      "norm_label": "._go_pickup()"
+    },
+    {
+      "label": "._wait_vision_and_deliver()",
+      "file_type": "code",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L55",
+      "id": "scripts_delivery_routine_deliveryroutine_wait_vision_and_deliver",
+      "community": 0,
+      "norm_label": "._wait_vision_and_deliver()"
+    },
+    {
+      "label": "._go_deliver()",
+      "file_type": "code",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L96",
+      "id": "scripts_delivery_routine_deliveryroutine_go_deliver",
+      "community": 0,
+      "norm_label": "._go_deliver()"
+    },
+    {
+      "label": "vision_lid_classifier.py",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L1",
+      "id": "scripts_vision_lid_classifier_py",
+      "community": 10,
+      "norm_label": "vision_lid_classifier.py"
+    },
+    {
+      "label": "LidColorClassifier",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L13",
+      "id": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "community": 10,
+      "norm_label": "lidcolorclassifier"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L20",
+      "id": "scripts_vision_lid_classifier_lidcolorclassifier_init",
+      "community": 10,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".on_image()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L59",
+      "id": "scripts_vision_lid_classifier_lidcolorclassifier_on_image",
+      "community": 10,
+      "norm_label": ".on_image()"
+    },
+    {
+      "label": ".process_image()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L66",
+      "id": "scripts_vision_lid_classifier_lidcolorclassifier_process_image",
+      "community": 10,
+      "norm_label": ".process_image()"
+    },
+    {
+      "label": "._crop_roi()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L129",
+      "id": "scripts_vision_lid_classifier_lidcolorclassifier_crop_roi",
+      "community": 10,
+      "norm_label": "._crop_roi()"
+    },
+    {
+      "label": "._detect_shape()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L141",
+      "id": "scripts_vision_lid_classifier_lidcolorclassifier_detect_shape",
+      "community": 10,
+      "norm_label": "._detect_shape()"
+    },
+    {
+      "label": "_cleanup()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L192",
+      "id": "scripts_vision_lid_classifier_cleanup",
+      "community": 10,
+      "norm_label": "_cleanup()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L199",
+      "id": "scripts_vision_lid_classifier_main",
+      "community": 10,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Subscribes:  /camera/color/image_raw  (sensor_msgs/Image)     Publishes:   /prod",
+      "file_type": "rationale",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L14",
+      "id": "scripts_vision_lid_classifier_rationale_14",
+      "community": 10,
+      "norm_label": "subscribes:  /camera/color/image_raw  (sensor_msgs/image)     publishes:   /prod"
+    },
+    {
+      "label": "Filtra a cor, acha contornos e aproxima pol\u00edgonos. Retorna (mask, poly).",
+      "file_type": "rationale",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L142",
+      "id": "scripts_vision_lid_classifier_rationale_142",
+      "community": 10,
+      "norm_label": "filtra a cor, acha contornos e aproxima poligonos. retorna (mask, poly)."
+    },
+    {
+      "label": "benchmark_plotter.py",
+      "file_type": "code",
+      "source_file": "scripts/benchmark_plotter.py",
+      "source_location": "L1",
+      "id": "scripts_benchmark_plotter_py",
+      "community": 15,
+      "norm_label": "benchmark_plotter.py"
+    },
+    {
+      "label": "parse_waypoints()",
+      "file_type": "code",
+      "source_file": "scripts/benchmark_plotter.py",
+      "source_location": "L16",
+      "id": "scripts_benchmark_plotter_parse_waypoints",
+      "community": 15,
+      "norm_label": "parse_waypoints()"
+    },
+    {
+      "label": "plot_trajectory()",
+      "file_type": "code",
+      "source_file": "scripts/benchmark_plotter.py",
+      "source_location": "L31",
+      "id": "scripts_benchmark_plotter_plot_trajectory",
+      "community": 15,
+      "norm_label": "plot_trajectory()"
+    },
+    {
+      "label": "restock_routine.py",
+      "file_type": "code",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L1",
+      "id": "scripts_restock_routine_py",
+      "community": 0,
+      "norm_label": "restock_routine.py"
+    },
+    {
+      "label": "RestockRoutine",
+      "file_type": "code",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L11",
+      "id": "scripts_restock_routine_restockroutine",
+      "community": 0,
+      "norm_label": "restockroutine"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L12",
+      "id": "scripts_restock_routine_restockroutine_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L17",
+      "id": "scripts_restock_routine_restockroutine_start",
+      "community": 0,
+      "norm_label": ".start()"
+    },
+    {
+      "label": "._go_inventory()",
+      "file_type": "code",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L28",
+      "id": "scripts_restock_routine_restockroutine_go_inventory",
+      "community": 0,
+      "norm_label": "._go_inventory()"
+    },
+    {
+      "label": "._go_supply()",
+      "file_type": "code",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L36",
+      "id": "scripts_restock_routine_restockroutine_go_supply",
+      "community": 0,
+      "norm_label": "._go_supply()"
+    },
+    {
+      "label": "vision_lid_classifier_simple.py",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L1",
+      "id": "scripts_vision_lid_classifier_simple_py",
+      "community": 6,
+      "norm_label": "vision_lid_classifier_simple.py"
+    },
+    {
+      "label": "LidColorClassifierSimple",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L13",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "community": 6,
+      "norm_label": "lidcolorclassifiersimple"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L22",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_init",
+      "community": 6,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".on_image()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L68",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_on_image",
+      "community": 6,
+      "norm_label": ".on_image()"
+    },
+    {
+      "label": ".process_image()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L75",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "community": 6,
+      "norm_label": ".process_image()"
+    },
+    {
+      "label": "._crop_roi()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L138",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_crop_roi",
+      "community": 6,
+      "norm_label": "._crop_roi()"
+    },
+    {
+      "label": "._mask_red()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L156",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_mask_red",
+      "community": 6,
+      "norm_label": "._mask_red()"
+    },
+    {
+      "label": "._mask_blue()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L176",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_mask_blue",
+      "community": 6,
+      "norm_label": "._mask_blue()"
+    },
+    {
+      "label": "._best_blob_info()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L188",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_best_blob_info",
+      "community": 6,
+      "norm_label": "._best_blob_info()"
+    },
+    {
+      "label": "._decide_label()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L281",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_decide_label",
+      "community": 6,
+      "norm_label": "._decide_label()"
+    },
+    {
+      "label": "._cleanup()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L316",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_cleanup",
+      "community": 6,
+      "norm_label": "._cleanup()"
+    },
+    {
+      "label": "._publish_result()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L328",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_publish_result",
+      "community": 6,
+      "norm_label": "._publish_result()"
+    },
+    {
+      "label": "._draw_status()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L335",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_draw_status",
+      "community": 6,
+      "norm_label": "._draw_status()"
+    },
+    {
+      "label": "._show_windows()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L349",
+      "id": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_show_windows",
+      "community": 6,
+      "norm_label": "._show_windows()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L364",
+      "id": "scripts_vision_lid_classifier_simple_main",
+      "community": 6,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Vers\u00e3o simples:     - usa ROI central da imagem     - ignora a faixa inferior (t",
+      "file_type": "rationale",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L14",
+      "id": "scripts_vision_lid_classifier_simple_rationale_14",
+      "community": 6,
+      "norm_label": "versao simples:     - usa roi central da imagem     - ignora a faixa inferior (t"
+    },
+    {
+      "label": "failure_routine.py",
+      "file_type": "code",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L1",
+      "id": "scripts_failure_routine_py",
+      "community": 0,
+      "norm_label": "failure_routine.py"
+    },
+    {
+      "label": "FailureRoutine",
+      "file_type": "code",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L11",
+      "id": "scripts_failure_routine_failureroutine",
+      "community": 0,
+      "norm_label": "failureroutine"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L12",
+      "id": "scripts_failure_routine_failureroutine_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L17",
+      "id": "scripts_failure_routine_failureroutine_start",
+      "community": 0,
+      "norm_label": ".start()"
+    },
+    {
+      "label": "._go_failure_pickup()",
+      "file_type": "code",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L28",
+      "id": "scripts_failure_routine_failureroutine_go_failure_pickup",
+      "community": 0,
+      "norm_label": "._go_failure_pickup()"
+    },
+    {
+      "label": "._go_failure_zone()",
+      "file_type": "code",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L36",
+      "id": "scripts_failure_routine_failureroutine_go_failure_zone",
+      "community": 0,
+      "norm_label": "._go_failure_zone()"
+    },
+    {
+      "label": "patrol.py",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L1",
+      "id": "scripts_patrol_py",
+      "community": 4,
+      "norm_label": "patrol.py"
+    },
+    {
+      "label": "Waypoint",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L21",
+      "id": "scripts_patrol_waypoint",
+      "community": 4,
+      "norm_label": "waypoint"
+    },
+    {
+      "label": "yaw_to_quat_z_w()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L27",
+      "id": "scripts_patrol_yaw_to_quat_z_w",
+      "community": 4,
+      "norm_label": "yaw_to_quat_z_w()"
+    },
+    {
+      "label": "MissionManager",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L32",
+      "id": "scripts_patrol_missionmanager",
+      "community": 4,
+      "norm_label": "missionmanager"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L33",
+      "id": "scripts_patrol_missionmanager_init",
+      "community": 4,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._wp_from_param()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L71",
+      "id": "scripts_patrol_missionmanager_wp_from_param",
+      "community": 4,
+      "norm_label": "._wp_from_param()"
+    },
+    {
+      "label": "._on_product_class()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L75",
+      "id": "scripts_patrol_missionmanager_on_product_class",
+      "community": 4,
+      "norm_label": "._on_product_class()"
+    },
+    {
+      "label": "._srv_start_delivery()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L79",
+      "id": "scripts_patrol_missionmanager_srv_start_delivery",
+      "community": 4,
+      "norm_label": "._srv_start_delivery()"
+    },
+    {
+      "label": "._start_once()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L86",
+      "id": "scripts_patrol_missionmanager_start_once",
+      "community": 4,
+      "norm_label": "._start_once()"
+    },
+    {
+      "label": "._run_mission_async()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L92",
+      "id": "scripts_patrol_missionmanager_run_mission_async",
+      "community": 4,
+      "norm_label": "._run_mission_async()"
+    },
+    {
+      "label": "._go_pickup()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L98",
+      "id": "scripts_patrol_missionmanager_go_pickup",
+      "community": 4,
+      "norm_label": "._go_pickup()"
+    },
+    {
+      "label": "._wait_vision_and_deliver()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L102",
+      "id": "scripts_patrol_missionmanager_wait_vision_and_deliver",
+      "community": 4,
+      "norm_label": "._wait_vision_and_deliver()"
+    },
+    {
+      "label": "._return_and_dock()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L124",
+      "id": "scripts_patrol_missionmanager_return_and_dock",
+      "community": 4,
+      "norm_label": "._return_and_dock()"
+    },
+    {
+      "label": "._navigate_to()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L129",
+      "id": "scripts_patrol_missionmanager_navigate_to",
+      "community": 4,
+      "norm_label": "._navigate_to()"
+    },
+    {
+      "label": "._on_nav_result()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L162",
+      "id": "scripts_patrol_missionmanager_on_nav_result",
+      "community": 4,
+      "norm_label": "._on_nav_result()"
+    },
+    {
+      "label": "._undock_then()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L172",
+      "id": "scripts_patrol_missionmanager_undock_then",
+      "community": 4,
+      "norm_label": "._undock_then()"
+    },
+    {
+      "label": "._dock_with_retries()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L192",
+      "id": "scripts_patrol_missionmanager_dock_with_retries",
+      "community": 4,
+      "norm_label": "._dock_with_retries()"
+    },
+    {
+      "label": "._dock_done()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L214",
+      "id": "scripts_patrol_missionmanager_dock_done",
+      "community": 4,
+      "norm_label": "._dock_done()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L225",
+      "id": "scripts_patrol_main",
+      "community": 4,
+      "norm_label": "main()"
+    },
+    {
+      "label": "2D yaw -> quaternion (z,w).",
+      "file_type": "rationale",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L28",
+      "id": "scripts_patrol_rationale_28",
+      "community": 4,
+      "norm_label": "2d yaw -> quaternion (z,w)."
+    },
+    {
+      "label": "mission_base.py",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L1",
+      "id": "scripts_mission_base_py",
+      "community": 1,
+      "norm_label": "mission_base.py"
+    },
+    {
+      "label": "Waypoint",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L37",
+      "id": "scripts_mission_base_waypoint",
+      "community": 1,
+      "norm_label": "waypoint"
+    },
+    {
+      "label": "yaw_to_quat_z_w()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L43",
+      "id": "scripts_mission_base_yaw_to_quat_z_w",
+      "community": 1,
+      "norm_label": "yaw_to_quat_z_w()"
+    },
+    {
+      "label": "MissionBase",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L49",
+      "id": "scripts_mission_base_missionbase",
+      "community": 1,
+      "norm_label": "missionbase"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L55",
+      "id": "scripts_mission_base_missionbase_init",
+      "community": 1,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._on_dock_status()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L90",
+      "id": "scripts_mission_base_missionbase_on_dock_status",
+      "community": 1,
+      "norm_label": "._on_dock_status()"
+    },
+    {
+      "label": "._wp_from_param()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L93",
+      "id": "scripts_mission_base_missionbase_wp_from_param",
+      "community": 1,
+      "norm_label": "._wp_from_param()"
+    },
+    {
+      "label": ".navigate_to()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L101",
+      "id": "scripts_mission_base_missionbase_navigate_to",
+      "community": 1,
+      "norm_label": ".navigate_to()"
+    },
+    {
+      "label": "._on_nav_result()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L145",
+      "id": "scripts_mission_base_missionbase_on_nav_result",
+      "community": 1,
+      "norm_label": "._on_nav_result()"
+    },
+    {
+      "label": ".undock()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L158",
+      "id": "scripts_mission_base_missionbase_undock",
+      "community": 1,
+      "norm_label": ".undock()"
+    },
+    {
+      "label": "._on_undock_result()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L185",
+      "id": "scripts_mission_base_missionbase_on_undock_result",
+      "community": 1,
+      "norm_label": "._on_undock_result()"
+    },
+    {
+      "label": ".dock()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L198",
+      "id": "scripts_mission_base_missionbase_dock",
+      "community": 1,
+      "norm_label": ".dock()"
+    },
+    {
+      "label": "._on_dock_result()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L229",
+      "id": "scripts_mission_base_missionbase_on_dock_result",
+      "community": 1,
+      "norm_label": "._on_dock_result()"
+    },
+    {
+      "label": ".return_to_dock()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L246",
+      "id": "scripts_mission_base_missionbase_return_to_dock",
+      "community": 1,
+      "norm_label": ".return_to_dock()"
+    },
+    {
+      "label": ".finish_mission()",
+      "file_type": "code",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L254",
+      "id": "scripts_mission_base_missionbase_finish_mission",
+      "community": 1,
+      "norm_label": ".finish_mission()"
+    },
+    {
+      "label": "Converte yaw 2D para componentes z, w do quaternion.",
+      "file_type": "rationale",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L44",
+      "id": "scripts_mission_base_rationale_44",
+      "community": 1,
+      "norm_label": "converte yaw 2d para componentes z, w do quaternion."
+    },
+    {
+      "label": "Classe base compartilhada por todas as rotinas de miss\u00e3o.     Declara par\u00e2metros",
+      "file_type": "rationale",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L50",
+      "id": "scripts_mission_base_rationale_50",
+      "community": 1,
+      "norm_label": "classe base compartilhada por todas as rotinas de missao.     declara parametros"
+    },
+    {
+      "label": "Envia goal de navega\u00e7\u00e3o para o waypoint `wp_name`.          `done_cb(True)`  \u2192 c",
+      "file_type": "rationale",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L102",
+      "id": "scripts_mission_base_rationale_102",
+      "community": 1,
+      "norm_label": "envia goal de navegacao para o waypoint `wp_name`.          `done_cb(true)`  \u2192 c"
+    },
+    {
+      "label": "Executa undock. Pula se o rob\u00f4 j\u00e1 estiver fora da dock.",
+      "file_type": "rationale",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L159",
+      "id": "scripts_mission_base_rationale_159",
+      "community": 1,
+      "norm_label": "executa undock. pula se o robo ja estiver fora da dock."
+    },
+    {
+      "label": "Executa dock com retentativas.",
+      "file_type": "rationale",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L201",
+      "id": "scripts_mission_base_rationale_201",
+      "community": 1,
+      "norm_label": "executa dock com retentativas."
+    },
+    {
+      "label": "Navega para predock_point e depois chama dock.",
+      "file_type": "rationale",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L247",
+      "id": "scripts_mission_base_rationale_247",
+      "community": 1,
+      "norm_label": "navega para predock_point e depois chama dock."
+    },
+    {
+      "label": "Sinaliza ao mission_manager que esta rotina acabou.",
+      "file_type": "rationale",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L255",
+      "id": "scripts_mission_base_rationale_255",
+      "community": 1,
+      "norm_label": "sinaliza ao mission_manager que esta rotina acabou."
+    },
+    {
+      "label": "test_assembly_connection.py",
+      "file_type": "code",
+      "source_file": "scripts/test_assembly_connection.py",
+      "source_location": "L1",
+      "id": "scripts_test_assembly_connection_py",
+      "community": 14,
+      "norm_label": "test_assembly_connection.py"
+    },
+    {
+      "label": "connect_opcua()",
+      "file_type": "code",
+      "source_file": "scripts/test_assembly_connection.py",
+      "source_location": "L13",
+      "id": "scripts_test_assembly_connection_connect_opcua",
+      "community": 14,
+      "norm_label": "connect_opcua()"
+    },
+    {
+      "label": "test_read_value()",
+      "file_type": "code",
+      "source_file": "scripts/test_assembly_connection.py",
+      "source_location": "L40",
+      "id": "scripts_test_assembly_connection_test_read_value",
+      "community": 14,
+      "norm_label": "test_read_value()"
+    },
+    {
+      "label": "disconnect()",
+      "file_type": "code",
+      "source_file": "scripts/test_assembly_connection.py",
+      "source_location": "L58",
+      "id": "scripts_test_assembly_connection_disconnect",
+      "community": 14,
+      "norm_label": "disconnect()"
+    },
+    {
+      "label": "network_instrumentation.py",
+      "file_type": "code",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L1",
+      "id": "scripts_diag_network_instrumentation_py",
+      "community": 8,
+      "norm_label": "network_instrumentation.py"
+    },
+    {
+      "label": "NetworkTester",
+      "file_type": "code",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L10",
+      "id": "diag_network_instrumentation_networktester",
+      "community": 8,
+      "norm_label": "networktester"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L11",
+      "id": "diag_network_instrumentation_networktester_init",
+      "community": 8,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".timer_callback()",
+      "file_type": "code",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L31",
+      "id": "diag_network_instrumentation_networktester_timer_callback",
+      "community": 8,
+      "norm_label": ".timer_callback()"
+    },
+    {
+      "label": ".listener_callback()",
+      "file_type": "code",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L43",
+      "id": "diag_network_instrumentation_networktester_listener_callback",
+      "community": 8,
+      "norm_label": ".listener_callback()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L84",
+      "id": "diag_network_instrumentation_main",
+      "community": 8,
+      "norm_label": "main()"
+    },
+    {
+      "label": "mycobot_anchor.launch.py",
+      "file_type": "code",
+      "source_file": "launch/mycobot_anchor.launch.py",
+      "source_location": "L1",
+      "id": "launch_mycobot_anchor_launch_py",
+      "community": 18,
+      "norm_label": "mycobot_anchor.launch.py"
+    },
+    {
+      "label": "generate_launch_description()",
+      "file_type": "code",
+      "source_file": "launch/mycobot_anchor.launch.py",
+      "source_location": "L8",
+      "id": "launch_mycobot_anchor_launch_generate_launch_description",
+      "community": 18,
+      "norm_label": "generate_launch_description()"
+    },
+    {
+      "label": "task.md",
+      "file_type": "document",
+      "source_file": "task.md",
+      "source_location": "L1",
+      "id": "task_md",
+      "community": 16,
+      "norm_label": "task.md"
+    },
+    {
+      "label": "Navega\u00e7\u00e3o TurtleBot4 + \u00c2ncora MyCobot",
+      "file_type": "document",
+      "source_file": "task.md",
+      "source_location": "L1",
+      "id": "turtlebot4_jazzy_docker_task_navega_o_turtlebot4_ncora_mycobot",
+      "community": 16,
+      "norm_label": "navegacao turtlebot4 + ancora mycobot"
+    },
+    {
+      "label": "Checklist da Fase 3",
+      "file_type": "document",
+      "source_file": "task.md",
+      "source_location": "L5",
+      "id": "turtlebot4_jazzy_docker_task_checklist_da_fase_3",
+      "community": 16,
+      "norm_label": "checklist da fase 3"
+    },
+    {
+      "label": "network_analysis_to_professor.md",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L1",
+      "id": "network_analysis_to_professor_md",
+      "community": 9,
+      "norm_label": "network_analysis_to_professor.md"
+    },
+    {
+      "label": "Network Communication Drill-Down Analysis",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L1",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "community": 9,
+      "norm_label": "network communication drill-down analysis"
+    },
+    {
+      "label": "Methodology",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L6",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_methodology",
+      "community": 9,
+      "norm_label": "methodology"
+    },
+    {
+      "label": "Results",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L14",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_results",
+      "community": 9,
+      "norm_label": "results"
+    },
+    {
+      "label": "1. Raw IP Communication (ICMP Ping)",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L16",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_1_raw_ip_communication_icmp_ping",
+      "community": 9,
+      "norm_label": "1. raw ip communication (icmp ping)"
+    },
+    {
+      "label": "2. ROS 2 Transport Instrumentation (Fast DDS RTT & Drop Rate)",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L21",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
+      "community": 9,
+      "norm_label": "2. ros 2 transport instrumentation (fast dds rtt & drop rate)"
+    },
+    {
+      "label": "Test A: Small Payload (100 Bytes)",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L23",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_a_small_payload_100_bytes",
+      "community": 9,
+      "norm_label": "test a: small payload (100 bytes)"
+    },
+    {
+      "label": "code:text ([RX] Reply seq=2 | RTT=14.27 ms | Avg RTT=14.27 ms | Loss Ra)",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L24",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_codeblock_1",
+      "community": 9,
+      "norm_label": "code:text ([rx] reply seq=2 | rtt=14.27 ms | avg rtt=14.27 ms | loss ra)"
+    },
+    {
+      "label": "Test B: Large Payload (1,000,000 Bytes ~ 1MB)",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L32",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_b_large_payload_1_000_000_bytes_1mb",
+      "community": 9,
+      "norm_label": "test b: large payload (1,000,000 bytes ~ 1mb)"
+    },
+    {
+      "label": "code:text ([TX] msg seq=1 | size=1000056 bytes)",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L33",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_codeblock_2",
+      "community": 9,
+      "norm_label": "code:text ([tx] msg seq=1 | size=1000056 bytes)"
+    },
+    {
+      "label": "Conclusion",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L46",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_conclusion",
+      "community": 9,
+      "norm_label": "conclusion"
+    },
+    {
+      "label": "Recommended Fixes",
+      "file_type": "document",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L53",
+      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_recommended_fixes",
+      "community": 9,
+      "norm_label": "recommended fixes"
+    },
+    {
+      "label": "NAV2_FIX.md",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L1",
+      "id": "nav2_fix_md",
+      "community": 3,
+      "norm_label": "nav2_fix.md"
+    },
+    {
+      "label": "Corre\u00e7\u00e3o do Nav2 - Guia de Uso",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L1",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "community": 3,
+      "norm_label": "correcao do nav2 - guia de uso"
+    },
+    {
+      "label": "\ud83d\udd27 O que foi corrigido",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L5",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_o_que_foi_corrigido",
+      "community": 3,
+      "norm_label": "\ud83d\udd27 o que foi corrigido"
+    },
+    {
+      "label": "\ud83d\udcc1 Arquivos criados",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L12",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_arquivos_criados",
+      "community": 3,
+      "norm_label": "\ud83d\udcc1 arquivos criados"
+    },
+    {
+      "label": "\ud83d\ude80 Como usar",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L18",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_como_usar",
+      "community": 11,
+      "norm_label": "\ud83d\ude80 como usar"
+    },
+    {
+      "label": "Op\u00e7\u00e3o 1: Tudo junto (recomendado para teste)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L20",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_op_o_1_tudo_junto_recomendado_para_teste",
+      "community": 11,
+      "norm_label": "opcao 1: tudo junto (recomendado para teste)"
+    },
+    {
+      "label": "code:bash (./run_lab_world.sh true true 0.0 0.0 0.0)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L22",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_1",
+      "community": 11,
+      "norm_label": "code:bash (./run_lab_world.sh true true 0.0 0.0 0.0)"
+    },
+    {
+      "label": "Op\u00e7\u00e3o 2: Passo a passo (recomendado se Nav2 falhar)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L30",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "community": 11,
+      "norm_label": "opcao 2: passo a passo (recomendado se nav2 falhar)"
+    },
+    {
+      "label": "Passo 1: Iniciar apenas sim + SLAM",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L32",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_passo_1_iniciar_apenas_sim_slam",
+      "community": 11,
+      "norm_label": "passo 1: iniciar apenas sim + slam"
+    },
+    {
+      "label": "code:bash (./run_lab_world.sh true false 0.0 0.0 0.0)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L34",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_2",
+      "community": 11,
+      "norm_label": "code:bash (./run_lab_world.sh true false 0.0 0.0 0.0)"
+    },
+    {
+      "label": "Passo 2: Verificar TF e scan",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L44",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_passo_2_verificar_tf_e_scan",
+      "community": 11,
+      "norm_label": "passo 2: verificar tf e scan"
+    },
+    {
+      "label": "code:bash (./scripts/check_tf_scan.sh)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L48",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_3",
+      "community": 11,
+      "norm_label": "code:bash (./scripts/check_tf_scan.sh)"
+    },
+    {
+      "label": "Passo 3: Iniciar Nav2 separadamente",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L57",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_passo_3_iniciar_nav2_separadamente",
+      "community": 11,
+      "norm_label": "passo 3: iniciar nav2 separadamente"
+    },
+    {
+      "label": "code:bash (./scripts/launch_nav2_separate.sh)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L61",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_4",
+      "community": 11,
+      "norm_label": "code:bash (./scripts/launch_nav2_separate.sh)"
+    },
+    {
+      "label": "code:bash (source /opt/ros/jazzy/setup.bash)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L67",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_5",
+      "community": 11,
+      "norm_label": "code:bash (source /opt/ros/jazzy/setup.bash)"
+    },
+    {
+      "label": "\ud83d\udd0d Diagn\u00f3stico",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L78",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
+      "community": 3,
+      "norm_label": "\ud83d\udd0d diagnostico"
+    },
+    {
+      "label": "Verificar t\u00f3picos",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L80",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_verificar_t_picos",
+      "community": 3,
+      "norm_label": "verificar topicos"
+    },
+    {
+      "label": "code:bash (ros2 topic list | grep -E '/scan$|/odom$|/cmd_vel$')",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L82",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_6",
+      "community": 3,
+      "norm_label": "code:bash (ros2 topic list | grep -e '/scan$|/odom$|/cmd_vel$')"
+    },
+    {
+      "label": "Verificar TF",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L86",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_verificar_tf",
+      "community": 3,
+      "norm_label": "verificar tf"
+    },
+    {
+      "label": "code:bash (# Deve funcionar sem timeout)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L88",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_7",
+      "community": 3,
+      "norm_label": "code:bash (# deve funcionar sem timeout)"
+    },
+    {
+      "label": "Verificar par\u00e2metros do costmap",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L96",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_verificar_par_metros_do_costmap",
+      "community": 3,
+      "norm_label": "verificar parametros do costmap"
+    },
+    {
+      "label": "code:bash (ros2 param dump /global_costmap)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L98",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_8",
+      "community": 3,
+      "norm_label": "code:bash (ros2 param dump /global_costmap)"
+    },
+    {
+      "label": "Ver logs do Nav2",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L109",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_ver_logs_do_nav2",
+      "community": 3,
+      "norm_label": "ver logs do nav2"
+    },
+    {
+      "label": "code:bash (ros2 run rqt_console rqt_console)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L111",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_9",
+      "community": 3,
+      "norm_label": "code:bash (ros2 run rqt_console rqt_console)"
+    },
+    {
+      "label": "\u26a0\ufe0f Problemas comuns",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L120",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
+      "community": 3,
+      "norm_label": "\u26a0\ufe0f problemas comuns"
+    },
+    {
+      "label": "1. \"Couldn't initialize state machine for node global_costmap\"",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L122",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_1_couldn_t_initialize_state_machine_for_node_global_costmap",
+      "community": 3,
+      "norm_label": "1. \"couldn't initialize state machine for node global_costmap\""
+    },
+    {
+      "label": "2. \"Waiting for service controller_server/get_state\"",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L131",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_2_waiting_for_service_controller_server_get_state",
+      "community": 3,
+      "norm_label": "2. \"waiting for service controller_server/get_state\""
+    },
+    {
+      "label": "3. LaserScan n\u00e3o aparece",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L140",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_3_laserscan_n_o_aparece",
+      "community": 3,
+      "norm_label": "3. laserscan nao aparece"
+    },
+    {
+      "label": "code:bash (# Verificar t\u00f3pico)",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L145",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_10",
+      "community": 3,
+      "norm_label": "code:bash (# verificar topico)"
+    },
+    {
+      "label": "\ud83d\udcdd Par\u00e2metros importantes",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L153",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_par_metros_importantes",
+      "community": 3,
+      "norm_label": "\ud83d\udcdd parametros importantes"
+    },
+    {
+      "label": "\ud83c\udfaf Pr\u00f3ximos passos",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L170",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_pr_ximos_passos",
+      "community": 3,
+      "norm_label": "\ud83c\udfaf proximos passos"
+    },
+    {
+      "label": "\ud83d\udcda Refer\u00eancias",
+      "file_type": "document",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L177",
+      "id": "turtlebot4_jazzy_docker_nav2_fix_refer_ncias",
+      "community": 3,
+      "norm_label": "\ud83d\udcda referencias"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 2,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "TurtleBot4 Simulator (ROS 2 Jazzy + Gazebo Harmonic) \u2014 Docker",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "community": 2,
+      "norm_label": "turtlebot4 simulator (ros 2 jazzy + gazebo harmonic) \u2014 docker"
+    },
+    {
+      "label": "Project Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "id": "turtlebot4_jazzy_docker_readme_project_structure",
+      "community": 2,
+      "norm_label": "project structure"
+    },
+    {
+      "label": "code:text (turtlebot4_docker/)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_1",
+      "community": 2,
+      "norm_label": "code:text (turtlebot4_docker/)"
+    },
+    {
+      "label": "Requirements",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "id": "turtlebot4_jazzy_docker_readme_requirements",
+      "community": 2,
+      "norm_label": "requirements"
+    },
+    {
+      "label": "Build",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "id": "turtlebot4_jazzy_docker_readme_build",
+      "community": 2,
+      "norm_label": "build"
+    },
+    {
+      "label": "code:bash (docker build --no-cache -t turtlebot4:jazzy .)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_2",
+      "community": 2,
+      "norm_label": "code:bash (docker build --no-cache -t turtlebot4:jazzy .)"
+    },
+    {
+      "label": "Run Container",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "id": "turtlebot4_jazzy_docker_readme_run_container",
+      "community": 2,
+      "norm_label": "run container"
+    },
+    {
+      "label": "code:bash (chmod +x run_docker.sh)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L36",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_3",
+      "community": 2,
+      "norm_label": "code:bash (chmod +x run_docker.sh)"
+    },
+    {
+      "label": "code:bash (source /opt/ros/jazzy/setup.bash)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_4",
+      "community": 2,
+      "norm_label": "code:bash (source /opt/ros/jazzy/setup.bash)"
+    },
+    {
+      "label": "Usage",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "id": "turtlebot4_jazzy_docker_readme_usage",
+      "community": 2,
+      "norm_label": "usage"
+    },
+    {
+      "label": "1. SLAM + Nav2 + RViz (Mapping)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "id": "turtlebot4_jazzy_docker_readme_1_slam_nav2_rviz_mapping",
+      "community": 2,
+      "norm_label": "1. slam + nav2 + rviz (mapping)"
+    },
+    {
+      "label": "code:bash (ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \\)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_5",
+      "community": 2,
+      "norm_label": "code:bash (ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \\)"
+    },
+    {
+      "label": "code:bash (ros2 topic hz /scan)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L63",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_6",
+      "community": 2,
+      "norm_label": "code:bash (ros2 topic hz /scan)"
+    },
+    {
+      "label": "2. Saving the Map",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L70",
+      "id": "turtlebot4_jazzy_docker_readme_2_saving_the_map",
+      "community": 2,
+      "norm_label": "2. saving the map"
+    },
+    {
+      "label": "code:bash (ros2 run nav2_map_server map_saver_cli -f /root/maps/warehou)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_7",
+      "community": 2,
+      "norm_label": "code:bash (ros2 run nav2_map_server map_saver_cli -f /root/maps/warehou)"
+    },
+    {
+      "label": "3. Localization + Nav2 (Navigation)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "id": "turtlebot4_jazzy_docker_readme_3_localization_nav2_navigation",
+      "community": 2,
+      "norm_label": "3. localization + nav2 (navigation)"
+    },
+    {
+      "label": "code:bash (# Optional: Launch simulation separately if needed)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L83",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_8",
+      "community": 2,
+      "norm_label": "code:bash (# optional: launch simulation separately if needed)"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "id": "turtlebot4_jazzy_docker_readme_troubleshooting",
+      "community": 2,
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "code:bash (ros2 run tf2_tools view_frames)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L102",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_9",
+      "community": 2,
+      "norm_label": "code:bash (ros2 run tf2_tools view_frames)"
+    },
+    {
+      "label": "code:bash (ros2 topic echo /map --once --qos-durability transient_local)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L108",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_10",
+      "community": 2,
+      "norm_label": "code:bash (ros2 topic echo /map --once --qos-durability transient_local)"
+    },
+    {
+      "label": "code:bash (apt-get update && apt-get install -y mesa-utils)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "id": "turtlebot4_jazzy_docker_readme_codeblock_11",
+      "community": 2,
+      "norm_label": "code:bash (apt-get update && apt-get install -y mesa-utils)"
+    },
+    {
+      "label": "TESTE_RAPIDO.md",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L1",
+      "id": "teste_rapido_md",
+      "community": 5,
+      "norm_label": "teste_rapido.md"
+    },
+    {
+      "label": "Teste R\u00e1pido - TurtleBot4 no Mundo do Laborat\u00f3rio",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L1",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "community": 5,
+      "norm_label": "teste rapido - turtlebot4 no mundo do laboratorio"
+    },
+    {
+      "label": "Op\u00e7\u00e3o 1: Script Autom\u00e1tico (Recomendado)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L3",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_op_o_1_script_autom_tico_recomendado",
+      "community": 5,
+      "norm_label": "opcao 1: script automatico (recomendado)"
+    },
+    {
+      "label": "code:bash (./run_lab_world.sh)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L7",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_1",
+      "community": 5,
+      "norm_label": "code:bash (./run_lab_world.sh)"
+    },
+    {
+      "label": "code:bash (# Apenas sim + SLAM (sem Nav2))",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L13",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_2",
+      "community": 5,
+      "norm_label": "code:bash (# apenas sim + slam (sem nav2))"
+    },
+    {
+      "label": "Op\u00e7\u00e3o 2: Manual (Passo a Passo)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L30",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_op_o_2_manual_passo_a_passo",
+      "community": 5,
+      "norm_label": "opcao 2: manual (passo a passo)"
+    },
+    {
+      "label": "1. Iniciar o cont\u00eainer:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L32",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_1_iniciar_o_cont_iner",
+      "community": 5,
+      "norm_label": "1. iniciar o conteiner:"
+    },
+    {
+      "label": "code:bash (./run_docker.sh)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L34",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_3",
+      "community": 5,
+      "norm_label": "code:bash (./run_docker.sh)"
+    },
+    {
+      "label": "2. Dentro do cont\u00eainer:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L38",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_2_dentro_do_cont_iner",
+      "community": 5,
+      "norm_label": "2. dentro do conteiner:"
+    },
+    {
+      "label": "code:bash (# Source do ROS)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L40",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_4",
+      "community": 5,
+      "norm_label": "code:bash (# source do ros)"
+    },
+    {
+      "label": "code:bash (ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \\)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L53",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_5",
+      "community": 5,
+      "norm_label": "code:bash (ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \\)"
+    },
+    {
+      "label": "O que esperar:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L62",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_o_que_esperar",
+      "community": 5,
+      "norm_label": "o que esperar:"
+    },
+    {
+      "label": "Comandos \u00fateis:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L77",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
+      "community": 12,
+      "norm_label": "comandos uteis:"
+    },
+    {
+      "label": "Verificar t\u00f3picos:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L79",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_verificar_t_picos",
+      "community": 12,
+      "norm_label": "verificar topicos:"
+    },
+    {
+      "label": "code:bash (ros2 topic list)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L80",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_6",
+      "community": 12,
+      "norm_label": "code:bash (ros2 topic list)"
+    },
+    {
+      "label": "Verificar TF:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L86",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_verificar_tf",
+      "community": 12,
+      "norm_label": "verificar tf:"
+    },
+    {
+      "label": "code:bash (ros2 run tf2_ros tf2_echo odom base_link)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L87",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_7",
+      "community": 12,
+      "norm_label": "code:bash (ros2 run tf2_ros tf2_echo odom base_link)"
+    },
+    {
+      "label": "Diagn\u00f3stico completo:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L92",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_diagn_stico_completo",
+      "community": 12,
+      "norm_label": "diagnostico completo:"
+    },
+    {
+      "label": "code:bash (./scripts/check_tf_scan.sh)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L93",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_8",
+      "community": 12,
+      "norm_label": "code:bash (./scripts/check_tf_scan.sh)"
+    },
+    {
+      "label": "Teleop (controlar o rob\u00f4):",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L97",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_teleop_controlar_o_rob",
+      "community": 12,
+      "norm_label": "teleop (controlar o robo):"
+    },
+    {
+      "label": "code:bash (ros2 run teleop_twist_keyboard teleop_twist_keyboard)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L98",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_9",
+      "community": 12,
+      "norm_label": "code:bash (ros2 run teleop_twist_keyboard teleop_twist_keyboard)"
+    },
+    {
+      "label": "Salvar mapa:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L102",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_salvar_mapa",
+      "community": 12,
+      "norm_label": "salvar mapa:"
+    },
+    {
+      "label": "code:bash (ros2 run nav2_map_server map_saver_cli -f /root/maps/lab_map)",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L103",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_10",
+      "community": 12,
+      "norm_label": "code:bash (ros2 run nav2_map_server map_saver_cli -f /root/maps/lab_map)"
+    },
+    {
+      "label": "Troubleshooting:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L107",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_troubleshooting",
+      "community": 5,
+      "norm_label": "troubleshooting:"
+    },
+    {
+      "label": "Par\u00e2metros do script:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L115",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_par_metros_do_script",
+      "community": 5,
+      "norm_label": "parametros do script:"
+    },
+    {
+      "label": "code:bash (./run_lab_world.sh [SLAM] [NAV2] [X] [Y] [YAW])",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L117",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_11",
+      "community": 5,
+      "norm_label": "code:bash (./run_lab_world.sh [slam] [nav2] [x] [y] [yaw])"
+    },
+    {
+      "label": "Exemplos:",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L127",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_exemplos",
+      "community": 5,
+      "norm_label": "exemplos:"
+    },
+    {
+      "label": "code:bash (# Apenas simula\u00e7\u00e3o (sem SLAM, sem Nav2))",
+      "file_type": "document",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L129",
+      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_12",
+      "community": 5,
+      "norm_label": "code:bash (# apenas simulacao (sem slam, sem nav2))"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_connect_opcua",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_disconnect_opcua",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_set_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_set_color_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_get_order_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_set_quantity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_set_quantity_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_get_ordernumber_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L206",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_process_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L289",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "turtlebot4_jazzy_docker_app_get_assembly_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "opcua_net_test_py",
+      "target": "turtlebot4_jazzy_docker_opcua_net_test_tcp_probe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "opcua_net_test_py",
+      "target": "turtlebot4_jazzy_docker_opcua_net_test_opcua_connect_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "opcua_net_test_py",
+      "target": "turtlebot4_jazzy_docker_opcua_net_test_parse_host_port",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "opcua_net_test_py",
+      "target": "turtlebot4_jazzy_docker_opcua_net_test_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_opcua_net_test_main",
+      "target": "turtlebot4_jazzy_docker_opcua_net_test_tcp_probe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_opcua_net_test_rationale_20",
+      "target": "turtlebot4_jazzy_docker_opcua_net_test_tcp_probe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_opcua_net_test_main",
+      "target": "turtlebot4_jazzy_docker_opcua_net_test_opcua_connect_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_opcua_net_test_rationale_38",
+      "target": "turtlebot4_jazzy_docker_opcua_net_test_opcua_connect_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "opcua_net_test.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_opcua_net_test_main",
+      "target": "turtlebot4_jazzy_docker_opcua_net_test_parse_host_port",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "scripts_undock_test_py",
+      "target": "scripts_undock_test_undockclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "scripts_undock_test_py",
+      "target": "scripts_undock_test_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "scripts_undock_test_undockclient",
+      "target": "node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "scripts_undock_test_undockclient",
+      "target": "scripts_undock_test_undockclient_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "scripts_undock_test_undockclient",
+      "target": "scripts_undock_test_undockclient_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "scripts_undock_test_main",
+      "target": "scripts_undock_test_undockclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "target": "node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "diag_network_instrumentation_networktester",
+      "target": "node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/undock_test.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "scripts_undock_test_main",
+      "target": "scripts_undock_test_undockclient_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_py",
+      "target": "scripts_mission_manager_missionmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_py",
+      "target": "scripts_mission_manager_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "scripts_mission_manager_missionmanager_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "scripts_mission_manager_missionmanager_check_nav2_ready",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "scripts_mission_manager_missionmanager_srv_delivery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "scripts_mission_manager_missionmanager_srv_failure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "scripts_mission_manager_missionmanager_srv_restock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "scripts_mission_manager_missionmanager_trigger_routine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_main",
+      "target": "scripts_mission_manager_missionmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_rationale_39",
+      "target": "scripts_mission_manager_missionmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L33",
+      "weight": 0.8,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "scripts_delivery_routine_deliveryroutine",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L34",
+      "weight": 0.8,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "scripts_failure_routine_failureroutine",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L35",
+      "weight": 0.8,
+      "source": "scripts_mission_manager_missionmanager",
+      "target": "scripts_restock_routine_restockroutine",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager_init",
+      "target": "scripts_delivery_routine_deliveryroutine"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager_init",
+      "target": "scripts_failure_routine_failureroutine"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager_init",
+      "target": "scripts_restock_routine_restockroutine"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_rationale_78",
+      "target": "scripts_mission_manager_missionmanager_check_nav2_ready",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager_srv_delivery",
+      "target": "scripts_mission_manager_missionmanager_trigger_routine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager_srv_failure",
+      "target": "scripts_mission_manager_missionmanager_trigger_routine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_manager.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "scripts_mission_manager_missionmanager_srv_restock",
+      "target": "scripts_mission_manager_missionmanager_trigger_routine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/benchmark_csv_exporter.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "scripts_benchmark_csv_exporter_py",
+      "target": "scripts_benchmark_csv_exporter_export_bag_to_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_py",
+      "target": "scripts_delivery_routine_deliveryroutine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_deliveryroutine",
+      "target": "missionbase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_deliveryroutine",
+      "target": "scripts_delivery_routine_deliveryroutine_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_deliveryroutine",
+      "target": "scripts_delivery_routine_deliveryroutine_on_product_class",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_deliveryroutine",
+      "target": "scripts_delivery_routine_deliveryroutine_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_deliveryroutine",
+      "target": "scripts_delivery_routine_deliveryroutine_go_pickup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_deliveryroutine",
+      "target": "scripts_delivery_routine_deliveryroutine_wait_vision_and_deliver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_deliveryroutine",
+      "target": "scripts_delivery_routine_deliveryroutine_go_deliver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L11",
+      "weight": 0.8,
+      "source": "scripts_delivery_routine_deliveryroutine",
+      "target": "scripts_mission_base_missionbase",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "scripts_restock_routine_restockroutine",
+      "target": "missionbase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "scripts_failure_routine_failureroutine",
+      "target": "missionbase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_deliveryroutine_start",
+      "target": "scripts_delivery_routine_deliveryroutine_go_pickup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/delivery_routine.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "scripts_delivery_routine_deliveryroutine_go_pickup",
+      "target": "scripts_delivery_routine_deliveryroutine_wait_vision_and_deliver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_py",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_py",
+      "target": "scripts_vision_lid_classifier_cleanup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_py",
+      "target": "scripts_vision_lid_classifier_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_on_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_process_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_crop_roi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_detect_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_main",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_rationale_14",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier_on_image",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_process_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier_process_image",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_crop_roi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier_process_image",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_detect_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_main",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_process_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_lidcolorclassifier_detect_shape",
+      "target": "scripts_vision_lid_classifier_cleanup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier.py",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_rationale_142",
+      "target": "scripts_vision_lid_classifier_lidcolorclassifier_detect_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/benchmark_plotter.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "scripts_benchmark_plotter_py",
+      "target": "scripts_benchmark_plotter_parse_waypoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/benchmark_plotter.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "scripts_benchmark_plotter_py",
+      "target": "scripts_benchmark_plotter_plot_trajectory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/benchmark_plotter.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "scripts_benchmark_plotter_plot_trajectory",
+      "target": "scripts_benchmark_plotter_parse_waypoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "scripts_restock_routine_py",
+      "target": "scripts_restock_routine_restockroutine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "scripts_restock_routine_restockroutine",
+      "target": "scripts_restock_routine_restockroutine_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "scripts_restock_routine_restockroutine",
+      "target": "scripts_restock_routine_restockroutine_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "scripts_restock_routine_restockroutine",
+      "target": "scripts_restock_routine_restockroutine_go_inventory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "scripts_restock_routine_restockroutine",
+      "target": "scripts_restock_routine_restockroutine_go_supply",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L8",
+      "weight": 0.8,
+      "source": "scripts_restock_routine_restockroutine",
+      "target": "scripts_mission_base_missionbase",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "scripts_restock_routine_restockroutine_start",
+      "target": "scripts_restock_routine_restockroutine_go_inventory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/restock_routine.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "scripts_restock_routine_restockroutine_go_inventory",
+      "target": "scripts_restock_routine_restockroutine_go_supply",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_py",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L364",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_py",
+      "target": "scripts_vision_lid_classifier_simple_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_on_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_crop_roi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_mask_red",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_mask_blue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_best_blob_info",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L281",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_decide_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L316",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_cleanup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L328",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_publish_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L335",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_draw_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L349",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_show_windows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L368",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_main",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_rationale_14",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_on_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_crop_roi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_publish_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_draw_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_show_windows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_mask_red",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_mask_blue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_cleanup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_best_blob_info",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_decide_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/vision_lid_classifier_simple.py",
+      "source_location": "L383",
+      "weight": 1.0,
+      "source": "scripts_vision_lid_classifier_simple_main",
+      "target": "scripts_vision_lid_classifier_simple_lidcolorclassifiersimple_process_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "scripts_failure_routine_py",
+      "target": "scripts_failure_routine_failureroutine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "scripts_failure_routine_failureroutine",
+      "target": "scripts_failure_routine_failureroutine_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "scripts_failure_routine_failureroutine",
+      "target": "scripts_failure_routine_failureroutine_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "scripts_failure_routine_failureroutine",
+      "target": "scripts_failure_routine_failureroutine_go_failure_pickup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "scripts_failure_routine_failureroutine",
+      "target": "scripts_failure_routine_failureroutine_go_failure_zone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L8",
+      "weight": 0.8,
+      "source": "scripts_failure_routine_failureroutine",
+      "target": "scripts_mission_base_missionbase",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "scripts_failure_routine_failureroutine_start",
+      "target": "scripts_failure_routine_failureroutine_go_failure_pickup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/failure_routine.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "scripts_failure_routine_failureroutine_go_failure_pickup",
+      "target": "scripts_failure_routine_failureroutine_go_failure_zone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "scripts_patrol_py",
+      "target": "scripts_patrol_waypoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "scripts_patrol_py",
+      "target": "scripts_patrol_yaw_to_quat_z_w",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "scripts_patrol_py",
+      "target": "scripts_patrol_missionmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "scripts_patrol_py",
+      "target": "scripts_patrol_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_wp_from_param",
+      "target": "scripts_patrol_waypoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_navigate_to",
+      "target": "scripts_patrol_yaw_to_quat_z_w",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "scripts_patrol_rationale_28",
+      "target": "scripts_patrol_yaw_to_quat_z_w",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_wp_from_param",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_on_product_class",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_srv_start_delivery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_start_once",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_run_mission_async",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_go_pickup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_wait_vision_and_deliver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_return_and_dock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_navigate_to",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_on_nav_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_undock_then",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_dock_with_retries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager",
+      "target": "scripts_patrol_missionmanager_dock_done",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "scripts_patrol_main",
+      "target": "scripts_patrol_missionmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_init",
+      "target": "scripts_patrol_missionmanager_wp_from_param",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_start_once",
+      "target": "scripts_patrol_missionmanager_run_mission_async",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_run_mission_async",
+      "target": "scripts_patrol_missionmanager_undock_then",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_run_mission_async",
+      "target": "scripts_patrol_missionmanager_go_pickup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_go_pickup",
+      "target": "scripts_patrol_missionmanager_navigate_to",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_go_pickup",
+      "target": "scripts_patrol_missionmanager_wait_vision_and_deliver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_return_and_dock",
+      "target": "scripts_patrol_missionmanager_navigate_to",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_return_and_dock",
+      "target": "scripts_patrol_missionmanager_dock_with_retries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patrol.py",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "scripts_patrol_missionmanager_dock_done",
+      "target": "scripts_patrol_missionmanager_dock_with_retries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "scripts_mission_base_py",
+      "target": "scripts_mission_base_waypoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "scripts_mission_base_py",
+      "target": "scripts_mission_base_yaw_to_quat_z_w",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "scripts_mission_base_py",
+      "target": "scripts_mission_base_missionbase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase_wp_from_param",
+      "target": "scripts_mission_base_waypoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase_navigate_to",
+      "target": "scripts_mission_base_yaw_to_quat_z_w",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "scripts_mission_base_rationale_44",
+      "target": "scripts_mission_base_yaw_to_quat_z_w",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_on_dock_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_wp_from_param",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_navigate_to",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_on_nav_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_undock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_on_undock_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_dock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L229",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_on_dock_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L246",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_return_to_dock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase",
+      "target": "scripts_mission_base_missionbase_finish_mission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "scripts_mission_base_rationale_50",
+      "target": "scripts_mission_base_missionbase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase_init",
+      "target": "scripts_mission_base_missionbase_wp_from_param",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase_return_to_dock",
+      "target": "scripts_mission_base_missionbase_navigate_to",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "scripts_mission_base_rationale_102",
+      "target": "scripts_mission_base_missionbase_navigate_to",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "scripts_mission_base_rationale_159",
+      "target": "scripts_mission_base_missionbase_undock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase_on_dock_result",
+      "target": "scripts_mission_base_missionbase_dock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "scripts_mission_base_missionbase_return_to_dock",
+      "target": "scripts_mission_base_missionbase_dock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "scripts_mission_base_rationale_201",
+      "target": "scripts_mission_base_missionbase_dock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L247",
+      "weight": 1.0,
+      "source": "scripts_mission_base_rationale_247",
+      "target": "scripts_mission_base_missionbase_return_to_dock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/mission_base.py",
+      "source_location": "L255",
+      "weight": 1.0,
+      "source": "scripts_mission_base_rationale_255",
+      "target": "scripts_mission_base_missionbase_finish_mission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test_assembly_connection.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "scripts_test_assembly_connection_py",
+      "target": "scripts_test_assembly_connection_connect_opcua",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test_assembly_connection.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "scripts_test_assembly_connection_py",
+      "target": "scripts_test_assembly_connection_test_read_value",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/test_assembly_connection.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "scripts_test_assembly_connection_py",
+      "target": "scripts_test_assembly_connection_disconnect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "scripts_diag_network_instrumentation_py",
+      "target": "diag_network_instrumentation_networktester",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "scripts_diag_network_instrumentation_py",
+      "target": "diag_network_instrumentation_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "diag_network_instrumentation_networktester",
+      "target": "diag_network_instrumentation_networktester_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "diag_network_instrumentation_networktester",
+      "target": "diag_network_instrumentation_networktester_timer_callback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "diag_network_instrumentation_networktester",
+      "target": "diag_network_instrumentation_networktester_listener_callback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/diag/network_instrumentation.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "diag_network_instrumentation_main",
+      "target": "diag_network_instrumentation_networktester",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "launch/mycobot_anchor.launch.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "launch_mycobot_anchor_launch_py",
+      "target": "launch_mycobot_anchor_launch_generate_launch_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "task.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "task_md",
+      "target": "turtlebot4_jazzy_docker_task_navega_o_turtlebot4_ncora_mycobot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "task.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_task_navega_o_turtlebot4_ncora_mycobot",
+      "target": "turtlebot4_jazzy_docker_task_checklist_da_fase_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "network_analysis_to_professor_md",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_methodology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_results",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_conclusion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_recommended_fixes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_results",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_1_raw_ip_communication_icmp_ping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_results",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_a_small_payload_100_bytes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_b_large_payload_1_000_000_bytes_1mb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_a_small_payload_100_bytes",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "network_analysis_to_professor.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_b_large_payload_1_000_000_bytes_1mb",
+      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "nav2_fix_md",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_o_que_foi_corrigido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_arquivos_criados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_como_usar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_par_metros_importantes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_pr_ximos_passos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_refer_ncias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_como_usar",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_op_o_1_tudo_junto_recomendado_para_teste",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_como_usar",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_op_o_1_tudo_junto_recomendado_para_teste",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_passo_1_iniciar_apenas_sim_slam",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_passo_2_verificar_tf_e_scan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_passo_3_iniciar_nav2_separadamente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_passo_1_iniciar_apenas_sim_slam",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_passo_2_verificar_tf_e_scan",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_passo_3_iniciar_nav2_separadamente",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_passo_3_iniciar_nav2_separadamente",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_verificar_t_picos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_verificar_tf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_verificar_par_metros_do_costmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_ver_logs_do_nav2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_verificar_t_picos",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_verificar_tf",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_verificar_par_metros_do_costmap",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_ver_logs_do_nav2",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_1_couldn_t_initialize_state_machine_for_node_global_costmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_2_waiting_for_service_controller_server_get_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_3_laserscan_n_o_aparece",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NAV2_FIX.md",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_nav2_fix_3_laserscan_n_o_aparece",
+      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_docker_readme_project_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_docker_readme_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_docker_readme_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_docker_readme_run_container",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_docker_readme_usage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_docker_readme_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_project_structure",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_build",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_run_container",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_run_container",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_usage",
+      "target": "turtlebot4_jazzy_docker_readme_1_slam_nav2_rviz_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_usage",
+      "target": "turtlebot4_jazzy_docker_readme_2_saving_the_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_usage",
+      "target": "turtlebot4_jazzy_docker_readme_3_localization_nav2_navigation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_1_slam_nav2_rviz_mapping",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_1_slam_nav2_rviz_mapping",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_2_saving_the_map",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_3_localization_nav2_navigation",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_troubleshooting",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_troubleshooting",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_readme_troubleshooting",
+      "target": "turtlebot4_jazzy_docker_readme_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "teste_rapido_md",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_op_o_1_script_autom_tico_recomendado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_op_o_2_manual_passo_a_passo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_o_que_esperar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_par_metros_do_script",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_exemplos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_op_o_1_script_autom_tico_recomendado",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_op_o_1_script_autom_tico_recomendado",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_op_o_2_manual_passo_a_passo",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_1_iniciar_o_cont_iner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_op_o_2_manual_passo_a_passo",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_2_dentro_do_cont_iner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_1_iniciar_o_cont_iner",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_2_dentro_do_cont_iner",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_2_dentro_do_cont_iner",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_verificar_t_picos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_verificar_tf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_diagn_stico_completo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_teleop_controlar_o_rob",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_salvar_mapa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_verificar_t_picos",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_verificar_tf",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_diagn_stico_completo",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_teleop_controlar_o_rob",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_salvar_mapa",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_par_metros_do_script",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TESTE_RAPIDO.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "turtlebot4_jazzy_docker_teste_rapido_exemplos",
+      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_12",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "74570a62ce2f07cb9b301a8eec49e7bd0186f110"
+}

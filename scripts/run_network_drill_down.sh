@@ -4,7 +4,9 @@ set -e
 ROBOT_IP="192.168.171.138"
 ROBOT_USER="ubuntu"
 PC_IP=$(ip route get 192.168.171.138 | sed -n 's/.*src \([0-9.]*\).*/\1/p')
-REPORT_FILE="/home/mhc/.gemini/antigravity/brain/b7b70953-9bad-4f46-8a19-ef9e15823f94/network_profiling_report.md"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPORT_FILE="${REPORT_FILE:-${HOME}/.gemini/antigravity/brain/b7b70953-9bad-4f46-8a19-ef9e15823f94/network_profiling_report.md}"
+mkdir -p "$(dirname "$REPORT_FILE")"
 
 echo "# Network Communication Drill-Down Report" > "$REPORT_FILE"
 echo "Date: $(date)" >> "$REPORT_FILE"
@@ -26,7 +28,7 @@ echo '```' >> "$REPORT_FILE"
 
 echo "## 2. ROS 2 Transport Instrumentation (Fast DDS RTT & Drop Rate)" >> "$REPORT_FILE"
 echo "Copying instrumentation script to robot..."
-scp -o BatchMode=yes /home/mhc/Germany/turtlebot4_jazzy_docker/scripts/network_instrumentation.py $ROBOT_USER@$ROBOT_IP:/tmp/network_instrumentation.py
+scp -o BatchMode=yes "${SCRIPT_DIR}/network_instrumentation.py" $ROBOT_USER@$ROBOT_IP:/tmp/network_instrumentation.py
 ssh -o BatchMode=yes $ROBOT_USER@$ROBOT_IP "chmod +x /tmp/network_instrumentation.py"
 
 echo "Starting Echo Server on Robot..."
@@ -38,7 +40,7 @@ export ROS_DISCOVERY_SERVER="192.168.171.138:11811"
 
 echo "### Test A: Small Payload (100 Bytes) - 10 Seconds" >> "$REPORT_FILE"
 echo '```text' >> "$REPORT_FILE"
-timeout 12 python3 /home/mhc/Germany/turtlebot4_jazzy_docker/scripts/network_instrumentation.py --mode client --size 100 > /tmp/client_small.log 2>&1 &
+timeout 12 python3 "${SCRIPT_DIR}/network_instrumentation.py" --mode client --size 100 > /tmp/client_small.log 2>&1 &
 PID_SMALL=$!
 sleep 10
 kill -INT $PID_SMALL || true
@@ -48,7 +50,7 @@ echo '```' >> "$REPORT_FILE"
 
 echo "### Test B: Large Payload (1,000,000 Bytes ~1MB) - 10 Seconds" >> "$REPORT_FILE"
 echo '```text' >> "$REPORT_FILE"
-timeout 12 python3 /home/mhc/Germany/turtlebot4_jazzy_docker/scripts/network_instrumentation.py --mode client --size 1000000 > /tmp/client_large.log 2>&1 &
+timeout 12 python3 "${SCRIPT_DIR}/network_instrumentation.py" --mode client --size 1000000 > /tmp/client_large.log 2>&1 &
 PID_LARGE=$!
 sleep 10
 kill -INT $PID_LARGE || true

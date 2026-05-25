@@ -6,7 +6,7 @@ ROBOT_USER="ubuntu"
 PC_IP=$(ip route get 192.168.171.138 | sed -n 's/.*src \([0-9.]*\).*/\1/p')
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 
-LOCAL_OUT="/home/mhc/Downloads/massdiag_robot_turtlebot4_${TIMESTAMP}"
+LOCAL_OUT="${LOCAL_OUT:-${HOME}/Downloads/massdiag_robot_turtlebot4_${TIMESTAMP}}"
 REMOTE_OUT="/tmp/massdiag_${TIMESTAMP}"
 
 # Create dual structure

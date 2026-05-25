@@ -184,12 +184,16 @@ class MissionBase(Node):
 
     def _on_undock_result(self, fut, done_cb: Callable[[bool], None]):
         status = fut.result().status
-        if status == 4:
-            self.get_logger().info("✅ Undock concluído")
-            done_cb(True)
-        else:
-            self.get_logger().warn(f"Undock terminou com status={status} — continuando")
-            done_cb(True)  # tolerante: continua mesmo se undock "falhou"
+        self.get_logger().info(f"Undock físico concluído (status={status}). Aguardando 3.0s para estabilizar odometria e AMCL...")
+        
+        # Cria um timer de 3 segundos de disparo único (one-shot)
+        self._undock_timer = None
+        def _after_wait():
+            self._undock_timer.cancel()
+            self.get_logger().info("Estabilização concluída. Iniciando navegação para predock_point...")
+            self.navigate_to("predock_point", lambda nav_ok: done_cb(nav_ok))
+            
+        self._undock_timer = self.create_timer(3.0, _after_wait)
 
     # ─────────────────────────────────────────────────────────
     # Dock

@@ -2,7 +2,7 @@
 set -e
 
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-LOCAL_OUT="/home/mhc/Downloads/massdiag_pc_only_${TIMESTAMP}"
+LOCAL_OUT="${LOCAL_OUT:-${HOME}/Downloads/massdiag_pc_only_${TIMESTAMP}}"
 mkdir -p "$LOCAL_OUT"
 
 echo "======================================================"
