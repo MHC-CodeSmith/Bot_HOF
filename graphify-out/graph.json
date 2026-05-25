@@ -17,7 +17,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L38",
-      "id": "turtlebot4_jazzy_docker_app_index",
+      "id": "turtlebot4_jazzy_app_index",
       "community": 7,
       "norm_label": "index()"
     },
@@ -26,7 +26,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L42",
-      "id": "turtlebot4_jazzy_docker_app_connect_opcua",
+      "id": "turtlebot4_jazzy_app_connect_opcua",
       "community": 7,
       "norm_label": "connect_opcua()"
     },
@@ -35,7 +35,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L96",
-      "id": "turtlebot4_jazzy_docker_app_disconnect_opcua",
+      "id": "turtlebot4_jazzy_app_disconnect_opcua",
       "community": 7,
       "norm_label": "disconnect_opcua()"
     },
@@ -44,7 +44,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L121",
-      "id": "turtlebot4_jazzy_docker_app_set_color",
+      "id": "turtlebot4_jazzy_app_set_color",
       "community": 7,
       "norm_label": "set_color()"
     },
@@ -53,7 +53,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L153",
-      "id": "turtlebot4_jazzy_docker_app_set_color_status",
+      "id": "turtlebot4_jazzy_app_set_color_status",
       "community": 7,
       "norm_label": "set_color_status()"
     },
@@ -62,7 +62,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L164",
-      "id": "turtlebot4_jazzy_docker_app_get_order_status",
+      "id": "turtlebot4_jazzy_app_get_order_status",
       "community": 7,
       "norm_label": "get_order_status()"
     },
@@ -71,7 +71,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L173",
-      "id": "turtlebot4_jazzy_docker_app_set_quantity",
+      "id": "turtlebot4_jazzy_app_set_quantity",
       "community": 7,
       "norm_label": "set_quantity()"
     },
@@ -80,7 +80,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L190",
-      "id": "turtlebot4_jazzy_docker_app_set_quantity_status",
+      "id": "turtlebot4_jazzy_app_set_quantity_status",
       "community": 7,
       "norm_label": "set_quantity_status()"
     },
@@ -89,7 +89,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L198",
-      "id": "turtlebot4_jazzy_docker_app_get_ordernumber_status",
+      "id": "turtlebot4_jazzy_app_get_ordernumber_status",
       "community": 7,
       "norm_label": "get_ordernumber_status()"
     },
@@ -98,7 +98,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L206",
-      "id": "turtlebot4_jazzy_docker_app_process_order",
+      "id": "turtlebot4_jazzy_app_process_order",
       "community": 7,
       "norm_label": "process_order()"
     },
@@ -107,7 +107,7 @@
       "file_type": "code",
       "source_file": "app.py",
       "source_location": "L289",
-      "id": "turtlebot4_jazzy_docker_app_get_assembly_step",
+      "id": "turtlebot4_jazzy_app_get_assembly_step",
       "community": 7,
       "norm_label": "get_assembly_step()"
     },
@@ -125,7 +125,7 @@
       "file_type": "code",
       "source_file": "opcua_net_test.py",
       "source_location": "L19",
-      "id": "turtlebot4_jazzy_docker_opcua_net_test_tcp_probe",
+      "id": "turtlebot4_jazzy_opcua_net_test_tcp_probe",
       "community": 13,
       "norm_label": "tcp_probe()"
     },
@@ -134,7 +134,7 @@
       "file_type": "code",
       "source_file": "opcua_net_test.py",
       "source_location": "L37",
-      "id": "turtlebot4_jazzy_docker_opcua_net_test_opcua_connect_test",
+      "id": "turtlebot4_jazzy_opcua_net_test_opcua_connect_test",
       "community": 13,
       "norm_label": "opcua_connect_test()"
     },
@@ -143,7 +143,7 @@
       "file_type": "code",
       "source_file": "opcua_net_test.py",
       "source_location": "L56",
-      "id": "turtlebot4_jazzy_docker_opcua_net_test_parse_host_port",
+      "id": "turtlebot4_jazzy_opcua_net_test_parse_host_port",
       "community": 13,
       "norm_label": "parse_host_port()"
     },
@@ -152,7 +152,7 @@
       "file_type": "code",
       "source_file": "opcua_net_test.py",
       "source_location": "L63",
-      "id": "turtlebot4_jazzy_docker_opcua_net_test_main",
+      "id": "turtlebot4_jazzy_opcua_net_test_main",
       "community": 13,
       "norm_label": "main()"
     },
@@ -161,7 +161,7 @@
       "file_type": "rationale",
       "source_file": "opcua_net_test.py",
       "source_location": "L20",
-      "id": "turtlebot4_jazzy_docker_opcua_net_test_rationale_20",
+      "id": "turtlebot4_jazzy_opcua_net_test_rationale_20",
       "community": 13,
       "norm_label": "testa se da pra abrir conexao tcp host:port."
     },
@@ -170,7 +170,7 @@
       "file_type": "rationale",
       "source_file": "opcua_net_test.py",
       "source_location": "L38",
-      "id": "turtlebot4_jazzy_docker_opcua_net_test_rationale_38",
+      "id": "turtlebot4_jazzy_opcua_net_test_rationale_38",
       "community": 13,
       "norm_label": "testa handshake opc ua com user/senha."
     },
@@ -1304,7 +1304,7 @@
       "file_type": "document",
       "source_file": "task.md",
       "source_location": "L1",
-      "id": "turtlebot4_jazzy_docker_task_navega_o_turtlebot4_ncora_mycobot",
+      "id": "turtlebot4_jazzy_task_navega_o_turtlebot4_ncora_mycobot",
       "community": 16,
       "norm_label": "navegacao turtlebot4 + ancora mycobot"
     },
@@ -1313,7 +1313,7 @@
       "file_type": "document",
       "source_file": "task.md",
       "source_location": "L5",
-      "id": "turtlebot4_jazzy_docker_task_checklist_da_fase_3",
+      "id": "turtlebot4_jazzy_task_checklist_da_fase_3",
       "community": 16,
       "norm_label": "checklist da fase 3"
     },
@@ -1331,7 +1331,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L1",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_network_communication_drill_down_analysis",
       "community": 9,
       "norm_label": "network communication drill-down analysis"
     },
@@ -1340,7 +1340,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L6",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_methodology",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_methodology",
       "community": 9,
       "norm_label": "methodology"
     },
@@ -1349,7 +1349,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L14",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_results",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_results",
       "community": 9,
       "norm_label": "results"
     },
@@ -1358,7 +1358,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L16",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_1_raw_ip_communication_icmp_ping",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_1_raw_ip_communication_icmp_ping",
       "community": 9,
       "norm_label": "1. raw ip communication (icmp ping)"
     },
@@ -1367,7 +1367,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L21",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
       "community": 9,
       "norm_label": "2. ros 2 transport instrumentation (fast dds rtt & drop rate)"
     },
@@ -1376,7 +1376,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L23",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_a_small_payload_100_bytes",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_test_a_small_payload_100_bytes",
       "community": 9,
       "norm_label": "test a: small payload (100 bytes)"
     },
@@ -1385,7 +1385,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L24",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_codeblock_1",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_codeblock_1",
       "community": 9,
       "norm_label": "code:text ([rx] reply seq=2 | rtt=14.27 ms | avg rtt=14.27 ms | loss ra)"
     },
@@ -1394,7 +1394,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L32",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_b_large_payload_1_000_000_bytes_1mb",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_test_b_large_payload_1_000_000_bytes_1mb",
       "community": 9,
       "norm_label": "test b: large payload (1,000,000 bytes ~ 1mb)"
     },
@@ -1403,7 +1403,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L33",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_codeblock_2",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_codeblock_2",
       "community": 9,
       "norm_label": "code:text ([tx] msg seq=1 | size=1000056 bytes)"
     },
@@ -1412,7 +1412,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L46",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_conclusion",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_conclusion",
       "community": 9,
       "norm_label": "conclusion"
     },
@@ -1421,7 +1421,7 @@
       "file_type": "document",
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L53",
-      "id": "turtlebot4_jazzy_docker_network_analysis_to_professor_recommended_fixes",
+      "id": "turtlebot4_jazzy_network_analysis_to_professor_recommended_fixes",
       "community": 9,
       "norm_label": "recommended fixes"
     },
@@ -1439,7 +1439,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L1",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "id": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
       "community": 3,
       "norm_label": "correcao do nav2 - guia de uso"
     },
@@ -1448,7 +1448,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L5",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_o_que_foi_corrigido",
+      "id": "turtlebot4_jazzy_nav2_fix_o_que_foi_corrigido",
       "community": 3,
       "norm_label": "\ud83d\udd27 o que foi corrigido"
     },
@@ -1457,7 +1457,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L12",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_arquivos_criados",
+      "id": "turtlebot4_jazzy_nav2_fix_arquivos_criados",
       "community": 3,
       "norm_label": "\ud83d\udcc1 arquivos criados"
     },
@@ -1466,7 +1466,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L18",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_como_usar",
+      "id": "turtlebot4_jazzy_nav2_fix_como_usar",
       "community": 11,
       "norm_label": "\ud83d\ude80 como usar"
     },
@@ -1475,7 +1475,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L20",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_op_o_1_tudo_junto_recomendado_para_teste",
+      "id": "turtlebot4_jazzy_nav2_fix_op_o_1_tudo_junto_recomendado_para_teste",
       "community": 11,
       "norm_label": "opcao 1: tudo junto (recomendado para teste)"
     },
@@ -1484,7 +1484,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L22",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_1",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_1",
       "community": 11,
       "norm_label": "code:bash (./run_lab_world.sh true true 0.0 0.0 0.0)"
     },
@@ -1493,7 +1493,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L30",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "id": "turtlebot4_jazzy_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
       "community": 11,
       "norm_label": "opcao 2: passo a passo (recomendado se nav2 falhar)"
     },
@@ -1502,7 +1502,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L32",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_passo_1_iniciar_apenas_sim_slam",
+      "id": "turtlebot4_jazzy_nav2_fix_passo_1_iniciar_apenas_sim_slam",
       "community": 11,
       "norm_label": "passo 1: iniciar apenas sim + slam"
     },
@@ -1511,7 +1511,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L34",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_2",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_2",
       "community": 11,
       "norm_label": "code:bash (./run_lab_world.sh true false 0.0 0.0 0.0)"
     },
@@ -1520,7 +1520,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L44",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_passo_2_verificar_tf_e_scan",
+      "id": "turtlebot4_jazzy_nav2_fix_passo_2_verificar_tf_e_scan",
       "community": 11,
       "norm_label": "passo 2: verificar tf e scan"
     },
@@ -1529,7 +1529,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L48",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_3",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_3",
       "community": 11,
       "norm_label": "code:bash (./scripts/check_tf_scan.sh)"
     },
@@ -1538,7 +1538,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L57",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_passo_3_iniciar_nav2_separadamente",
+      "id": "turtlebot4_jazzy_nav2_fix_passo_3_iniciar_nav2_separadamente",
       "community": 11,
       "norm_label": "passo 3: iniciar nav2 separadamente"
     },
@@ -1547,7 +1547,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L61",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_4",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_4",
       "community": 11,
       "norm_label": "code:bash (./scripts/launch_nav2_separate.sh)"
     },
@@ -1556,7 +1556,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L67",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_5",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_5",
       "community": 11,
       "norm_label": "code:bash (source /opt/ros/jazzy/setup.bash)"
     },
@@ -1565,7 +1565,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L78",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
+      "id": "turtlebot4_jazzy_nav2_fix_diagn_stico",
       "community": 3,
       "norm_label": "\ud83d\udd0d diagnostico"
     },
@@ -1574,7 +1574,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L80",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_verificar_t_picos",
+      "id": "turtlebot4_jazzy_nav2_fix_verificar_t_picos",
       "community": 3,
       "norm_label": "verificar topicos"
     },
@@ -1583,7 +1583,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L82",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_6",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_6",
       "community": 3,
       "norm_label": "code:bash (ros2 topic list | grep -e '/scan$|/odom$|/cmd_vel$')"
     },
@@ -1592,7 +1592,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L86",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_verificar_tf",
+      "id": "turtlebot4_jazzy_nav2_fix_verificar_tf",
       "community": 3,
       "norm_label": "verificar tf"
     },
@@ -1601,7 +1601,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L88",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_7",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_7",
       "community": 3,
       "norm_label": "code:bash (# deve funcionar sem timeout)"
     },
@@ -1610,7 +1610,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L96",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_verificar_par_metros_do_costmap",
+      "id": "turtlebot4_jazzy_nav2_fix_verificar_par_metros_do_costmap",
       "community": 3,
       "norm_label": "verificar parametros do costmap"
     },
@@ -1619,7 +1619,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L98",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_8",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_8",
       "community": 3,
       "norm_label": "code:bash (ros2 param dump /global_costmap)"
     },
@@ -1628,7 +1628,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L109",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_ver_logs_do_nav2",
+      "id": "turtlebot4_jazzy_nav2_fix_ver_logs_do_nav2",
       "community": 3,
       "norm_label": "ver logs do nav2"
     },
@@ -1637,7 +1637,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L111",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_9",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_9",
       "community": 3,
       "norm_label": "code:bash (ros2 run rqt_console rqt_console)"
     },
@@ -1646,7 +1646,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L120",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
+      "id": "turtlebot4_jazzy_nav2_fix_problemas_comuns",
       "community": 3,
       "norm_label": "\u26a0\ufe0f problemas comuns"
     },
@@ -1655,7 +1655,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L122",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_1_couldn_t_initialize_state_machine_for_node_global_costmap",
+      "id": "turtlebot4_jazzy_nav2_fix_1_couldn_t_initialize_state_machine_for_node_global_costmap",
       "community": 3,
       "norm_label": "1. \"couldn't initialize state machine for node global_costmap\""
     },
@@ -1664,7 +1664,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L131",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_2_waiting_for_service_controller_server_get_state",
+      "id": "turtlebot4_jazzy_nav2_fix_2_waiting_for_service_controller_server_get_state",
       "community": 3,
       "norm_label": "2. \"waiting for service controller_server/get_state\""
     },
@@ -1673,7 +1673,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L140",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_3_laserscan_n_o_aparece",
+      "id": "turtlebot4_jazzy_nav2_fix_3_laserscan_n_o_aparece",
       "community": 3,
       "norm_label": "3. laserscan nao aparece"
     },
@@ -1682,7 +1682,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L145",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_codeblock_10",
+      "id": "turtlebot4_jazzy_nav2_fix_codeblock_10",
       "community": 3,
       "norm_label": "code:bash (# verificar topico)"
     },
@@ -1691,7 +1691,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L153",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_par_metros_importantes",
+      "id": "turtlebot4_jazzy_nav2_fix_par_metros_importantes",
       "community": 3,
       "norm_label": "\ud83d\udcdd parametros importantes"
     },
@@ -1700,7 +1700,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L170",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_pr_ximos_passos",
+      "id": "turtlebot4_jazzy_nav2_fix_pr_ximos_passos",
       "community": 3,
       "norm_label": "\ud83c\udfaf proximos passos"
     },
@@ -1709,7 +1709,7 @@
       "file_type": "document",
       "source_file": "NAV2_FIX.md",
       "source_location": "L177",
-      "id": "turtlebot4_jazzy_docker_nav2_fix_refer_ncias",
+      "id": "turtlebot4_jazzy_nav2_fix_refer_ncias",
       "community": 3,
       "norm_label": "\ud83d\udcda referencias"
     },
@@ -1727,7 +1727,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "id": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "id": "turtlebot4_jazzy_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
       "community": 2,
       "norm_label": "turtlebot4 simulator (ros 2 jazzy + gazebo harmonic) \u2014 docker"
     },
@@ -1736,7 +1736,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L7",
-      "id": "turtlebot4_jazzy_docker_readme_project_structure",
+      "id": "turtlebot4_jazzy_readme_project_structure",
       "community": 2,
       "norm_label": "project structure"
     },
@@ -1745,7 +1745,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L9",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_1",
+      "id": "turtlebot4_jazzy_readme_codeblock_1",
       "community": 2,
       "norm_label": "code:text (turtlebot4_docker/)"
     },
@@ -1754,7 +1754,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L18",
-      "id": "turtlebot4_jazzy_docker_readme_requirements",
+      "id": "turtlebot4_jazzy_readme_requirements",
       "community": 2,
       "norm_label": "requirements"
     },
@@ -1763,7 +1763,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L24",
-      "id": "turtlebot4_jazzy_docker_readme_build",
+      "id": "turtlebot4_jazzy_readme_build",
       "community": 2,
       "norm_label": "build"
     },
@@ -1772,7 +1772,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L28",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_2",
+      "id": "turtlebot4_jazzy_readme_codeblock_2",
       "community": 2,
       "norm_label": "code:bash (docker build --no-cache -t turtlebot4:jazzy .)"
     },
@@ -1781,7 +1781,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L32",
-      "id": "turtlebot4_jazzy_docker_readme_run_container",
+      "id": "turtlebot4_jazzy_readme_run_container",
       "community": 2,
       "norm_label": "run container"
     },
@@ -1790,7 +1790,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L36",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_3",
+      "id": "turtlebot4_jazzy_readme_codeblock_3",
       "community": 2,
       "norm_label": "code:bash (chmod +x run_docker.sh)"
     },
@@ -1799,7 +1799,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L43",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_4",
+      "id": "turtlebot4_jazzy_readme_codeblock_4",
       "community": 2,
       "norm_label": "code:bash (source /opt/ros/jazzy/setup.bash)"
     },
@@ -1808,7 +1808,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L47",
-      "id": "turtlebot4_jazzy_docker_readme_usage",
+      "id": "turtlebot4_jazzy_readme_usage",
       "community": 2,
       "norm_label": "usage"
     },
@@ -1817,7 +1817,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L49",
-      "id": "turtlebot4_jazzy_docker_readme_1_slam_nav2_rviz_mapping",
+      "id": "turtlebot4_jazzy_readme_1_slam_nav2_rviz_mapping",
       "community": 2,
       "norm_label": "1. slam + nav2 + rviz (mapping)"
     },
@@ -1826,7 +1826,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L53",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_5",
+      "id": "turtlebot4_jazzy_readme_codeblock_5",
       "community": 2,
       "norm_label": "code:bash (ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \\)"
     },
@@ -1835,7 +1835,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L63",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_6",
+      "id": "turtlebot4_jazzy_readme_codeblock_6",
       "community": 2,
       "norm_label": "code:bash (ros2 topic hz /scan)"
     },
@@ -1844,7 +1844,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L70",
-      "id": "turtlebot4_jazzy_docker_readme_2_saving_the_map",
+      "id": "turtlebot4_jazzy_readme_2_saving_the_map",
       "community": 2,
       "norm_label": "2. saving the map"
     },
@@ -1853,7 +1853,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L74",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_7",
+      "id": "turtlebot4_jazzy_readme_codeblock_7",
       "community": 2,
       "norm_label": "code:bash (ros2 run nav2_map_server map_saver_cli -f /root/maps/warehou)"
     },
@@ -1862,7 +1862,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L79",
-      "id": "turtlebot4_jazzy_docker_readme_3_localization_nav2_navigation",
+      "id": "turtlebot4_jazzy_readme_3_localization_nav2_navigation",
       "community": 2,
       "norm_label": "3. localization + nav2 (navigation)"
     },
@@ -1871,7 +1871,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L83",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_8",
+      "id": "turtlebot4_jazzy_readme_codeblock_8",
       "community": 2,
       "norm_label": "code:bash (# optional: launch simulation separately if needed)"
     },
@@ -1880,7 +1880,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L98",
-      "id": "turtlebot4_jazzy_docker_readme_troubleshooting",
+      "id": "turtlebot4_jazzy_readme_troubleshooting",
       "community": 2,
       "norm_label": "troubleshooting"
     },
@@ -1889,7 +1889,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L102",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_9",
+      "id": "turtlebot4_jazzy_readme_codeblock_9",
       "community": 2,
       "norm_label": "code:bash (ros2 run tf2_tools view_frames)"
     },
@@ -1898,7 +1898,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L108",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_10",
+      "id": "turtlebot4_jazzy_readme_codeblock_10",
       "community": 2,
       "norm_label": "code:bash (ros2 topic echo /map --once --qos-durability transient_local)"
     },
@@ -1907,7 +1907,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L114",
-      "id": "turtlebot4_jazzy_docker_readme_codeblock_11",
+      "id": "turtlebot4_jazzy_readme_codeblock_11",
       "community": 2,
       "norm_label": "code:bash (apt-get update && apt-get install -y mesa-utils)"
     },
@@ -1925,7 +1925,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L1",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "id": "turtlebot4_jazzy_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
       "community": 5,
       "norm_label": "teste rapido - turtlebot4 no mundo do laboratorio"
     },
@@ -1934,7 +1934,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L3",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_op_o_1_script_autom_tico_recomendado",
+      "id": "turtlebot4_jazzy_teste_rapido_op_o_1_script_autom_tico_recomendado",
       "community": 5,
       "norm_label": "opcao 1: script automatico (recomendado)"
     },
@@ -1943,7 +1943,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L7",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_1",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_1",
       "community": 5,
       "norm_label": "code:bash (./run_lab_world.sh)"
     },
@@ -1952,7 +1952,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L13",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_2",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_2",
       "community": 5,
       "norm_label": "code:bash (# apenas sim + slam (sem nav2))"
     },
@@ -1961,7 +1961,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L30",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_op_o_2_manual_passo_a_passo",
+      "id": "turtlebot4_jazzy_teste_rapido_op_o_2_manual_passo_a_passo",
       "community": 5,
       "norm_label": "opcao 2: manual (passo a passo)"
     },
@@ -1970,7 +1970,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L32",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_1_iniciar_o_cont_iner",
+      "id": "turtlebot4_jazzy_teste_rapido_1_iniciar_o_cont_iner",
       "community": 5,
       "norm_label": "1. iniciar o conteiner:"
     },
@@ -1979,7 +1979,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L34",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_3",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_3",
       "community": 5,
       "norm_label": "code:bash (./run_docker.sh)"
     },
@@ -1988,7 +1988,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L38",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_2_dentro_do_cont_iner",
+      "id": "turtlebot4_jazzy_teste_rapido_2_dentro_do_cont_iner",
       "community": 5,
       "norm_label": "2. dentro do conteiner:"
     },
@@ -1997,7 +1997,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L40",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_4",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_4",
       "community": 5,
       "norm_label": "code:bash (# source do ros)"
     },
@@ -2006,7 +2006,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L53",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_5",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_5",
       "community": 5,
       "norm_label": "code:bash (ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py \\)"
     },
@@ -2015,7 +2015,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L62",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_o_que_esperar",
+      "id": "turtlebot4_jazzy_teste_rapido_o_que_esperar",
       "community": 5,
       "norm_label": "o que esperar:"
     },
@@ -2024,7 +2024,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L77",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
+      "id": "turtlebot4_jazzy_teste_rapido_comandos_teis",
       "community": 12,
       "norm_label": "comandos uteis:"
     },
@@ -2033,7 +2033,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L79",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_verificar_t_picos",
+      "id": "turtlebot4_jazzy_teste_rapido_verificar_t_picos",
       "community": 12,
       "norm_label": "verificar topicos:"
     },
@@ -2042,7 +2042,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L80",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_6",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_6",
       "community": 12,
       "norm_label": "code:bash (ros2 topic list)"
     },
@@ -2051,7 +2051,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L86",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_verificar_tf",
+      "id": "turtlebot4_jazzy_teste_rapido_verificar_tf",
       "community": 12,
       "norm_label": "verificar tf:"
     },
@@ -2060,7 +2060,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L87",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_7",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_7",
       "community": 12,
       "norm_label": "code:bash (ros2 run tf2_ros tf2_echo odom base_link)"
     },
@@ -2069,7 +2069,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L92",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_diagn_stico_completo",
+      "id": "turtlebot4_jazzy_teste_rapido_diagn_stico_completo",
       "community": 12,
       "norm_label": "diagnostico completo:"
     },
@@ -2078,7 +2078,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L93",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_8",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_8",
       "community": 12,
       "norm_label": "code:bash (./scripts/check_tf_scan.sh)"
     },
@@ -2087,7 +2087,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L97",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_teleop_controlar_o_rob",
+      "id": "turtlebot4_jazzy_teste_rapido_teleop_controlar_o_rob",
       "community": 12,
       "norm_label": "teleop (controlar o robo):"
     },
@@ -2096,7 +2096,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L98",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_9",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_9",
       "community": 12,
       "norm_label": "code:bash (ros2 run teleop_twist_keyboard teleop_twist_keyboard)"
     },
@@ -2105,7 +2105,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L102",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_salvar_mapa",
+      "id": "turtlebot4_jazzy_teste_rapido_salvar_mapa",
       "community": 12,
       "norm_label": "salvar mapa:"
     },
@@ -2114,7 +2114,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L103",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_10",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_10",
       "community": 12,
       "norm_label": "code:bash (ros2 run nav2_map_server map_saver_cli -f /root/maps/lab_map)"
     },
@@ -2123,7 +2123,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L107",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_troubleshooting",
+      "id": "turtlebot4_jazzy_teste_rapido_troubleshooting",
       "community": 5,
       "norm_label": "troubleshooting:"
     },
@@ -2132,7 +2132,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L115",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_par_metros_do_script",
+      "id": "turtlebot4_jazzy_teste_rapido_par_metros_do_script",
       "community": 5,
       "norm_label": "parametros do script:"
     },
@@ -2141,7 +2141,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L117",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_11",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_11",
       "community": 5,
       "norm_label": "code:bash (./run_lab_world.sh [slam] [nav2] [x] [y] [yaw])"
     },
@@ -2150,7 +2150,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L127",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_exemplos",
+      "id": "turtlebot4_jazzy_teste_rapido_exemplos",
       "community": 5,
       "norm_label": "exemplos:"
     },
@@ -2159,7 +2159,7 @@
       "file_type": "document",
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L129",
-      "id": "turtlebot4_jazzy_docker_teste_rapido_codeblock_12",
+      "id": "turtlebot4_jazzy_teste_rapido_codeblock_12",
       "community": 5,
       "norm_label": "code:bash (# apenas simulacao (sem slam, sem nav2))"
     }
@@ -2172,7 +2172,7 @@
       "source_location": "L38",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_index",
+      "target": "turtlebot4_jazzy_app_index",
       "confidence_score": 1.0
     },
     {
@@ -2182,7 +2182,7 @@
       "source_location": "L42",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_connect_opcua",
+      "target": "turtlebot4_jazzy_app_connect_opcua",
       "confidence_score": 1.0
     },
     {
@@ -2192,7 +2192,7 @@
       "source_location": "L96",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_disconnect_opcua",
+      "target": "turtlebot4_jazzy_app_disconnect_opcua",
       "confidence_score": 1.0
     },
     {
@@ -2202,7 +2202,7 @@
       "source_location": "L121",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_set_color",
+      "target": "turtlebot4_jazzy_app_set_color",
       "confidence_score": 1.0
     },
     {
@@ -2212,7 +2212,7 @@
       "source_location": "L153",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_set_color_status",
+      "target": "turtlebot4_jazzy_app_set_color_status",
       "confidence_score": 1.0
     },
     {
@@ -2222,7 +2222,7 @@
       "source_location": "L164",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_get_order_status",
+      "target": "turtlebot4_jazzy_app_get_order_status",
       "confidence_score": 1.0
     },
     {
@@ -2232,7 +2232,7 @@
       "source_location": "L173",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_set_quantity",
+      "target": "turtlebot4_jazzy_app_set_quantity",
       "confidence_score": 1.0
     },
     {
@@ -2242,7 +2242,7 @@
       "source_location": "L190",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_set_quantity_status",
+      "target": "turtlebot4_jazzy_app_set_quantity_status",
       "confidence_score": 1.0
     },
     {
@@ -2252,7 +2252,7 @@
       "source_location": "L198",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_get_ordernumber_status",
+      "target": "turtlebot4_jazzy_app_get_ordernumber_status",
       "confidence_score": 1.0
     },
     {
@@ -2262,7 +2262,7 @@
       "source_location": "L206",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_process_order",
+      "target": "turtlebot4_jazzy_app_process_order",
       "confidence_score": 1.0
     },
     {
@@ -2272,7 +2272,7 @@
       "source_location": "L289",
       "weight": 1.0,
       "source": "app_py",
-      "target": "turtlebot4_jazzy_docker_app_get_assembly_step",
+      "target": "turtlebot4_jazzy_app_get_assembly_step",
       "confidence_score": 1.0
     },
     {
@@ -2282,7 +2282,7 @@
       "source_location": "L19",
       "weight": 1.0,
       "source": "opcua_net_test_py",
-      "target": "turtlebot4_jazzy_docker_opcua_net_test_tcp_probe",
+      "target": "turtlebot4_jazzy_opcua_net_test_tcp_probe",
       "confidence_score": 1.0
     },
     {
@@ -2292,7 +2292,7 @@
       "source_location": "L37",
       "weight": 1.0,
       "source": "opcua_net_test_py",
-      "target": "turtlebot4_jazzy_docker_opcua_net_test_opcua_connect_test",
+      "target": "turtlebot4_jazzy_opcua_net_test_opcua_connect_test",
       "confidence_score": 1.0
     },
     {
@@ -2302,7 +2302,7 @@
       "source_location": "L56",
       "weight": 1.0,
       "source": "opcua_net_test_py",
-      "target": "turtlebot4_jazzy_docker_opcua_net_test_parse_host_port",
+      "target": "turtlebot4_jazzy_opcua_net_test_parse_host_port",
       "confidence_score": 1.0
     },
     {
@@ -2312,7 +2312,7 @@
       "source_location": "L63",
       "weight": 1.0,
       "source": "opcua_net_test_py",
-      "target": "turtlebot4_jazzy_docker_opcua_net_test_main",
+      "target": "turtlebot4_jazzy_opcua_net_test_main",
       "confidence_score": 1.0
     },
     {
@@ -2322,8 +2322,8 @@
       "source_file": "opcua_net_test.py",
       "source_location": "L71",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_opcua_net_test_main",
-      "target": "turtlebot4_jazzy_docker_opcua_net_test_tcp_probe",
+      "source": "turtlebot4_jazzy_opcua_net_test_main",
+      "target": "turtlebot4_jazzy_opcua_net_test_tcp_probe",
       "confidence_score": 1.0
     },
     {
@@ -2332,8 +2332,8 @@
       "source_file": "opcua_net_test.py",
       "source_location": "L20",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_opcua_net_test_rationale_20",
-      "target": "turtlebot4_jazzy_docker_opcua_net_test_tcp_probe",
+      "source": "turtlebot4_jazzy_opcua_net_test_rationale_20",
+      "target": "turtlebot4_jazzy_opcua_net_test_tcp_probe",
       "confidence_score": 1.0
     },
     {
@@ -2343,8 +2343,8 @@
       "source_file": "opcua_net_test.py",
       "source_location": "L75",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_opcua_net_test_main",
-      "target": "turtlebot4_jazzy_docker_opcua_net_test_opcua_connect_test",
+      "source": "turtlebot4_jazzy_opcua_net_test_main",
+      "target": "turtlebot4_jazzy_opcua_net_test_opcua_connect_test",
       "confidence_score": 1.0
     },
     {
@@ -2353,8 +2353,8 @@
       "source_file": "opcua_net_test.py",
       "source_location": "L38",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_opcua_net_test_rationale_38",
-      "target": "turtlebot4_jazzy_docker_opcua_net_test_opcua_connect_test",
+      "source": "turtlebot4_jazzy_opcua_net_test_rationale_38",
+      "target": "turtlebot4_jazzy_opcua_net_test_opcua_connect_test",
       "confidence_score": 1.0
     },
     {
@@ -2364,8 +2364,8 @@
       "source_file": "opcua_net_test.py",
       "source_location": "L68",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_opcua_net_test_main",
-      "target": "turtlebot4_jazzy_docker_opcua_net_test_parse_host_port",
+      "source": "turtlebot4_jazzy_opcua_net_test_main",
+      "target": "turtlebot4_jazzy_opcua_net_test_parse_host_port",
       "confidence_score": 1.0
     },
     {
@@ -4198,7 +4198,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "task_md",
-      "target": "turtlebot4_jazzy_docker_task_navega_o_turtlebot4_ncora_mycobot",
+      "target": "turtlebot4_jazzy_task_navega_o_turtlebot4_ncora_mycobot",
       "confidence_score": 1.0
     },
     {
@@ -4207,8 +4207,8 @@
       "source_file": "task.md",
       "source_location": "L5",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_task_navega_o_turtlebot4_ncora_mycobot",
-      "target": "turtlebot4_jazzy_docker_task_checklist_da_fase_3",
+      "source": "turtlebot4_jazzy_task_navega_o_turtlebot4_ncora_mycobot",
+      "target": "turtlebot4_jazzy_task_checklist_da_fase_3",
       "confidence_score": 1.0
     },
     {
@@ -4218,7 +4218,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "network_analysis_to_professor_md",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_network_communication_drill_down_analysis",
       "confidence_score": 1.0
     },
     {
@@ -4227,8 +4227,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L6",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_methodology",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_methodology",
       "confidence_score": 1.0
     },
     {
@@ -4237,8 +4237,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L14",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_results",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_results",
       "confidence_score": 1.0
     },
     {
@@ -4247,8 +4247,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L46",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_conclusion",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_conclusion",
       "confidence_score": 1.0
     },
     {
@@ -4257,8 +4257,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L53",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_network_communication_drill_down_analysis",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_recommended_fixes",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_network_communication_drill_down_analysis",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_recommended_fixes",
       "confidence_score": 1.0
     },
     {
@@ -4267,8 +4267,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L16",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_results",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_1_raw_ip_communication_icmp_ping",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_results",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_1_raw_ip_communication_icmp_ping",
       "confidence_score": 1.0
     },
     {
@@ -4277,8 +4277,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L21",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_results",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_results",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
       "confidence_score": 1.0
     },
     {
@@ -4287,8 +4287,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L23",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_a_small_payload_100_bytes",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_test_a_small_payload_100_bytes",
       "confidence_score": 1.0
     },
     {
@@ -4297,8 +4297,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L32",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_b_large_payload_1_000_000_bytes_1mb",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_2_ros_2_transport_instrumentation_fast_dds_rtt_drop_rate",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_test_b_large_payload_1_000_000_bytes_1mb",
       "confidence_score": 1.0
     },
     {
@@ -4307,8 +4307,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L24",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_a_small_payload_100_bytes",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_codeblock_1",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_test_a_small_payload_100_bytes",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_codeblock_1",
       "confidence_score": 1.0
     },
     {
@@ -4317,8 +4317,8 @@
       "source_file": "network_analysis_to_professor.md",
       "source_location": "L33",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_network_analysis_to_professor_test_b_large_payload_1_000_000_bytes_1mb",
-      "target": "turtlebot4_jazzy_docker_network_analysis_to_professor_codeblock_2",
+      "source": "turtlebot4_jazzy_network_analysis_to_professor_test_b_large_payload_1_000_000_bytes_1mb",
+      "target": "turtlebot4_jazzy_network_analysis_to_professor_codeblock_2",
       "confidence_score": 1.0
     },
     {
@@ -4328,7 +4328,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "nav2_fix_md",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
       "confidence_score": 1.0
     },
     {
@@ -4337,8 +4337,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L5",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_o_que_foi_corrigido",
+      "source": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_nav2_fix_o_que_foi_corrigido",
       "confidence_score": 1.0
     },
     {
@@ -4347,8 +4347,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L12",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_arquivos_criados",
+      "source": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_nav2_fix_arquivos_criados",
       "confidence_score": 1.0
     },
     {
@@ -4357,8 +4357,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L18",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_como_usar",
+      "source": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_nav2_fix_como_usar",
       "confidence_score": 1.0
     },
     {
@@ -4367,8 +4367,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L78",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
+      "source": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_nav2_fix_diagn_stico",
       "confidence_score": 1.0
     },
     {
@@ -4377,8 +4377,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L120",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
+      "source": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_nav2_fix_problemas_comuns",
       "confidence_score": 1.0
     },
     {
@@ -4387,8 +4387,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L153",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_par_metros_importantes",
+      "source": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_nav2_fix_par_metros_importantes",
       "confidence_score": 1.0
     },
     {
@@ -4397,8 +4397,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L170",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_pr_ximos_passos",
+      "source": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_nav2_fix_pr_ximos_passos",
       "confidence_score": 1.0
     },
     {
@@ -4407,8 +4407,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L177",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_corre_o_do_nav2_guia_de_uso",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_refer_ncias",
+      "source": "turtlebot4_jazzy_nav2_fix_corre_o_do_nav2_guia_de_uso",
+      "target": "turtlebot4_jazzy_nav2_fix_refer_ncias",
       "confidence_score": 1.0
     },
     {
@@ -4417,8 +4417,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L20",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_como_usar",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_op_o_1_tudo_junto_recomendado_para_teste",
+      "source": "turtlebot4_jazzy_nav2_fix_como_usar",
+      "target": "turtlebot4_jazzy_nav2_fix_op_o_1_tudo_junto_recomendado_para_teste",
       "confidence_score": 1.0
     },
     {
@@ -4427,8 +4427,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L30",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_como_usar",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "source": "turtlebot4_jazzy_nav2_fix_como_usar",
+      "target": "turtlebot4_jazzy_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
       "confidence_score": 1.0
     },
     {
@@ -4437,8 +4437,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L22",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_op_o_1_tudo_junto_recomendado_para_teste",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_1",
+      "source": "turtlebot4_jazzy_nav2_fix_op_o_1_tudo_junto_recomendado_para_teste",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_1",
       "confidence_score": 1.0
     },
     {
@@ -4447,8 +4447,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L32",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_passo_1_iniciar_apenas_sim_slam",
+      "source": "turtlebot4_jazzy_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "target": "turtlebot4_jazzy_nav2_fix_passo_1_iniciar_apenas_sim_slam",
       "confidence_score": 1.0
     },
     {
@@ -4457,8 +4457,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L44",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_passo_2_verificar_tf_e_scan",
+      "source": "turtlebot4_jazzy_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "target": "turtlebot4_jazzy_nav2_fix_passo_2_verificar_tf_e_scan",
       "confidence_score": 1.0
     },
     {
@@ -4467,8 +4467,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L57",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_passo_3_iniciar_nav2_separadamente",
+      "source": "turtlebot4_jazzy_nav2_fix_op_o_2_passo_a_passo_recomendado_se_nav2_falhar",
+      "target": "turtlebot4_jazzy_nav2_fix_passo_3_iniciar_nav2_separadamente",
       "confidence_score": 1.0
     },
     {
@@ -4477,8 +4477,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L34",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_passo_1_iniciar_apenas_sim_slam",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_2",
+      "source": "turtlebot4_jazzy_nav2_fix_passo_1_iniciar_apenas_sim_slam",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_2",
       "confidence_score": 1.0
     },
     {
@@ -4487,8 +4487,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L48",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_passo_2_verificar_tf_e_scan",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_3",
+      "source": "turtlebot4_jazzy_nav2_fix_passo_2_verificar_tf_e_scan",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_3",
       "confidence_score": 1.0
     },
     {
@@ -4497,8 +4497,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L61",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_passo_3_iniciar_nav2_separadamente",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_4",
+      "source": "turtlebot4_jazzy_nav2_fix_passo_3_iniciar_nav2_separadamente",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_4",
       "confidence_score": 1.0
     },
     {
@@ -4507,8 +4507,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L67",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_passo_3_iniciar_nav2_separadamente",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_5",
+      "source": "turtlebot4_jazzy_nav2_fix_passo_3_iniciar_nav2_separadamente",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_5",
       "confidence_score": 1.0
     },
     {
@@ -4517,8 +4517,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L80",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_verificar_t_picos",
+      "source": "turtlebot4_jazzy_nav2_fix_diagn_stico",
+      "target": "turtlebot4_jazzy_nav2_fix_verificar_t_picos",
       "confidence_score": 1.0
     },
     {
@@ -4527,8 +4527,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L86",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_verificar_tf",
+      "source": "turtlebot4_jazzy_nav2_fix_diagn_stico",
+      "target": "turtlebot4_jazzy_nav2_fix_verificar_tf",
       "confidence_score": 1.0
     },
     {
@@ -4537,8 +4537,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L96",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_verificar_par_metros_do_costmap",
+      "source": "turtlebot4_jazzy_nav2_fix_diagn_stico",
+      "target": "turtlebot4_jazzy_nav2_fix_verificar_par_metros_do_costmap",
       "confidence_score": 1.0
     },
     {
@@ -4547,8 +4547,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L109",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_diagn_stico",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_ver_logs_do_nav2",
+      "source": "turtlebot4_jazzy_nav2_fix_diagn_stico",
+      "target": "turtlebot4_jazzy_nav2_fix_ver_logs_do_nav2",
       "confidence_score": 1.0
     },
     {
@@ -4557,8 +4557,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L82",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_verificar_t_picos",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_6",
+      "source": "turtlebot4_jazzy_nav2_fix_verificar_t_picos",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_6",
       "confidence_score": 1.0
     },
     {
@@ -4567,8 +4567,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L88",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_verificar_tf",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_7",
+      "source": "turtlebot4_jazzy_nav2_fix_verificar_tf",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_7",
       "confidence_score": 1.0
     },
     {
@@ -4577,8 +4577,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L98",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_verificar_par_metros_do_costmap",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_8",
+      "source": "turtlebot4_jazzy_nav2_fix_verificar_par_metros_do_costmap",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_8",
       "confidence_score": 1.0
     },
     {
@@ -4587,8 +4587,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L111",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_ver_logs_do_nav2",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_9",
+      "source": "turtlebot4_jazzy_nav2_fix_ver_logs_do_nav2",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_9",
       "confidence_score": 1.0
     },
     {
@@ -4597,8 +4597,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L122",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_1_couldn_t_initialize_state_machine_for_node_global_costmap",
+      "source": "turtlebot4_jazzy_nav2_fix_problemas_comuns",
+      "target": "turtlebot4_jazzy_nav2_fix_1_couldn_t_initialize_state_machine_for_node_global_costmap",
       "confidence_score": 1.0
     },
     {
@@ -4607,8 +4607,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L131",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_2_waiting_for_service_controller_server_get_state",
+      "source": "turtlebot4_jazzy_nav2_fix_problemas_comuns",
+      "target": "turtlebot4_jazzy_nav2_fix_2_waiting_for_service_controller_server_get_state",
       "confidence_score": 1.0
     },
     {
@@ -4617,8 +4617,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L140",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_problemas_comuns",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_3_laserscan_n_o_aparece",
+      "source": "turtlebot4_jazzy_nav2_fix_problemas_comuns",
+      "target": "turtlebot4_jazzy_nav2_fix_3_laserscan_n_o_aparece",
       "confidence_score": 1.0
     },
     {
@@ -4627,8 +4627,8 @@
       "source_file": "NAV2_FIX.md",
       "source_location": "L145",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_nav2_fix_3_laserscan_n_o_aparece",
-      "target": "turtlebot4_jazzy_docker_nav2_fix_codeblock_10",
+      "source": "turtlebot4_jazzy_nav2_fix_3_laserscan_n_o_aparece",
+      "target": "turtlebot4_jazzy_nav2_fix_codeblock_10",
       "confidence_score": 1.0
     },
     {
@@ -4638,7 +4638,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "readme_md",
-      "target": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
       "confidence_score": 1.0
     },
     {
@@ -4647,8 +4647,8 @@
       "source_file": "README.md",
       "source_location": "L7",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
-      "target": "turtlebot4_jazzy_docker_readme_project_structure",
+      "source": "turtlebot4_jazzy_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_readme_project_structure",
       "confidence_score": 1.0
     },
     {
@@ -4657,8 +4657,8 @@
       "source_file": "README.md",
       "source_location": "L18",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
-      "target": "turtlebot4_jazzy_docker_readme_requirements",
+      "source": "turtlebot4_jazzy_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_readme_requirements",
       "confidence_score": 1.0
     },
     {
@@ -4667,8 +4667,8 @@
       "source_file": "README.md",
       "source_location": "L24",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
-      "target": "turtlebot4_jazzy_docker_readme_build",
+      "source": "turtlebot4_jazzy_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_readme_build",
       "confidence_score": 1.0
     },
     {
@@ -4677,8 +4677,8 @@
       "source_file": "README.md",
       "source_location": "L32",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
-      "target": "turtlebot4_jazzy_docker_readme_run_container",
+      "source": "turtlebot4_jazzy_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_readme_run_container",
       "confidence_score": 1.0
     },
     {
@@ -4687,8 +4687,8 @@
       "source_file": "README.md",
       "source_location": "L47",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
-      "target": "turtlebot4_jazzy_docker_readme_usage",
+      "source": "turtlebot4_jazzy_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_readme_usage",
       "confidence_score": 1.0
     },
     {
@@ -4697,8 +4697,8 @@
       "source_file": "README.md",
       "source_location": "L98",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
-      "target": "turtlebot4_jazzy_docker_readme_troubleshooting",
+      "source": "turtlebot4_jazzy_readme_turtlebot4_simulator_ros_2_jazzy_gazebo_harmonic_docker",
+      "target": "turtlebot4_jazzy_readme_troubleshooting",
       "confidence_score": 1.0
     },
     {
@@ -4707,8 +4707,8 @@
       "source_file": "README.md",
       "source_location": "L9",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_project_structure",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_1",
+      "source": "turtlebot4_jazzy_readme_project_structure",
+      "target": "turtlebot4_jazzy_readme_codeblock_1",
       "confidence_score": 1.0
     },
     {
@@ -4717,8 +4717,8 @@
       "source_file": "README.md",
       "source_location": "L28",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_build",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_2",
+      "source": "turtlebot4_jazzy_readme_build",
+      "target": "turtlebot4_jazzy_readme_codeblock_2",
       "confidence_score": 1.0
     },
     {
@@ -4727,8 +4727,8 @@
       "source_file": "README.md",
       "source_location": "L36",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_run_container",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_3",
+      "source": "turtlebot4_jazzy_readme_run_container",
+      "target": "turtlebot4_jazzy_readme_codeblock_3",
       "confidence_score": 1.0
     },
     {
@@ -4737,8 +4737,8 @@
       "source_file": "README.md",
       "source_location": "L43",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_run_container",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_4",
+      "source": "turtlebot4_jazzy_readme_run_container",
+      "target": "turtlebot4_jazzy_readme_codeblock_4",
       "confidence_score": 1.0
     },
     {
@@ -4747,8 +4747,8 @@
       "source_file": "README.md",
       "source_location": "L49",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_usage",
-      "target": "turtlebot4_jazzy_docker_readme_1_slam_nav2_rviz_mapping",
+      "source": "turtlebot4_jazzy_readme_usage",
+      "target": "turtlebot4_jazzy_readme_1_slam_nav2_rviz_mapping",
       "confidence_score": 1.0
     },
     {
@@ -4757,8 +4757,8 @@
       "source_file": "README.md",
       "source_location": "L70",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_usage",
-      "target": "turtlebot4_jazzy_docker_readme_2_saving_the_map",
+      "source": "turtlebot4_jazzy_readme_usage",
+      "target": "turtlebot4_jazzy_readme_2_saving_the_map",
       "confidence_score": 1.0
     },
     {
@@ -4767,8 +4767,8 @@
       "source_file": "README.md",
       "source_location": "L79",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_usage",
-      "target": "turtlebot4_jazzy_docker_readme_3_localization_nav2_navigation",
+      "source": "turtlebot4_jazzy_readme_usage",
+      "target": "turtlebot4_jazzy_readme_3_localization_nav2_navigation",
       "confidence_score": 1.0
     },
     {
@@ -4777,8 +4777,8 @@
       "source_file": "README.md",
       "source_location": "L53",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_1_slam_nav2_rviz_mapping",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_5",
+      "source": "turtlebot4_jazzy_readme_1_slam_nav2_rviz_mapping",
+      "target": "turtlebot4_jazzy_readme_codeblock_5",
       "confidence_score": 1.0
     },
     {
@@ -4787,8 +4787,8 @@
       "source_file": "README.md",
       "source_location": "L63",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_1_slam_nav2_rviz_mapping",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_6",
+      "source": "turtlebot4_jazzy_readme_1_slam_nav2_rviz_mapping",
+      "target": "turtlebot4_jazzy_readme_codeblock_6",
       "confidence_score": 1.0
     },
     {
@@ -4797,8 +4797,8 @@
       "source_file": "README.md",
       "source_location": "L74",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_2_saving_the_map",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_7",
+      "source": "turtlebot4_jazzy_readme_2_saving_the_map",
+      "target": "turtlebot4_jazzy_readme_codeblock_7",
       "confidence_score": 1.0
     },
     {
@@ -4807,8 +4807,8 @@
       "source_file": "README.md",
       "source_location": "L83",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_3_localization_nav2_navigation",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_8",
+      "source": "turtlebot4_jazzy_readme_3_localization_nav2_navigation",
+      "target": "turtlebot4_jazzy_readme_codeblock_8",
       "confidence_score": 1.0
     },
     {
@@ -4817,8 +4817,8 @@
       "source_file": "README.md",
       "source_location": "L102",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_troubleshooting",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_9",
+      "source": "turtlebot4_jazzy_readme_troubleshooting",
+      "target": "turtlebot4_jazzy_readme_codeblock_9",
       "confidence_score": 1.0
     },
     {
@@ -4827,8 +4827,8 @@
       "source_file": "README.md",
       "source_location": "L108",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_troubleshooting",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_10",
+      "source": "turtlebot4_jazzy_readme_troubleshooting",
+      "target": "turtlebot4_jazzy_readme_codeblock_10",
       "confidence_score": 1.0
     },
     {
@@ -4837,8 +4837,8 @@
       "source_file": "README.md",
       "source_location": "L114",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_readme_troubleshooting",
-      "target": "turtlebot4_jazzy_docker_readme_codeblock_11",
+      "source": "turtlebot4_jazzy_readme_troubleshooting",
+      "target": "turtlebot4_jazzy_readme_codeblock_11",
       "confidence_score": 1.0
     },
     {
@@ -4848,7 +4848,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "teste_rapido_md",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
       "confidence_score": 1.0
     },
     {
@@ -4857,8 +4857,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L3",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_op_o_1_script_autom_tico_recomendado",
+      "source": "turtlebot4_jazzy_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_teste_rapido_op_o_1_script_autom_tico_recomendado",
       "confidence_score": 1.0
     },
     {
@@ -4867,8 +4867,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L30",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_op_o_2_manual_passo_a_passo",
+      "source": "turtlebot4_jazzy_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_teste_rapido_op_o_2_manual_passo_a_passo",
       "confidence_score": 1.0
     },
     {
@@ -4877,8 +4877,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L62",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_o_que_esperar",
+      "source": "turtlebot4_jazzy_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_teste_rapido_o_que_esperar",
       "confidence_score": 1.0
     },
     {
@@ -4887,8 +4887,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L77",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
+      "source": "turtlebot4_jazzy_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_teste_rapido_comandos_teis",
       "confidence_score": 1.0
     },
     {
@@ -4897,8 +4897,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L107",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_troubleshooting",
+      "source": "turtlebot4_jazzy_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_teste_rapido_troubleshooting",
       "confidence_score": 1.0
     },
     {
@@ -4907,8 +4907,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L115",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_par_metros_do_script",
+      "source": "turtlebot4_jazzy_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_teste_rapido_par_metros_do_script",
       "confidence_score": 1.0
     },
     {
@@ -4917,8 +4917,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L127",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_exemplos",
+      "source": "turtlebot4_jazzy_teste_rapido_teste_r_pido_turtlebot4_no_mundo_do_laborat_rio",
+      "target": "turtlebot4_jazzy_teste_rapido_exemplos",
       "confidence_score": 1.0
     },
     {
@@ -4927,8 +4927,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L7",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_op_o_1_script_autom_tico_recomendado",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_1",
+      "source": "turtlebot4_jazzy_teste_rapido_op_o_1_script_autom_tico_recomendado",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_1",
       "confidence_score": 1.0
     },
     {
@@ -4937,8 +4937,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L13",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_op_o_1_script_autom_tico_recomendado",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_2",
+      "source": "turtlebot4_jazzy_teste_rapido_op_o_1_script_autom_tico_recomendado",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_2",
       "confidence_score": 1.0
     },
     {
@@ -4947,8 +4947,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L32",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_op_o_2_manual_passo_a_passo",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_1_iniciar_o_cont_iner",
+      "source": "turtlebot4_jazzy_teste_rapido_op_o_2_manual_passo_a_passo",
+      "target": "turtlebot4_jazzy_teste_rapido_1_iniciar_o_cont_iner",
       "confidence_score": 1.0
     },
     {
@@ -4957,8 +4957,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L38",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_op_o_2_manual_passo_a_passo",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_2_dentro_do_cont_iner",
+      "source": "turtlebot4_jazzy_teste_rapido_op_o_2_manual_passo_a_passo",
+      "target": "turtlebot4_jazzy_teste_rapido_2_dentro_do_cont_iner",
       "confidence_score": 1.0
     },
     {
@@ -4967,8 +4967,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L34",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_1_iniciar_o_cont_iner",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_3",
+      "source": "turtlebot4_jazzy_teste_rapido_1_iniciar_o_cont_iner",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_3",
       "confidence_score": 1.0
     },
     {
@@ -4977,8 +4977,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L40",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_2_dentro_do_cont_iner",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_4",
+      "source": "turtlebot4_jazzy_teste_rapido_2_dentro_do_cont_iner",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_4",
       "confidence_score": 1.0
     },
     {
@@ -4987,8 +4987,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L53",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_2_dentro_do_cont_iner",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_5",
+      "source": "turtlebot4_jazzy_teste_rapido_2_dentro_do_cont_iner",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_5",
       "confidence_score": 1.0
     },
     {
@@ -4997,8 +4997,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L79",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_verificar_t_picos",
+      "source": "turtlebot4_jazzy_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_teste_rapido_verificar_t_picos",
       "confidence_score": 1.0
     },
     {
@@ -5007,8 +5007,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L86",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_verificar_tf",
+      "source": "turtlebot4_jazzy_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_teste_rapido_verificar_tf",
       "confidence_score": 1.0
     },
     {
@@ -5017,8 +5017,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L92",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_diagn_stico_completo",
+      "source": "turtlebot4_jazzy_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_teste_rapido_diagn_stico_completo",
       "confidence_score": 1.0
     },
     {
@@ -5027,8 +5027,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L97",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_teleop_controlar_o_rob",
+      "source": "turtlebot4_jazzy_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_teste_rapido_teleop_controlar_o_rob",
       "confidence_score": 1.0
     },
     {
@@ -5037,8 +5037,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L102",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_comandos_teis",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_salvar_mapa",
+      "source": "turtlebot4_jazzy_teste_rapido_comandos_teis",
+      "target": "turtlebot4_jazzy_teste_rapido_salvar_mapa",
       "confidence_score": 1.0
     },
     {
@@ -5047,8 +5047,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L80",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_verificar_t_picos",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_6",
+      "source": "turtlebot4_jazzy_teste_rapido_verificar_t_picos",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_6",
       "confidence_score": 1.0
     },
     {
@@ -5057,8 +5057,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L87",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_verificar_tf",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_7",
+      "source": "turtlebot4_jazzy_teste_rapido_verificar_tf",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_7",
       "confidence_score": 1.0
     },
     {
@@ -5067,8 +5067,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L93",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_diagn_stico_completo",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_8",
+      "source": "turtlebot4_jazzy_teste_rapido_diagn_stico_completo",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_8",
       "confidence_score": 1.0
     },
     {
@@ -5077,8 +5077,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L98",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_teleop_controlar_o_rob",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_9",
+      "source": "turtlebot4_jazzy_teste_rapido_teleop_controlar_o_rob",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_9",
       "confidence_score": 1.0
     },
     {
@@ -5087,8 +5087,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L103",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_salvar_mapa",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_10",
+      "source": "turtlebot4_jazzy_teste_rapido_salvar_mapa",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_10",
       "confidence_score": 1.0
     },
     {
@@ -5097,8 +5097,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L117",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_par_metros_do_script",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_11",
+      "source": "turtlebot4_jazzy_teste_rapido_par_metros_do_script",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_11",
       "confidence_score": 1.0
     },
     {
@@ -5107,8 +5107,8 @@
       "source_file": "TESTE_RAPIDO.md",
       "source_location": "L129",
       "weight": 1.0,
-      "source": "turtlebot4_jazzy_docker_teste_rapido_exemplos",
-      "target": "turtlebot4_jazzy_docker_teste_rapido_codeblock_12",
+      "source": "turtlebot4_jazzy_teste_rapido_exemplos",
+      "target": "turtlebot4_jazzy_teste_rapido_codeblock_12",
       "confidence_score": 1.0
     }
   ],
