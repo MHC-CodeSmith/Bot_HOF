@@ -14,12 +14,13 @@ class RestockRoutine(MissionBase):
 
     # ── Entrada da rotina ────────────────────────────────────────
 
-    def start(self):
+    def start(self, on_complete=None):
+        self._on_complete = on_complete
         self.get_logger().info("=== Restock: iniciando ===")
         self.undock(
             lambda ok: self._go_inventory()
             if ok
-            else self.get_logger().error("Restock: undock falhou")
+            else self.finish_mission(False, "Restock: undock falhou")
         )
 
     # ── Passos da missão ─────────────────────────────────────────

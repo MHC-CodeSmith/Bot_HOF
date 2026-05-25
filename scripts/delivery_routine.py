@@ -28,16 +28,18 @@ class DeliveryRoutine(MissionBase):
     # ── Callbacks ───────────────────────────────────────────────
 
     def _on_product_class(self, msg: String):
-        self.latest_product_class = msg.data.strip().lower()
+        if getattr(self, 'wait_vision_active', False):
+            self.latest_product_class = msg.data.strip().lower()
 
     # ── Entrada da rotina ────────────────────────────────────────
 
-    def start(self):
+    def start(self, on_complete=None):
+        self._on_complete = on_complete
         self.get_logger().info("=== Delivery: iniciando ===")
         self.undock(
             lambda ok: self._go_pickup()
             if ok
-            else self.get_logger().error("Delivery: undock falhou")
+            else self.finish_mission(False, "Delivery: undock falhou")
         )
 
     # ── Passos da missão ─────────────────────────────────────────
@@ -47,7 +49,7 @@ class DeliveryRoutine(MissionBase):
             "pickup_point",
             lambda ok: self._wait_vision_and_deliver()
             if ok
-            else self.get_logger().error("Delivery: falhou em pickup_point"),
+            else self.finish_mission(False, "Delivery: falhou em pickup_point"),
         )
 
     def _wait_vision_and_deliver(self):
@@ -55,11 +57,13 @@ class DeliveryRoutine(MissionBase):
         self.latest_product_class = None
         self.red_count = 0
         self.blue_count = 0
+        self.wait_vision_active = True
 
         deadline = self.get_clock().now() + Duration(seconds=self.vision_timeout)
 
         def _poll():
             cls = self.latest_product_class
+            self.latest_product_class = None  # Reseta pra garantir q é um frame novo da câmera
             if cls == "red":
                 self.red_count += 1
             elif cls == "blue":
@@ -68,11 +72,13 @@ class DeliveryRoutine(MissionBase):
             # Confirma após 5 leituras iguais (evita ruídos ou falsos positivos momentâneos)
             if self.red_count >= 5:
                 self.get_logger().info("Produto CONFIRMADO: red")
+                self.wait_vision_active = False
                 self.destroy_timer(_t)
                 self._go_deliver("delivery_red")
                 return
             elif self.blue_count >= 5:
                 self.get_logger().info("Produto CONFIRMADO: blue")
+                self.wait_vision_active = False
                 self.destroy_timer(_t)
                 self._go_deliver("delivery_blue")
                 return
@@ -81,15 +87,16 @@ class DeliveryRoutine(MissionBase):
                 self.get_logger().warn(
                     "Timeout: Produto não reconhecido com certeza. Retornando para dock."
                 )
+                self.wait_vision_active = False
                 self.destroy_timer(_t)
-                self.return_to_dock(lambda _: None)
+                self.return_to_dock(lambda dock_ok: self.finish_mission(dock_ok))
 
         _t = self.create_timer(0.2, _poll)
 
     def _go_deliver(self, target: str):
         self.navigate_to(
             target,
-            lambda ok: self.return_to_dock(lambda _: None)
+            lambda ok: self.return_to_dock(lambda dock_ok: self.finish_mission(dock_ok))
             if ok
-            else self.get_logger().error(f"Delivery: falhou em {target}"),
+            else self.finish_mission(False, f"Delivery: falhou em {target}"),
         )

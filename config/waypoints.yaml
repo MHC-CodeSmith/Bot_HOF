@@ -4,6 +4,6 @@ mission_manager:
     pickup_station: [-0.68, -2.55, 0.0]
     client_red: [0.80, -1.20, 0.0]
     client_blue: [0.80, -2.20, 0.0]
-    predock: [-0.56, 0.0, 0.0]
+    predock: [-0.56, 0.3, 0.0]
     dock_tries: 2
     vision_timeout_s: 10.0

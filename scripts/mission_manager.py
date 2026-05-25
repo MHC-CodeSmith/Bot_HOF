@@ -121,12 +121,16 @@ class MissionManager(Node):
         # para não bloquear o callback do service
         _timer_ref = [None]
 
+        def _on_mission_complete(success: bool):
+            self.get_logger().info(f"Missão '{name}' reportou conclusão (Success: {success}). Liberando Manager.")
+            self._busy = False
+
         def _once():
             _t = _timer_ref[0]
             if _t is not None:
                 self.destroy_timer(_t)
                 _timer_ref[0] = None
-            routine.start()
+            routine.start(on_complete=_on_mission_complete)
 
         _timer_ref[0] = self.create_timer(0.01, _once)
 

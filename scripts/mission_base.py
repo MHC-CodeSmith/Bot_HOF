@@ -250,3 +250,14 @@ class MissionBase(Node):
             "predock_point",
             lambda ok: self.dock(done_cb) if ok else done_cb(False),
         )
+
+    def finish_mission(self, success: bool, msg: str = ""):
+        """Sinaliza ao mission_manager que esta rotina acabou."""
+        if msg:
+            if success:
+                self.get_logger().info(msg)
+            else:
+                self.get_logger().error(msg)
+        
+        if hasattr(self, '_on_complete') and self._on_complete:
+            self._on_complete(success)

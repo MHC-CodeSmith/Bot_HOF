@@ -14,12 +14,13 @@ class FailureRoutine(MissionBase):
 
     # ── Entrada da rotina ────────────────────────────────────────
 
-    def start(self):
+    def start(self, on_complete=None):
+        self._on_complete = on_complete
         self.get_logger().info("=== Failure: iniciando ===")
         self.undock(
             lambda ok: self._go_failure_pickup()
             if ok
-            else self.get_logger().error("Failure: undock falhou")
+            else self.finish_mission(False, "Failure: undock falhou")
         )
 
     # ── Passos da missão ─────────────────────────────────────────
@@ -29,13 +30,13 @@ class FailureRoutine(MissionBase):
             "failure_pickup",
             lambda ok: self._go_failure_zone()
             if ok
-            else self.get_logger().error("Failure: falhou em failure_pickup"),
+            else self.finish_mission(False, "Failure: falhou em failure_pickup"),
         )
 
     def _go_failure_zone(self):
         self.navigate_to(
             "failure_zone",
-            lambda ok: self.return_to_dock(lambda _: None)
+            lambda ok: self.return_to_dock(lambda dock_ok: self.finish_mission(dock_ok))
             if ok
-            else self.get_logger().error("Failure: falhou em failure_zone"),
+            else self.finish_mission(False, "Failure: falhou em failure_zone"),
         )
