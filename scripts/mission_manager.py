@@ -202,7 +202,8 @@ def main():
         manager.delivery.destroy_node()
         manager.failure.destroy_node()
         manager.restock.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == "__main__":
