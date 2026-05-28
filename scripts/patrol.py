@@ -6,6 +6,7 @@ from typing import Dict, Optional
 import rclpy
 from rclpy.node import Node
 from rclpy.duration import Duration
+from rclpy.time import Time
 
 from std_msgs.msg import String
 from std_srvs.srv import Trigger
@@ -138,7 +139,7 @@ class MissionManager(Node):
         goal = NavigateToPose.Goal()
         goal.pose = PoseStamped()
         goal.pose.header.frame_id = self.frame_id
-        goal.pose.header.stamp = self.get_clock().now().to_msg()
+        goal.pose.header.stamp = Time().to_msg()
         goal.pose.pose.position.x = wp.x
         goal.pose.pose.position.y = wp.y
         goal.pose.pose.position.z = 0.0

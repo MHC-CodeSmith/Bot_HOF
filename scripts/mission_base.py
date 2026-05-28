@@ -13,6 +13,7 @@ import rclpy
 from rclpy.action import ActionClient
 from rclpy.duration import Duration
 from rclpy.node import Node
+from rclpy.time import Time
 
 from geometry_msgs.msg import PoseStamped
 from nav2_msgs.action import NavigateToPose
@@ -120,12 +121,17 @@ class MissionBase(Node):
         goal = NavigateToPose.Goal()
         goal.pose = PoseStamped()
         goal.pose.header.frame_id = self.frame_id
-        goal.pose.header.stamp = self.get_clock().now().to_msg()
+        goal.pose.header.stamp = Time().to_msg()
         goal.pose.pose.position.x = wp.x
         goal.pose.pose.position.y = wp.y
         goal.pose.pose.position.z = 0.0
         goal.pose.pose.orientation.z = qz
         goal.pose.pose.orientation.w = qw
+
+        self.get_logger().info(
+            f"Enviando goal {wp_name}: x={wp.x:.3f}, y={wp.y:.3f}, "
+            f"yaw={wp.yaw:.3f}, frame={self.frame_id}, stamp=latest"
+        )
 
         future = self.nav_client.send_goal_async(goal)
 
