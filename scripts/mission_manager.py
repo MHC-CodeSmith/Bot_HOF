@@ -87,7 +87,9 @@ class MissionManager(Node):
             # Comando SSH em background usando nohup para iniciar o driver da câmera no robô físico
             ssh_cmd = [
                 "ssh", "-o", "ConnectTimeout=3", "ubuntu@192.168.0.129",
-                "nohup ros2 launch turtlebot4_bringup oakd.launch.py > /tmp/oakd.log 2>&1 &"
+                "bash -lc 'source /opt/ros/jazzy/setup.bash && "
+                "nohup ros2 launch turtlebot4_bringup oakd.launch.py "
+                "> /tmp/oakd.log 2>&1 &'"
             ]
             subprocess.Popen(ssh_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             self.get_logger().info("✅ [AUTO-START] Comando SSH de inicialização da câmera disparado!")

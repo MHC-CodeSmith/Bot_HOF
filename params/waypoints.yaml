@@ -3,6 +3,10 @@
     frame_id: "map"
     dock_tries: 2
     vision_timeout_s: 10.0
+    post_undock_stabilize_s: 8.0
+    nav_input_max_age_s: 1.0
+    nav_input_wait_timeout_s: 25.0
+    nav_input_stable_samples: 5
 
     # Dock / predock
     dock_station:    [-0.1148907467, -0.2112344652, 0.0]
