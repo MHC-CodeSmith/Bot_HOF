@@ -88,6 +88,7 @@ class MissionManager(Node):
             ssh_cmd = [
                 "ssh", "-o", "ConnectTimeout=3", "ubuntu@192.168.0.129",
                 "bash -lc 'source /opt/ros/jazzy/setup.bash && "
+                "export ROS_DISCOVERY_SERVER=\"127.0.0.1:11811\" && "
                 "nohup ros2 launch turtlebot4_bringup oakd.launch.py "
                 "> /tmp/oakd.log 2>&1 &'"
             ]

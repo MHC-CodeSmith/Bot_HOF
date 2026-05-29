@@ -66,6 +66,11 @@ class LidColorClassifierSimple(Node):
         self.get_logger().info(f"Simple vision node listening on: {image_topic}")
 
     def on_image(self, msg: Image):
+        if not hasattr(self, '_img_count'):
+            self._img_count = 0
+        self._img_count += 1
+        if self._img_count % 30 == 0:
+            self.get_logger().info(f"Heartbeat: Received {self._img_count} images from camera...")
         try:
             bgr = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
             self.process_image(bgr, is_webcam_test=False)
