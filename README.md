@@ -99,6 +99,10 @@ ros2 launch turtlebot4_navigation nav2.launch.py
 
 ## Troubleshooting
 
+- **Known upstream issues and B002 notes**:
+  See [KNOWN_ISSUES.md](KNOWN_ISSUES.md) for the TurtleBot4/Nav2/network issues
+  that influenced this project.
+
 - **Broken TF (`map -> odom -> base_link`)**:
   Run `view_frames` to verify the transform tree is connected.
   ```bash
