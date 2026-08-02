@@ -44,10 +44,6 @@ class MissionManager(Node):
     def __init__(self):
         super().__init__("mission_manager")
 
-        # ── Inicia a Câmera OAK-D e o Classificador Visual ────────
-        self._classifier_proc = None
-        self._start_camera_and_vision_nodes()
-
         # ── Instancia as rotinas ─────────────────────────────────
         self.delivery = DeliveryRoutine("delivery_routine")
         self.failure = FailureRoutine("failure_routine")
@@ -77,38 +73,6 @@ class MissionManager(Node):
             "│  (aguardando Nav2 pronto antes de aceitar)  │\n"
             "└─────────────────────────────────────────────┘"
         )
-
-    def _start_camera_and_vision_nodes(self):
-        import subprocess
-        import time
-        
-        self.get_logger().info("🚀 [AUTO-START] Iniciando a câmera OAK-D na Raspberry Pi (192.168.0.129) via SSH...")
-        try:
-            # Comando SSH em background usando nohup para iniciar o driver da câmera no robô físico
-            ssh_cmd = [
-                "ssh", "-o", "ConnectTimeout=3", "ubuntu@192.168.0.129",
-                "bash -lc 'source /opt/ros/jazzy/setup.bash && "
-                "export ROS_DISCOVERY_SERVER=\"127.0.0.1:11811\" && "
-                "nohup ros2 launch turtlebot4_bringup oakd.launch.py "
-                "> /tmp/oakd.log 2>&1 &'"
-            ]
-            subprocess.Popen(ssh_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            self.get_logger().info("✅ [AUTO-START] Comando SSH de inicialização da câmera disparado!")
-        except Exception as e:
-            self.get_logger().error(f"❌ [AUTO-START] Falha ao disparar câmera por SSH: {e}")
-
-        self.get_logger().info("🚀 [AUTO-START] Iniciando o classificador visual local (vision_lid_classifier_simple.py)...")
-        try:
-            classifier_path = os.path.join(_SCRIPTS_DIR, "vision_lid_classifier_simple.py")
-            # Dispara o classificador de visão como subprocesso em background no notebook
-            self._classifier_proc = subprocess.Popen(
-                ["python3", classifier_path],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL
-            )
-            self.get_logger().info("✅ [AUTO-START] Classificador de visão local rodando em background!")
-        except Exception as e:
-            self.get_logger().error(f"❌ [AUTO-START] Falha ao iniciar o classificador local: {e}")
 
     def _check_nav2_ready(self):
         """Verifica periodicamente se o Nav2 está disponível."""
@@ -192,15 +156,6 @@ def main():
     except KeyboardInterrupt:
         pass
     finally:
-        # Finaliza o classificador local se estiver rodando
-        if hasattr(manager, "_classifier_proc") and manager._classifier_proc is not None:
-            manager.get_logger().info("🛑 [AUTO-STOP] Parando o classificador visual local...")
-            try:
-                manager._classifier_proc.terminate()
-                manager._classifier_proc.wait(timeout=2.0)
-            except Exception:
-                manager._classifier_proc.kill()
-        
         manager.destroy_node()
         manager.delivery.destroy_node()
         manager.failure.destroy_node()

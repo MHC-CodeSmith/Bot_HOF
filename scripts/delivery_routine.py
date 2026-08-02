@@ -47,51 +47,10 @@ class DeliveryRoutine(MissionBase):
     def _go_pickup(self):
         self.navigate_to(
             "pickup_point",
-            lambda ok: self._wait_vision_and_deliver()
+            lambda ok: self._go_deliver("delivery_red")
             if ok
             else self.finish_mission(False, "Delivery: falhou em pickup_point"),
         )
-
-    def _wait_vision_and_deliver(self):
-        self.get_logger().info("Aguardando classificação do produto (/product_class)...")
-        self.latest_product_class = None
-        self.red_count = 0
-        self.blue_count = 0
-        self.wait_vision_active = True
-
-        deadline = self.get_clock().now() + Duration(seconds=self.vision_timeout)
-
-        def _poll():
-            cls = self.latest_product_class
-            self.latest_product_class = None  # Reseta pra garantir q é um frame novo da câmera
-            if cls == "red":
-                self.red_count += 1
-            elif cls == "blue":
-                self.blue_count += 1
-
-            # Confirma após 5 leituras iguais (evita ruídos ou falsos positivos momentâneos)
-            if self.red_count >= 5:
-                self.get_logger().info("Produto CONFIRMADO: red")
-                self.wait_vision_active = False
-                self.destroy_timer(_t)
-                self._go_deliver("delivery_red")
-                return
-            elif self.blue_count >= 5:
-                self.get_logger().info("Produto CONFIRMADO: blue")
-                self.wait_vision_active = False
-                self.destroy_timer(_t)
-                self._go_deliver("delivery_blue")
-                return
-
-            if self.get_clock().now() > deadline:
-                self.get_logger().warn(
-                    "Timeout: Produto não reconhecido com certeza. Retornando para dock."
-                )
-                self.wait_vision_active = False
-                self.destroy_timer(_t)
-                self.return_to_dock(lambda dock_ok: self.finish_mission(dock_ok))
-
-        _t = self.create_timer(0.2, _poll)
 
     def _go_deliver(self, target: str):
         self.navigate_to(
