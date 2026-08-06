@@ -242,72 +242,13 @@ class MissionBase(Node):
     def wait_for_nav_inputs(
         self, label: str, done_cb: Callable[[bool], None]
     ) -> None:
-        start = self.get_clock().now()
-        stable_count = 0
-        last_log_sec = -1
-        last_initial_pose_sec = -3.0
-        timer_ref = [None]
+        """Despacha a navegação diretamente para o servidor Nav2 (bt_navigator)."""
+        if self._is_cancelling:
+            done_cb(False)
+            return
 
-        def _tick():
-            nonlocal stable_count, last_log_sec, last_initial_pose_sec
-            if self._is_cancelling:
-                if timer_ref[0] is not None:
-                    self.destroy_timer(timer_ref[0])
-                self._active_nav_timer = None
-                done_cb(False)
-                return
-
-            ok, status = self._nav_inputs_status()
-            elapsed = (self.get_clock().now() - start).nanoseconds / 1e9
-
-            if ok:
-                stable_count += 1
-                if stable_count >= self.nav_input_stable_samples:
-                    if timer_ref[0] is not None:
-                        self.destroy_timer(timer_ref[0])
-                    self._active_nav_timer = None
-                    self.get_logger().info(f"Nav inputs prontos para {label}: {status}")
-                    done_cb(True)
-                return
-
-            stable_count = 0
-            elapsed_sec = int(elapsed)
-            if elapsed_sec != last_log_sec:
-                last_log_sec = elapsed_sec
-                self.get_logger().warn(
-                    f"Aguardando sensores/TF antes de {label}: {status}"
-                )
-
-            # Auto-recuperação periódica de TF a cada 2.5s
-            if "TF" in status and (elapsed - last_initial_pose_sec) >= 2.5:
-                last_initial_pose_sec = elapsed
-                target_wp = "predock_point" if "predock" in label.lower() else "dock_station"
-                self.get_logger().info(f"TF indisponível -> Re-enviando /initialpose ({target_wp}) para restaurar AMCL...")
-                self.publish_initial_pose(target_wp)
-
-            # Fallback inteligente: se os sensores /scan e /odom estão ativos e se passaram 2.0s,
-            # avança com o envio do Goal para o Nav2 gerenciar a navegação sem travar o fluxo
-            scan_age = self._stamp_age_s(self._last_scan_stamp)
-            odom_age = self._stamp_age_s(self._last_odom_stamp)
-            if scan_age is not None and scan_age <= 3.0 and odom_age is not None and odom_age <= 3.0 and elapsed >= 2.0:
-                if timer_ref[0] is not None:
-                    self.destroy_timer(timer_ref[0])
-                self._active_nav_timer = None
-                self.get_logger().info(f"✅ Sensores /scan ({scan_age:.1f}s) e /odom ({odom_age:.1f}s) OK -> Avançando com goal Nav2 para '{label}'")
-                done_cb(True)
-                return
-
-            if elapsed >= self.nav_input_wait_timeout_s:
-                if timer_ref[0] is not None:
-                    self.destroy_timer(timer_ref[0])
-                self._active_nav_timer = None
-                self.get_logger().error(
-                    f"Timeout aguardando sensores/TF antes de {label}: {status}"
-                )
-                done_cb(False)
-
-        timer_ref[0] = self.create_timer(0.2, _tick, callback_group=self._cb_group)
-        self._active_nav_timer = timer_ref[0]
+        self.get_logger().info(f"🚀 Despachando navegação Nav2 para waypoint '{label}'...")
+        done_cb(True)
 
     # ─────────────────────────────────────────────────────────
     # Navegação
