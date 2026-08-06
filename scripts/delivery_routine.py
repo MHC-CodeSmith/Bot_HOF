@@ -45,12 +45,24 @@ class DeliveryRoutine(MissionBase):
     # ── Passos da missão ─────────────────────────────────────────
 
     def _go_pickup(self):
-        self.navigate_to(
-            "pickup_point",
-            lambda ok: self._go_deliver("delivery_red")
-            if ok
-            else self.finish_mission(False, "Delivery: falhou em pickup_point"),
-        )
+        def _on_pickup_reached(ok: bool):
+            if not ok:
+                self.finish_mission(False, "Delivery: falhou em pickup_point")
+                return
+            
+            # Determina o waypoint de destino dinamicamente com base na cor/classe da lata
+            cls = (self.latest_product_class or "").lower()
+            if "blue" in cls or "azul" in cls:
+                target_wp = "delivery_blue"
+            elif "red" in cls or "vermelh" in cls:
+                target_wp = "delivery_red"
+            else:
+                target_wp = "delivery_red"  # fallback padrão
+
+            self.get_logger().info(f"Classe detectada: '{cls}' -> Navegando para '{target_wp}'")
+            self._go_deliver(target_wp)
+
+        self.navigate_to("pickup_point", _on_pickup_reached)
 
     def _go_deliver(self, target: str):
         self.navigate_to(
