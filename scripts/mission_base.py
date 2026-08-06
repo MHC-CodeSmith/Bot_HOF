@@ -115,6 +115,8 @@ class MissionBase(Node):
         self._cmd_vel_pub = self.create_publisher(Twist, "/cmd_vel_unstamped", 10)
         self._current_goal_handle = None
         self._active_nav_timer = None
+        self._mission_watchdog_timer = None
+        self._auto_dock_recovering = False
         self._is_cancelling = False
 
         self.nav_client = ActionClient(self, NavigateToPose, "/navigate_to_pose", callback_group=self._cb_group)
@@ -480,13 +482,60 @@ class MissionBase(Node):
             lambda ok: self.dock(done_cb) if ok else done_cb(False),
         )
 
+    def start_mission_watchdog(self, timeout_s: float = 180.0):
+        """Inicia um temporizador watchdog global para garantir que a missão termine em no máximo 180s."""
+        self.stop_mission_watchdog()
+
+        def _on_timeout():
+            self.get_logger().error(
+                f"⏱️ WATCHDOG GLOBAL DE MISSÃO ({timeout_s:.0f}s): Tempo limite máximo excedido! "
+                "Cancelando goals Nav2 e acionando recolhimento de emergência para proteger a bateria."
+            )
+            self.cancel_current_mission()
+
+        self._mission_watchdog_timer = self.create_timer(
+            timeout_s, _on_timeout, callback_group=self._cb_group
+        )
+
+    def stop_mission_watchdog(self):
+        """Cancela o temporizador watchdog da missão."""
+        if self._mission_watchdog_timer is not None:
+            try:
+                self.destroy_timer(self._mission_watchdog_timer)
+            except Exception:
+                pass
+            self._mission_watchdog_timer = None
+
     def finish_mission(self, success: bool, msg: str = ""):
-        """Sinaliza ao mission_manager que esta rotina acabou."""
+        """Sinaliza ao mission_manager que esta rotina acabou.
+
+        Se a missão falhar enquanto o robô estiver fora da dock, dispara
+        o recolhimento automático à Dock Station para salvar a bateria!
+        """
+        self.stop_mission_watchdog()
+
         if msg:
             if success:
                 self.get_logger().info(msg)
             else:
                 self.get_logger().error(msg)
-        
+
+        # 🔋 PROTEÇÃO DE BATERIA: Se falhou e o robô não está na dock, recolhe automaticamente!
+        if not success and not getattr(self, "_is_docked", True) and not getattr(self, "_auto_dock_recovering", False):
+            self._auto_dock_recovering = True
+            self.get_logger().warn("🔋 BATERIA SAFEGUARD: Missão falhou enquanto undockado! Disparando retorno automático de emergência à Dock Station...")
+
+            def _on_emergency_dock_done(dock_ok: bool):
+                self._auto_dock_recovering = False
+                if dock_ok:
+                    self.get_logger().info("✅ BATERIA SAFEGUARD: Robô recolhido e acoplado à Dock Station com sucesso!")
+                else:
+                    self.get_logger().error("❌ BATERIA SAFEGUARD: Falha ao acoplar na Dock. Recomenda-se acionar /dock manualmente.")
+                if hasattr(self, '_on_complete') and self._on_complete:
+                    self._on_complete(False)
+
+            self.return_to_dock(_on_emergency_dock_done)
+            return
+
         if hasattr(self, '_on_complete') and self._on_complete:
             self._on_complete(success)
