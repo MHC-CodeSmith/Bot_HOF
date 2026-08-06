@@ -30,13 +30,13 @@ class RestockRoutine(MissionBase):
             "inventory_point",
             lambda ok: self._go_supply()
             if ok
-            else self.get_logger().error("Restock: falhou em inventory_point"),
+            else self.finish_mission(False, "Restock: falhou em inventory_point"),
         )
 
     def _go_supply(self):
         self.navigate_to(
             "supply_point",
-            lambda ok: self.return_to_dock(lambda _: None)
+            lambda ok: self.return_to_dock(lambda dock_ok: self.finish_mission(dock_ok))
             if ok
-            else self.get_logger().error("Restock: falhou em supply_point"),
+            else self.finish_mission(False, "Restock: falhou em supply_point"),
         )

@@ -57,6 +57,7 @@ class MissionManager(Node):
         self.create_service(Trigger, "/start_delivery", self._srv_delivery)
         self.create_service(Trigger, "/start_failure", self._srv_failure)
         self.create_service(Trigger, "/start_restock", self._srv_restock)
+        self.create_service(Trigger, "/stop_mission", self._srv_stop)
 
         # ── Aguarda Nav2 ficar disponível ─────────────────────────
         self.get_logger().info("Aguardando Nav2 ficar disponível...")
@@ -70,7 +71,7 @@ class MissionManager(Node):
             "│  /start_delivery  → rota entrega            │\n"
             "│  /start_failure   → rota falha              │\n"
             "│  /start_restock   → rota reabastecimento    │\n"
-            "│  (aguardando Nav2 pronto antes de aceitar)  │\n"
+            "│  /stop_mission    → CANCELAR MISSÃO ATUAL   │\n"
             "└─────────────────────────────────────────────┘"
         )
 
@@ -93,6 +94,16 @@ class MissionManager(Node):
 
     def _srv_restock(self, req, resp):
         return self._trigger_routine("restock", self.restock, resp)
+
+    def _srv_stop(self, req, resp):
+        self.get_logger().warn("🛑 Comando de CANCELAMENTO DE MISSÃO recebido (/stop_mission)!")
+        self.delivery.cancel_current_mission()
+        self.failure.cancel_current_mission()
+        self.restock.cancel_current_mission()
+        self._busy = False
+        resp.success = True
+        resp.message = "Todas as missões foram canceladas e o Mission Manager foi liberado."
+        return resp
 
     # ─────────────────────────────────────────────────────────
     # Dispatcher

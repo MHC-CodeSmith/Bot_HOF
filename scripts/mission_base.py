@@ -15,7 +15,7 @@ from rclpy.duration import Duration
 from rclpy.node import Node
 from rclpy.time import Time
 
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped, Twist
 from nav2_msgs.action import NavigateToPose
 from nav_msgs.msg import Odometry
 from irobot_create_msgs.action import Dock, Undock
@@ -104,7 +104,15 @@ class MissionBase(Node):
         self._tf_buffer = Buffer(cache_time=Duration(seconds=30.0))
         self._tf_listener = TransformListener(self._tf_buffer, self)
 
-        # ── Action clients ───────────────────────────────────
+        # ── Action clients & Publishers ────────────────────────
+        self._initial_pose_pub = self.create_publisher(
+            PoseWithCovarianceStamped, "/initialpose", 10
+        )
+        self._cmd_vel_pub = self.create_publisher(Twist, "/cmd_vel_unstamped", 10)
+        self._current_goal_handle = None
+        self._active_nav_timer = None
+        self._is_cancelling = False
+
         self.nav_client = ActionClient(self, NavigateToPose, "/navigate_to_pose")
         self.dock_client = ActionClient(self, Dock, "/dock")
         self.undock_client = ActionClient(self, Undock, "/undock")
@@ -112,6 +120,57 @@ class MissionBase(Node):
     # ─────────────────────────────────────────────────────────
     # Helpers
     # ─────────────────────────────────────────────────────────
+
+    def publish_initial_pose(self, wp_name: str = "dock_station"):
+        """Publica a pose inicial no AMCL para estabelecer a transformada map->odom."""
+        if wp_name not in self.waypoints:
+            wp_name = "dock_station"
+        wp = self.waypoints.get(wp_name)
+        if not wp:
+            return
+
+        qz, qw = yaw_to_quat_z_w(wp.yaw)
+        msg = PoseWithCovarianceStamped()
+        msg.header.frame_id = self.frame_id
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.pose.pose.position.x = wp.x
+        msg.pose.pose.position.y = wp.y
+        msg.pose.pose.position.z = 0.0
+        msg.pose.pose.orientation.z = qz
+        msg.pose.pose.orientation.w = qw
+        msg.pose.covariance[0] = 0.25
+        msg.pose.covariance[7] = 0.25
+        msg.pose.covariance[35] = 0.0685
+        self._initial_pose_pub.publish(msg)
+        self.get_logger().info(f"📍 Pose inicial (/initialpose) publicada em '{wp_name}': x={wp.x:.3f}, y={wp.y:.3f}")
+
+    def cancel_current_mission(self):
+        """Interrompe a missão corrente, cancela timers/goals ativos e para o robô."""
+        self.get_logger().warn("⚠️ Solicitado cancelamento de missão em andamento...")
+        self._is_cancelling = True
+
+        if self._active_nav_timer is not None:
+            try:
+                self.destroy_timer(self._active_nav_timer)
+            except Exception:
+                pass
+            self._active_nav_timer = None
+
+        if hasattr(self, "_current_goal_handle") and self._current_goal_handle is not None:
+            try:
+                self.get_logger().info("Cancelando Goal Nav2 ativo...")
+                self._current_goal_handle.cancel_goal_async()
+            except Exception as e:
+                self.get_logger().warn(f"Erro ao cancelar goal Nav2: {e}")
+            self._current_goal_handle = None
+
+        # Para motores do robô
+        stop_msg = Twist()
+        for _ in range(5):
+            self._cmd_vel_pub.publish(stop_msg)
+
+        self._is_cancelling = False
+        self.finish_mission(False, "Missão interrompida e cancelada pelo usuário.")
 
     def _on_dock_status(self, msg: DockStatus):
         self._is_docked = msg.is_docked
@@ -157,17 +216,27 @@ class MissionBase(Node):
         start = self.get_clock().now()
         stable_count = 0
         last_log_sec = -1
+        initial_pose_sent = False
         timer_ref = [None]
 
         def _tick():
-            nonlocal stable_count, last_log_sec
+            nonlocal stable_count, last_log_sec, initial_pose_sent
+            if self._is_cancelling:
+                if timer_ref[0] is not None:
+                    self.destroy_timer(timer_ref[0])
+                self._active_nav_timer = None
+                done_cb(False)
+                return
+
             ok, status = self._nav_inputs_status()
             elapsed = (self.get_clock().now() - start).nanoseconds / 1e9
 
             if ok:
                 stable_count += 1
                 if stable_count >= self.nav_input_stable_samples:
-                    self.destroy_timer(timer_ref[0])
+                    if timer_ref[0] is not None:
+                        self.destroy_timer(timer_ref[0])
+                    self._active_nav_timer = None
                     self.get_logger().info(f"Nav inputs prontos para {label}: {status}")
                     done_cb(True)
                 return
@@ -179,15 +248,23 @@ class MissionBase(Node):
                 self.get_logger().warn(
                     f"Aguardando sensores/TF antes de {label}: {status}"
                 )
+                # Se passou de 3s e o TF map->base_link está indisponível, envia initialpose automaticamente
+                if elapsed > 3.0 and not initial_pose_sent and "TF" in status:
+                    initial_pose_sent = True
+                    self.get_logger().info("Tentando auto-publicar /initialpose (dock_station) para inicializar AMCL...")
+                    self.publish_initial_pose("dock_station")
 
             if elapsed >= self.nav_input_wait_timeout_s:
-                self.destroy_timer(timer_ref[0])
+                if timer_ref[0] is not None:
+                    self.destroy_timer(timer_ref[0])
+                self._active_nav_timer = None
                 self.get_logger().error(
                     f"Timeout aguardando sensores/TF antes de {label}: {status}"
                 )
                 done_cb(False)
 
         timer_ref[0] = self.create_timer(0.2, _tick)
+        self._active_nav_timer = timer_ref[0]
 
     # ─────────────────────────────────────────────────────────
     # Navegação
@@ -239,8 +316,10 @@ class MissionBase(Node):
 
         def _on_sent(fut):
             gh = fut.result()
+            self._current_goal_handle = gh
             if not gh.accepted:
                 self.get_logger().error(f"Goal rejeitado: {wp_name}")
+                self._current_goal_handle = None
                 done_cb(False)
                 return
             self.get_logger().info(f"Goal aceito: {wp_name}")
