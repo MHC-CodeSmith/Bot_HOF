@@ -28,8 +28,9 @@ class DeliveryRoutine(MissionBase):
     # ── Callbacks ───────────────────────────────────────────────
 
     def _on_product_class(self, msg: String):
-        if getattr(self, 'wait_vision_active', False):
-            self.latest_product_class = msg.data.strip().lower()
+        val = msg.data.strip().lower()
+        self.get_logger().info(f"Tópico /product_class recebido no TurtleBot 4: '{val}'")
+        self.latest_product_class = val
 
     # ── Entrada da rotina ────────────────────────────────────────
 
