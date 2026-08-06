@@ -6,6 +6,8 @@ Classe base para todas as rotinas de missão.
 Fornece: navigate_to, dock, undock, return_to_dock, helpers de pose/quaternion.
 """
 import math
+import time
+import threading
 from dataclasses import dataclass
 from typing import Callable, Dict, Optional
 
