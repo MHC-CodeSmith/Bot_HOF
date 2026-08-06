@@ -4,7 +4,7 @@
     dock_tries: 2
     vision_timeout_s: 10.0
     post_undock_stabilize_s: 8.0
-    nav_input_max_age_s: 1.0
+    nav_input_max_age_s: 3.0
     nav_input_wait_timeout_s: 25.0
     nav_input_stable_samples: 5
 
@@ -21,6 +21,6 @@
     failure_pickup:  [-0.4200577437, 0.9857606291, 0.0]
 
     # Pickup / inventory / supply
-    pickup_point:    [-0.8660708069, 5.6563882827, 1.5708]
+    pickup_point:    [-1.0784763097763062, 0.12965846061706543,  0.34820556640625]
     inventory_point: [-2.6266512870, -0.6102321743, 0.0]
     supply_point:    [-1.1477638483, 2.3001086711, 0.0]

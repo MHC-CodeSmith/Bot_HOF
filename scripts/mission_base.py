@@ -128,7 +128,7 @@ class MissionBase(Node):
     # ─────────────────────────────────────────────────────────
 
     def publish_initial_pose(self, wp_name: str = "dock_station"):
-        """Publica a pose inicial no AMCL para estabelecer a transformada map->odom."""
+        """Publica a pose inicial no AMCL em rajada (burst) para recuperar a transformada map->odom."""
         if wp_name not in self.waypoints:
             wp_name = "dock_station"
         wp = self.waypoints.get(wp_name)
@@ -147,8 +147,19 @@ class MissionBase(Node):
         msg.pose.covariance[0] = 0.25
         msg.pose.covariance[7] = 0.25
         msg.pose.covariance[35] = 0.0685
-        self._initial_pose_pub.publish(msg)
-        self.get_logger().info(f"📍 Pose inicial (/initialpose) publicada em '{wp_name}': x={wp.x:.3f}, y={wp.y:.3f}")
+
+        def _burst():
+            for _ in range(5):
+                try:
+                    msg.header.stamp = self.get_clock().now().to_msg()
+                    self._initial_pose_pub.publish(msg)
+                except Exception:
+                    pass
+                time.sleep(0.05)
+
+        t = threading.Thread(target=_burst, daemon=True)
+        t.start()
+        self.get_logger().info(f"📍 Pose inicial (/initialpose) enviada em rajada 5x em '{wp_name}': x={wp.x:.3f}, y={wp.y:.3f}")
 
     def cancel_current_mission(self):
         """Interrompe a missão corrente, cancela timers/goals ativos e para o robô."""
@@ -209,10 +220,19 @@ class MissionBase(Node):
         if odom_age > self.nav_input_max_age_s:
             return False, f"/odom atrasado {odom_age:.2f}s"
 
-        if not self._tf_buffer.can_transform(
-            self.frame_id, "base_link", Time(), timeout=Duration(seconds=0.05)
-        ):
-            return False, f"TF {self.frame_id}->base_link indisponível"
+        # Tenta checar TF para base_link e base_footprint
+        has_tf = False
+        now_time = Time()
+        for target_frame in ["base_link", "base_footprint"]:
+            try:
+                if self._tf_buffer.can_transform(self.frame_id, target_frame, now_time, timeout=Duration(seconds=0.1)):
+                    has_tf = True
+                    break
+            except Exception:
+                pass
+
+        if not has_tf:
+            return False, f"TF {self.frame_id}->base_link/base_footprint indisponível"
 
         return True, f"/scan {scan_age:.2f}s, /odom {odom_age:.2f}s, TF ok"
 
@@ -222,11 +242,11 @@ class MissionBase(Node):
         start = self.get_clock().now()
         stable_count = 0
         last_log_sec = -1
-        initial_pose_sent = False
+        last_initial_pose_sec = -3.0
         timer_ref = [None]
 
         def _tick():
-            nonlocal stable_count, last_log_sec, initial_pose_sent
+            nonlocal stable_count, last_log_sec, last_initial_pose_sec
             if self._is_cancelling:
                 if timer_ref[0] is not None:
                     self.destroy_timer(timer_ref[0])
@@ -254,11 +274,13 @@ class MissionBase(Node):
                 self.get_logger().warn(
                     f"Aguardando sensores/TF antes de {label}: {status}"
                 )
-                # Se passou de 3s e o TF map->base_link está indisponível, envia initialpose automaticamente
-                if elapsed > 3.0 and not initial_pose_sent and "TF" in status:
-                    initial_pose_sent = True
-                    self.get_logger().info("Tentando auto-publicar /initialpose (dock_station) para inicializar AMCL...")
-                    self.publish_initial_pose("dock_station")
+
+            # Auto-recuperação periódica de TF a cada 2.5s
+            if "TF" in status and (elapsed - last_initial_pose_sec) >= 2.5:
+                last_initial_pose_sec = elapsed
+                target_wp = "predock_point" if "predock" in label.lower() else "dock_station"
+                self.get_logger().info(f"TF indisponível -> Re-enviando /initialpose ({target_wp}) para restaurar AMCL...")
+                self.publish_initial_pose(target_wp)
 
             if elapsed >= self.nav_input_wait_timeout_s:
                 if timer_ref[0] is not None:
