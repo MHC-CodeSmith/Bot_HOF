@@ -167,6 +167,7 @@ class MissionBase(Node):
         """Interrompe a missão corrente, cancela timers/goals ativos e para o robô."""
         self.get_logger().warn("⚠️ Solicitado cancelamento de missão em andamento...")
         self._is_cancelling = True
+        self._is_user_cancelled = True
 
         if self._active_nav_timer is not None:
             try:
@@ -283,6 +284,18 @@ class MissionBase(Node):
                 target_wp = "predock_point" if "predock" in label.lower() else "dock_station"
                 self.get_logger().info(f"TF indisponível -> Re-enviando /initialpose ({target_wp}) para restaurar AMCL...")
                 self.publish_initial_pose(target_wp)
+
+            # Fallback inteligente: se os sensores /scan e /odom estão ativos e se passaram 2.0s,
+            # avança com o envio do Goal para o Nav2 gerenciar a navegação sem travar o fluxo
+            scan_age = self._stamp_age_s(self._last_scan_stamp)
+            odom_age = self._stamp_age_s(self._last_odom_stamp)
+            if scan_age is not None and scan_age <= 3.0 and odom_age is not None and odom_age <= 3.0 and elapsed >= 2.0:
+                if timer_ref[0] is not None:
+                    self.destroy_timer(timer_ref[0])
+                self._active_nav_timer = None
+                self.get_logger().info(f"✅ Sensores /scan ({scan_age:.1f}s) e /odom ({odom_age:.1f}s) OK -> Avançando com goal Nav2 para '{label}'")
+                done_cb(True)
+                return
 
             if elapsed >= self.nav_input_wait_timeout_s:
                 if timer_ref[0] is not None:
@@ -439,10 +452,10 @@ class MissionBase(Node):
         except Exception as e:
             self.get_logger().warn(f"Undock result exceção: {e}")
 
-        # Timer de estabilização
+        # Timer de estabilização pós-undock
         def _after_wait():
-            self.get_logger().info("Estabilização concluída. Navegando para predock_point...")
-            self.navigate_to("predock_point", lambda nav_ok: finish_cb(nav_ok, "sucesso"))
+            self.get_logger().info("Estabilização pós-undock concluída.")
+            finish_cb(True, "sucesso")
 
         self.create_timer(3.0, _after_wait, callback_group=self._cb_group)
 
@@ -544,7 +557,14 @@ class MissionBase(Node):
             else:
                 self.get_logger().error(msg)
 
-        # 🔋 PROTEÇÃO DE BATERIA: Se falhou e o robô não está na dock, recolhe automaticamente!
+        # Se foi cancelado intencionalmente pelo usuário com /stop_mission, libera o gerenciador imediatamente
+        if getattr(self, "_is_user_cancelled", False):
+            self._is_user_cancelled = False
+            if hasattr(self, '_on_complete') and self._on_complete:
+                self._on_complete(False)
+            return
+
+        # 🔋 PROTEÇÃO DE BATERIA: Se falhou por imprevisto e o robô não está na dock, recolhe automaticamente!
         if not success and not getattr(self, "_is_docked", True) and not getattr(self, "_auto_dock_recovering", False):
             self._auto_dock_recovering = True
             self.get_logger().warn("🔋 BATERIA SAFEGUARD: Missão falhou enquanto undockado! Disparando retorno automático de emergência à Dock Station...")
