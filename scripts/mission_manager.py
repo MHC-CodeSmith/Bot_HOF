@@ -26,6 +26,7 @@ if _SCRIPTS_DIR not in sys.path:
     sys.path.insert(0, _SCRIPTS_DIR)
 
 import rclpy
+from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 from std_srvs.srv import Trigger
@@ -44,6 +45,9 @@ class MissionManager(Node):
     def __init__(self):
         super().__init__("mission_manager")
 
+        # ── Callback Group Reentrante ──────────────────────────
+        self._cb_group = ReentrantCallbackGroup()
+
         # ── Instancia as rotinas ─────────────────────────────────
         self.delivery = DeliveryRoutine("delivery_routine")
         self.failure = FailureRoutine("failure_routine")
@@ -54,14 +58,14 @@ class MissionManager(Node):
         self._nav2_ready = False  # bloqueia missões até Nav2 estar pronto
 
         # ── Services ─────────────────────────────────────────────
-        self.create_service(Trigger, "/start_delivery", self._srv_delivery)
-        self.create_service(Trigger, "/start_failure", self._srv_failure)
-        self.create_service(Trigger, "/start_restock", self._srv_restock)
-        self.create_service(Trigger, "/stop_mission", self._srv_stop)
+        self.create_service(Trigger, "/start_delivery", self._srv_delivery, callback_group=self._cb_group)
+        self.create_service(Trigger, "/start_failure", self._srv_failure, callback_group=self._cb_group)
+        self.create_service(Trigger, "/start_restock", self._srv_restock, callback_group=self._cb_group)
+        self.create_service(Trigger, "/stop_mission", self._srv_stop, callback_group=self._cb_group)
 
         # ── Aguarda Nav2 ficar disponível ─────────────────────────
         self.get_logger().info("Aguardando Nav2 ficar disponível...")
-        self._ready_timer = self.create_timer(2.0, self._check_nav2_ready)
+        self._ready_timer = self.create_timer(2.0, self._check_nav2_ready, callback_group=self._cb_group)
 
         self.get_logger().info(
             "\n"
@@ -143,7 +147,7 @@ class MissionManager(Node):
                 _timer_ref[0] = None
             routine.start(on_complete=_on_mission_complete)
 
-        _timer_ref[0] = self.create_timer(0.01, _once)
+        _timer_ref[0] = self.create_timer(0.01, _once, callback_group=self._cb_group)
 
         resp.success = True
         resp.message = f"Rotina '{name}' disparada."

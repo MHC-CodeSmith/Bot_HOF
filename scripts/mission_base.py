@@ -11,6 +11,7 @@ from typing import Callable, Dict, Optional
 
 import rclpy
 from rclpy.action import ActionClient
+from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.duration import Duration
 from rclpy.node import Node
 from rclpy.time import Time
@@ -92,15 +93,18 @@ class MissionBase(Node):
             name: self._wp_from_param(name) for name in _WAYPOINT_NAMES
         }
 
+        # ── Callback Group Reentrante ──────────────────────────
+        self._cb_group = ReentrantCallbackGroup()
+
         # ── Estado da dock (atualizado por /dock_status) ─────
         self._is_docked: bool = True  # assume dockado até receber msg
         self.create_subscription(
-            DockStatus, "/dock_status", self._on_dock_status, 10
+            DockStatus, "/dock_status", self._on_dock_status, 10, callback_group=self._cb_group
         )
         self._last_scan_stamp = None
         self._last_odom_stamp = None
-        self.create_subscription(LaserScan, "/scan", self._on_scan, 10)
-        self.create_subscription(Odometry, "/odom", self._on_odom, 10)
+        self.create_subscription(LaserScan, "/scan", self._on_scan, 10, callback_group=self._cb_group)
+        self.create_subscription(Odometry, "/odom", self._on_odom, 10, callback_group=self._cb_group)
         self._tf_buffer = Buffer(cache_time=Duration(seconds=30.0))
         self._tf_listener = TransformListener(self._tf_buffer, self)
 
@@ -113,9 +117,9 @@ class MissionBase(Node):
         self._active_nav_timer = None
         self._is_cancelling = False
 
-        self.nav_client = ActionClient(self, NavigateToPose, "/navigate_to_pose")
-        self.dock_client = ActionClient(self, Dock, "/dock")
-        self.undock_client = ActionClient(self, Undock, "/undock")
+        self.nav_client = ActionClient(self, NavigateToPose, "/navigate_to_pose", callback_group=self._cb_group)
+        self.dock_client = ActionClient(self, Dock, "/dock", callback_group=self._cb_group)
+        self.undock_client = ActionClient(self, Undock, "/undock", callback_group=self._cb_group)
 
     # ─────────────────────────────────────────────────────────
     # Helpers
@@ -263,7 +267,7 @@ class MissionBase(Node):
                 )
                 done_cb(False)
 
-        timer_ref[0] = self.create_timer(0.2, _tick)
+        timer_ref[0] = self.create_timer(0.2, _tick, callback_group=self._cb_group)
         self._active_nav_timer = timer_ref[0]
 
     # ─────────────────────────────────────────────────────────
@@ -343,48 +347,78 @@ class MissionBase(Node):
     # ─────────────────────────────────────────────────────────
 
     def undock(self, done_cb: Callable[[bool], None]) -> None:
-        """Executa undock. Pula se o robô já estiver fora da dock."""
+        """Executa undock com watchdog de segurança para evitar travamentos."""
         if not self._is_docked:
             self.get_logger().info("Robô já undockado — pulando undock")
             done_cb(True)
             return
 
-        if not self.undock_client.wait_for_server(timeout_sec=5.0):
+        if not self.undock_client.wait_for_server(timeout_sec=3.0):
             self.get_logger().warn("/undock indisponível — continuando sem undock")
             done_cb(True)
             return
 
-        future = self.undock_client.send_goal_async(Undock.Goal())
+        undock_finished = False
+        watchdog = [None]
 
-        def _on_sent(fut):
-            gh = fut.result()
-            if not gh.accepted:
-                self.get_logger().warn("Undock rejeitado — continuando")
-                done_cb(True)
+        def _finish(success: bool, reason: str = ""):
+            nonlocal undock_finished
+            if undock_finished:
                 return
-            self.get_logger().info("Undock iniciado...")
-            gh.get_result_async().add_done_callback(
-                lambda rf: self._on_undock_result(rf, done_cb)
+            undock_finished = True
+            if watchdog[0] is not None:
+                try:
+                    self.destroy_timer(watchdog[0])
+                except Exception:
+                    pass
+                watchdog[0] = None
+            if reason:
+                self.get_logger().info(f"Undock finalizado ({reason})")
+            done_cb(success)
+
+        # Watchdog de 10s: se o robô não responder action result, avança para o próximo passo sem travar
+        watchdog[0] = self.create_timer(10.0, lambda: _finish(True, "watchdog timeout 10s"), callback_group=self._cb_group)
+
+        try:
+            future = self.undock_client.send_goal_async(Undock.Goal())
+
+            def _on_sent(fut):
+                try:
+                    gh = fut.result()
+                    if not gh.accepted:
+                        self.get_logger().warn("Undock rejeitado — continuando")
+                        _finish(True, "goal rejeitado")
+                        return
+                    self.get_logger().info("Undock iniciado...")
+                    gh.get_result_async().add_done_callback(
+                        lambda rf: self._on_undock_result_safe(rf, _finish)
+                    )
+                except Exception as e:
+                    self.get_logger().warn(f"Exceção no envio de undock ({e}) — continuando")
+                    _finish(True, f"exceção {e}")
+
+            future.add_done_callback(_on_sent)
+        except Exception as e:
+            self.get_logger().warn(f"Falha ao chamar undock ({e}) — continuando")
+            _finish(True, f"erro cliente {e}")
+
+    def _on_undock_result_safe(self, fut, finish_cb: Callable[[bool, str], None]):
+        try:
+            status = fut.result().status
+            wait_s = self.post_undock_stabilize_s
+            self.get_logger().info(
+                f"Undock físico concluído (status={status}). "
+                f"Aguardando {wait_s:.1f}s para estabilizar lidar, odometria e AMCL..."
             )
+        except Exception as e:
+            self.get_logger().warn(f"Undock result exceção: {e}")
 
-        future.add_done_callback(_on_sent)
-
-    def _on_undock_result(self, fut, done_cb: Callable[[bool], None]):
-        status = fut.result().status
-        wait_s = self.post_undock_stabilize_s
-        self.get_logger().info(
-            f"Undock físico concluído (status={status}). "
-            f"Aguardando {wait_s:.1f}s para estabilizar lidar, odometria e AMCL..."
-        )
-
-        # Cria um timer de disparo único (one-shot)
-        self._undock_timer = None
+        # Timer de estabilização
         def _after_wait():
-            self._undock_timer.cancel()
-            self.get_logger().info("Estabilização concluída. Iniciando navegação para predock_point...")
-            self.navigate_to("predock_point", lambda nav_ok: done_cb(nav_ok))
-            
-        self._undock_timer = self.create_timer(3.0, _after_wait)
+            self.get_logger().info("Estabilização concluída. Navegando para predock_point...")
+            self.navigate_to("predock_point", lambda nav_ok: finish_cb(nav_ok, "sucesso"))
+
+        self.create_timer(3.0, _after_wait, callback_group=self._cb_group)
 
     # ─────────────────────────────────────────────────────────
     # Dock
