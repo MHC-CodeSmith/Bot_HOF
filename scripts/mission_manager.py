@@ -55,6 +55,7 @@ class MissionManager(Node):
 
         # ── Flags ─────────────────────────────────────────────────
         self._busy = False
+        self._active_routine = None
         self._nav2_ready = False  # bloqueia missões até Nav2 estar pronto
 
         # ── Services ─────────────────────────────────────────────
@@ -101,12 +102,20 @@ class MissionManager(Node):
 
     def _srv_stop(self, req, resp):
         self.get_logger().warn("🛑 Comando de CANCELAMENTO DE MISSÃO recebido (/stop_mission)!")
-        self.delivery.cancel_current_mission()
-        self.failure.cancel_current_mission()
-        self.restock.cancel_current_mission()
+        if self._active_routine is not None:
+            self._active_routine.cancel_current_mission()
+            self._active_routine = None
+        else:
+            self.get_logger().info("ℹ️ Nenhuma missão em andamento no momento. Verificando estado do robô...")
+            if self.delivery._is_docked:
+                self.get_logger().info("✅ Robô já está acoplado na Dock Station. Cancelamento concluído sem movimento.")
+            else:
+                self.get_logger().warn("⚠️ Robô está fora da dock sem missão ativa. Retornando para predock_point & Dock Station...")
+                self.delivery.return_to_dock(lambda ok: None)
+
         self._busy = False
         resp.success = True
-        resp.message = "Todas as missões foram canceladas e o Mission Manager foi liberado."
+        resp.message = "Cancelamento de missão processado com sucesso!"
         return resp
 
     # ─────────────────────────────────────────────────────────
@@ -115,9 +124,9 @@ class MissionManager(Node):
 
     def _trigger_routine(self, name: str, routine, resp):
         if not self._nav2_ready:
-            self.get_logger().warn("Nav2 ainda não pronto — aguarde o log '✅ Nav2 pronto'")
+            self.get_logger().warn("Nav2 ainda não pronto — certifique-se de iniciar a Localização e o Stack Nav2 no Dashboard.")
             resp.success = False
-            resp.message = "Nav2 ainda não pronto. Aguarde alguns segundos e tente novamente."
+            resp.message = "Nav2 ainda não inicializado. Por favor, acione os botões '1. Iniciar Localização' e '2. Lançar Nav2 Stack' no painel."
             return resp
 
         if self._busy:
@@ -131,6 +140,7 @@ class MissionManager(Node):
 
         self.get_logger().info(f"Trigger recebido: {name}")
         self._busy = True
+        self._active_routine = routine
 
         # Dispara a rotina usando um timer de disparo único
         # para não bloquear o callback do service
@@ -139,6 +149,7 @@ class MissionManager(Node):
         def _on_mission_complete(success: bool):
             self.get_logger().info(f"Missão '{name}' reportou conclusão (Success: {success}). Liberando Manager.")
             self._busy = False
+            self._active_routine = None
 
         def _once():
             _t = _timer_ref[0]

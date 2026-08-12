@@ -84,8 +84,46 @@ class MissionBase(Node):
         v = self.get_parameter(name).value
         return Waypoint(float(v[0]), float(v[1]), float(v[2]))
 
+    def start_mission_watchdog(self, timeout_sec: float = 180.0) -> None:
+        """Inicia temporizador de segurança para cancelar a missão se ela ultrapassar timeout_sec."""
+        self.stop_mission_watchdog()
+        def _on_watchdog_timeout():
+            self.get_logger().warn(f"⚠️ Watchdog de missão atingiu o timeout de {timeout_sec}s!")
+            self.finish_mission(False, "Mission watchdog timeout")
+        self._watchdog_timer = threading.Timer(timeout_sec, _on_watchdog_timeout)
+        self._watchdog_timer.daemon = True
+        self._watchdog_timer.start()
+
+    def stop_mission_watchdog(self) -> None:
+        """Cancela o temporizador de segurança da missão."""
+        if hasattr(self, "_watchdog_timer") and self._watchdog_timer is not None:
+            try:
+                self._watchdog_timer.cancel()
+            except Exception:
+                pass
+            self._watchdog_timer = None
+
+    def clear_costmaps(self):
+        """Limpa totalmente os mapas de custo local e global do Nav2 para remover obstáculos fantasma (como a dock)."""
+        import subprocess
+        self.get_logger().info("🧹 Limpando costmaps do Nav2 (Global & Local)...")
+        cmd = (
+            "source /opt/ros/jazzy/setup.bash && "
+            "export ROS_DOMAIN_ID=0 && "
+            "export ROS_AUTOMATIC_DISCOVERY_RANGE=SUBNET && "
+            "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp && "
+            "export ROS_SUPER_CLIENT=True && "
+            "export ROS_DISCOVERY_SERVER=\"192.168.0.129:11811;\" && "
+            "ros2 service call /global_costmap/clear_entirely_global_costmap nav2_msgs/srv/ClearEntireCostmap {} >/dev/null 2>&1 & "
+            "ros2 service call /local_costmap/clear_entirely_local_costmap nav2_msgs/srv/ClearEntireCostmap {} >/dev/null 2>&1 &"
+        )
+        try:
+            subprocess.Popen(cmd, shell=True, executable="/bin/bash")
+        except Exception:
+            pass
+
     def cancel_current_mission(self):
-        """Interrompe a missão corrente e cancela o Goal Nav2 ativo."""
+        """Interrompe a missão corrente e navega o robô de volta para predock_point & Dock Station."""
         self.get_logger().warn("⚠️ Solicitado cancelamento de missão em andamento...")
         self._is_cancelling = True
         self._is_user_cancelled = True
@@ -102,10 +140,15 @@ class MissionBase(Node):
             self._cmd_vel_pub.publish(stop_msg)
 
         self._is_cancelling = False
-        self.finish_mission(False, "Missão cancelada pelo usuário.")
+        if not self._is_docked:
+            self.get_logger().warn("🛑 Missão cancelada fora da dock! Retornando robô para predock_point & Dock Station...")
+            self.return_to_dock(lambda dock_ok: self.finish_mission(False, "Missão cancelada pelo usuário. Robô recolhido à dock."))
+        else:
+            self.get_logger().info("✅ Robô já está acoplado na Dock Station. Cancelamento concluído sem movimento.")
+            self.finish_mission(False, "Missão cancelada pelo usuário (Robô na dock).")
 
-    def navigate_to(self, wp_name: str, done_cb: Callable[[bool], None]) -> None:
-        """Envia goal de navegação para o waypoint `wp_name` diretamente via Nav2 (como no RViz)."""
+    def navigate_to(self, wp_name: str, done_cb: Callable[[bool], None], retry_count: int = 0) -> None:
+        """Envia goal de navegação para o waypoint `wp_name` diretamente via Nav2 com retentativas automáticas."""
         if self._is_cancelling:
             done_cb(False)
             return
@@ -126,14 +169,14 @@ class MissionBase(Node):
         goal = NavigateToPose.Goal()
         goal.pose = PoseStamped()
         goal.pose.header.frame_id = self.frame_id
-        goal.pose.header.stamp = self.get_clock().now().to_msg()
         goal.pose.pose.position.x = wp.x
         goal.pose.pose.position.y = wp.y
         goal.pose.pose.position.z = 0.0
         goal.pose.pose.orientation.z = qz
         goal.pose.pose.orientation.w = qw
 
-        self.get_logger().info(f"🚀 Enviando Goal Nav2 para '{wp_name}': x={wp.x:.3f}, y={wp.y:.3f}")
+        attempt_str = f" (Tentativa {retry_count + 1}/3)" if retry_count > 0 else ""
+        self.get_logger().info(f"🚀 Enviando Goal Nav2 para '{wp_name}': x={wp.x:.3f}, y={wp.y:.3f}{attempt_str}")
 
         future = self.nav_client.send_goal_async(goal)
 
@@ -144,11 +187,18 @@ class MissionBase(Node):
                 if not gh.accepted:
                     self.get_logger().error(f"Goal Nav2 rejeitado para waypoint '{wp_name}'")
                     self._current_goal_handle = None
-                    done_cb(False)
+                    if retry_count < 2 and not self._is_cancelling:
+                        self.get_logger().warn(f"⚠️ Reenviando goal para '{wp_name}' em 1.5s após rejeição...")
+                        self.clear_costmaps()
+                        time.sleep(1.5)
+                        self.navigate_to(wp_name, done_cb, retry_count + 1)
+                    else:
+                        done_cb(False)
                     return
+
                 self.get_logger().info(f"✅ Goal Nav2 aceito! Navegando para '{wp_name}'...")
                 gh.get_result_async().add_done_callback(
-                    lambda rf: self._on_nav_result(rf, wp_name, done_cb)
+                    lambda rf: self._on_nav_result(rf, wp_name, done_cb, retry_count)
                 )
             except Exception as e:
                 self.get_logger().error(f"Exceção ao enviar goal Nav2 ({e})")
@@ -156,16 +206,25 @@ class MissionBase(Node):
 
         future.add_done_callback(_on_sent)
 
-    def _on_nav_result(self, fut, wp_name: str, done_cb: Callable[[bool], None]):
+    def _on_nav_result(self, fut, wp_name: str, done_cb: Callable[[bool], None], retry_count: int = 0):
         self._current_goal_handle = None
         try:
             status = fut.result().status
             if status == 4:  # STATUS_SUCCEEDED
                 self.get_logger().info(f"📍 Chegou ao waypoint '{wp_name}' com SUCESSO!")
                 done_cb(True)
+            elif status == 5 or getattr(self, "_is_user_cancelled", False) or getattr(self, "_is_cancelling", False):
+                self.get_logger().warn(f"🛑 Navegação para '{wp_name}' interrompida por cancelamento.")
+                done_cb(False)
             else:
                 self.get_logger().error(f"❌ Nav2 falhou para '{wp_name}' — status={status}")
-                done_cb(False)
+                if retry_count < 2 and not getattr(self, "_is_user_cancelled", False) and not getattr(self, "_is_cancelling", False):
+                    self.get_logger().warn(f"⚠️ Retentando navegação para '{wp_name}' (Tentativa {retry_count + 2}/3)...")
+                    self.clear_costmaps()
+                    time.sleep(1.5)
+                    self.navigate_to(wp_name, done_cb, retry_count + 1)
+                else:
+                    done_cb(False)
         except Exception as e:
             self.get_logger().error(f"Exceção no resultado do Nav2 ({e})")
             done_cb(False)
@@ -192,10 +251,13 @@ class MissionBase(Node):
                         self.get_logger().warn("Undock rejeitado — continuando navegação")
                         done_cb(True)
                         return
-                    self.get_logger().info("Undock em andamento na base Create 3...")
-                    gh.get_result_async().add_done_callback(
-                        lambda rf: done_cb(True)
-                    )
+                    def _on_undock_result(rf):
+                        self.get_logger().info("Undock concluído! Limpando costmaps do Nav2 e aguardando estabilização...")
+                        self.clear_costmaps()
+                        time.sleep(2.5)
+                        done_cb(True)
+
+                    gh.get_result_async().add_done_callback(_on_undock_result)
                 except Exception:
                     done_cb(True)
 
@@ -260,6 +322,7 @@ class MissionBase(Node):
 
     def finish_mission(self, success: bool, msg: str = ""):
         """Finaliza a missão e notifica o mission_manager."""
+        self.stop_mission_watchdog()
         if msg:
             if success:
                 self.get_logger().info(msg)
