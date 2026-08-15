@@ -1,8 +1,13 @@
 /**:
   ros__parameters:
     frame_id: "map"
+    base_frame_id: "base_link"
     dock_tries: 2
+    dock_status_max_age_s: 3.0
     vision_timeout_s: 10.0
+    product_class_max_age_s: 5.0
+    handoff_timeout_s: 90.0
+    pickup_announce_period_s: 0.5
     post_undock_stabilize_s: 8.0
     nav_input_max_age_s: 3.0
     nav_input_wait_timeout_s: 25.0

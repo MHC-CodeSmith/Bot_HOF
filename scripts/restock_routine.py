@@ -15,8 +15,7 @@ class RestockRoutine(MissionBase):
     # ── Entrada da rotina ────────────────────────────────────────
 
     def start(self, on_complete=None):
-        self._on_complete = on_complete
-        self.start_mission_watchdog(180.0)
+        self.begin_mission(on_complete, watchdog_timeout_s=180.0)
         self.get_logger().info("=== Restock: iniciando ===")
         self.undock(
             lambda ok: self._go_inventory()
