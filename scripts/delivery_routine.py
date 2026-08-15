@@ -16,8 +16,12 @@ from mission_base import MissionBase
 def delivery_target_for_class(product_class: str) -> Optional[str]:
     """Traduz somente classes explicitamente reconhecidas em um destino."""
     normalized = product_class.strip().lower().replace("-", "_").replace(" ", "_")
-    red_classes = {"red", "vermelho", "vermelha", "tin_valid_red"}
-    blue_classes = {"blue", "azul", "tin_valid_blue"}
+    red_classes = {
+        "red", "vermelho", "vermelha", "tin_valid_red", "tin_valid_red_square"
+    }
+    blue_classes = {
+        "blue", "azul", "tin_valid_blue", "tin_valid_blue_square"
+    }
     if normalized in red_classes:
         return "delivery_red"
     if normalized in blue_classes:
@@ -199,12 +203,19 @@ class DeliveryRoutine(MissionBase):
         )
 
     def _cancel_timer(self, attribute: str) -> None:
+        """Cancela um timer sem destruir sua entidade dentro de um callback.
+
+        A rotina usa um executor multithread. ``destroy_timer`` enquanto o
+        próprio timer (ou outro callback) ainda está na wait-set pode gerar
+        ``rclpy._rclpy_pybind11.InvalidHandle`` e derrubar todo o Mission
+        Manager. O nó mantém os timers cancelados até seu encerramento, quando
+        o rclpy faz a destruição em um ponto seguro.
+        """
         timer = getattr(self, attribute, None)
         setattr(self, attribute, None)
         if timer is not None:
             try:
                 timer.cancel()
-                self.destroy_timer(timer)
             except Exception:
                 pass
 
