@@ -1,7 +1,7 @@
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, GroupAction, OpaqueFunction
+from launch.actions import DeclareLaunchArgument, GroupAction, OpaqueFunction, TimerAction
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node, PushRosNamespace, SetParameter, SetRemap
 from launch_ros.descriptions import ParameterFile
@@ -44,6 +44,11 @@ ARGUMENTS = [
         description="Lifecycle bond timeout in seconds",
     ),
     DeclareLaunchArgument(
+        "lifecycle_start_delay",
+        default_value="10.0",
+        description="Delay lifecycle manager startup so DDS endpoints can settle",
+    ),
+    DeclareLaunchArgument(
         "use_respawn",
         default_value="false",
         choices=["true", "false"],
@@ -63,6 +68,7 @@ def launch_setup(context, *args, **kwargs):
     autostart = LaunchConfiguration("autostart")
     params_file = LaunchConfiguration("params_file")
     bond_timeout = LaunchConfiguration("bond_timeout")
+    lifecycle_start_delay = LaunchConfiguration("lifecycle_start_delay")
     use_respawn = LaunchConfiguration("use_respawn")
     log_level = LaunchConfiguration("log_level")
 
@@ -210,16 +216,21 @@ def launch_setup(context, *args, **kwargs):
                 arguments=["--ros-args", "--log-level", log_level],
                 remappings=remappings,
             ),
-            Node(
-                package="nav2_lifecycle_manager",
-                executable="lifecycle_manager",
-                name="lifecycle_manager_navigation",
-                output="screen",
-                arguments=["--ros-args", "--log-level", log_level],
-                parameters=[
-                    {"autostart": ParameterValue(autostart, value_type=bool)},
-                    {"node_names": lifecycle_nodes},
-                    {"bond_timeout": ParameterValue(bond_timeout, value_type=float)},
+            TimerAction(
+                period=lifecycle_start_delay,
+                actions=[
+                    Node(
+                        package="nav2_lifecycle_manager",
+                        executable="lifecycle_manager",
+                        name="lifecycle_manager_navigation",
+                        output="screen",
+                        arguments=["--ros-args", "--log-level", log_level],
+                        parameters=[
+                            {"autostart": ParameterValue(autostart, value_type=bool)},
+                            {"node_names": lifecycle_nodes},
+                            {"bond_timeout": ParameterValue(bond_timeout, value_type=float)},
+                        ],
+                    )
                 ],
             ),
         ]
